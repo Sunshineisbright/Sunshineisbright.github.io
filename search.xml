@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Javaweb]]></title>
+    <url>%2F2018%2F12%2F14%2FJavaweb%2F</url>
+    <content type="text"><![CDATA[Servlet上下文 Servlet容器在启动时会自动加载Web应用，并未每个Web应用创建唯一的ServletContext对象，在ServletContext接口中定义了一组方法，Servlet可以使用这些方法与Servlet容器进行通信。 eg： 存放共享数据、得到文件的MIME类型、转发请求、向日志文件写入消息等。 ServletContext接口 一个ServletContext对象代表一个Web应用程序的上下文。Servlet容器在Servlet初始化期间向其传递要给ServletConfig对象，可以通过这个对象的getServletContext()方法来得到ServletContext对象，也可以通过GenericServlet类的getServletContext()方法来得到它。 ServletContext中常用的方法|方法名|描述||—:|—:||getAttribute()|根据给定的属性返回设定的值||getAttributeName()|返回一个Enumeration对象，它包含了存储在ServletContext对象中的所有属性名||getAttribute(String name,Object object)|把一个对象和一个属性名绑定，将对象存储在这个ServletContext| 使用ServletContext实现计算网页访问的次数123456789ServletContext context = getServletContext();Integer count = (Integer)context.getAttribute(&quot;counter&quot;);if(count == null)&#123; count = new Integer(1);&#125;else&#123; count = new Integer(count.intValue+1)&#125;context.setAttribute(&quot;counter&quot;,count); 请求转发与重定向 在Web应用中，MVC（模型-视图-控制器）。在MVC模式中控制器的角色由Servlet充当，它可以将请求转发给另一个Servlet或JSP页面，然后由他们进行处理并产生对i请求的响应。完成请求转发就要使用到javax.servletRequestDispatcher接口。 RequestDispatcher接口 RequestDispatcher对象由Servlet容器创建。用于封装一个由路径所表示的服务器资源。利用RequestDispatcher对象，可以把请求转发给其他的Servlet或JSP页面。在RequestDispatcher接口中定义的两个方法： (1) forward(ServletRequest request,ServletResponse response) 该方法用于将请求从另一个Servlet传递给服务器上的其他Servlet、JSP或者是HTML页面。在Servlet中，可以对请求进行处理，然后调用这个方法，由其他的资源来生成响应 获取RequestDispatcher对象 有三种方法可以得到RequestDispatcher对象： 一种是利用ServletRequest接口中的getRequestDispatcher()方法， 利用ServletContext接口中的getNamedDispatcher() 利用ServletContext接口中的getRequestDispatcher() ServletRequest接口和ServletContext接口各自提供了一个getRequestDispatcher()方法，他们的参数都是资源的路径名。但是ServlertContext.getRequestDispatcher()方法的参数必须以（/）开始，被解释为相对于当前上下文根路径ServletRequest.getRequestDispatcher()方法的参数不但可以是相对于上下文根的路径，还可以是相对于当前Servlet的路径。 ####### 请求重定向 HttpServletResponse接口的sendRedirect()方法和RequestDispatcher接口的forward()方法都可以利用其他的资源（Servlet、JSP或HTML文件）来为客户服务，但两种方法有本质的区别 会话跟踪 当客户访问Web应用时，Web服务器经常需要跟踪用户的状态Web服务器跟踪客户状态的方法4种： 建立含有跟踪数据的隐藏表单字段 重写包含额外参数的URL 使用持久化的Cookie 使用ServletAPI中的Session（会话）机制]]></content>
+      <categories>
+        <category>JavaWeb</category>
+      </categories>
+      <tags>
+        <tag>Javaweb</tag>
+        <tag>Web开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2018%2F12%2F14%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+</search>
