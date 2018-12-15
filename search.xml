@@ -3,7 +3,13 @@
   <entry>
     <title><![CDATA[schedule]]></title>
     <url>%2F2018%2F12%2F15%2Fschedule%2F</url>
-    <content type="text"><![CDATA[1. HeadFirst系列丛书2. 阿里巴巴技术手册（码出高效）3. Mysql数据库4. 软件开发5. 英语 ####Niit Stu * 转本 * 二级Java * 二级Mysql * 四级英语]]></content>
+    <content type="text"><![CDATA[1. HeadFirst系列丛书2. 阿里巴巴技术手册（码出高效）3. Mysql数据库4. 软件开发5. 英语]]></content>
+      <categories>
+        <category>小目标</category>
+      </categories>
+      <tags>
+        <tag>schedule</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[The usage of the Hexo]]></title>
