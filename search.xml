@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[schedule]]></title>
+    <url>%2F2018%2F12%2F15%2Fschedule%2F</url>
+    <content type="text"><![CDATA[1. HeadFirst系列丛书2. 阿里巴巴技术手册（码出高效）3. Mysql数据库4. 软件开发5. 英语 ####Niit Stu * 转本 * 二级Java * 二级Mysql * 四级英语]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[The usage of the Hexo]]></title>
     <url>%2F2018%2F12%2F15%2FThe-usage-of-the-Hexo%2F</url>
     <content type="text"><![CDATA[Hexo的基本使用 hexo g = hexo generate // 生成hexo d = hexo deploy // 部署hexo s = hexo server // 运行服务器hexo new post “article title” //新建文章 Hexo撰写文章创建文章 在站点（eg：F:Blog就是 XXX MINGW64 /F/Blog）下使用此命令：hexo new “title” 此时就会在Blog/source/_post文件夹中创建一个名为: title.md,而这个文件就是要发布到网站上的原始文件，记录文章内容。 使用Markdown编写文章 部署发布 hexo g -d建议：在使用命令 hexo g 部署之后，可以先使用 hexo s 运行本地站点，在浏览器输入地址http://lacolhost:4000/查看运行结果，检查没有错误后再使用命令 hexo d 发布 Hexo命令 init 在folder中建立一个网站 hexo init [folder]public 生成的网站文件，发布的站点文件。 source资源文件夹，用于存放内容。 tag 标签文件夹。 archive归档文件夹。 category分类文件夹。 downloads/code include code文件夹。 :lang i18n_dir 国际化文件夹。 _config.yml 配置文件 new 新建一篇文章。默认为layout布局如果标题含有空格，使用引号括起来 hexo new [layout] generate 生成静态文件(-d, –deploy文件生成后立即部署网站) hexo generate publish 发表草稿 hexo publish [layout] server 启动服务器，默认情况下，访问网址为:localhost:4000/ hexo server deploy 部署网站 （一般写文章的时候：hexo g -d 这种形式使用较多） hexo deploy render 渲染文件 hexo render [f1]… migrate 从其他博客系统迁移内容 hexo migrate clean 清除缓存文件(db.json)和已经生成的静态文件(public)在某些情况下（尤其是在更换主题之后），如果发现对站点的更改不生效可以使用此命令 hexo clean list 列出网站资料 hexo list version 显示Hexo版本 hexo version 选项安全模式 hexo –safe 在安全模式下，不会载入任何插件和脚本，当安装新插件遇到问题时，可以尝试以安全模式重新执行。 调试模式 hexo –debug 在终端中显示调试信息并记录到debug.log]]></content>
