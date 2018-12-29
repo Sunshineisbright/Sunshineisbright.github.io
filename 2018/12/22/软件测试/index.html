@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="复习一 测试计划编写要六个要素：  1. what  2. why  3. when  4. where  5. who  6. how  测试用例由【输入数据】和预期的【输出数据】两部分组成 性能测试主要包括两个方面【时间性能】和【空间性能】 验收测试主要包括两方面内容【α测试】和【β测试】 自顶向下测试有两种组合策略【深度优先策略】和【广度优先策略】 测试计划的指定必须要注意： 测试策略 测试">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-22T13:10:20.744Z">
+<meta property="og:updated_time" content="2018-12-29T07:17:10.536Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="软件测试">
 <meta name="twitter:description" content="复习一 测试计划编写要六个要素：  1. what  2. why  3. when  4. where  5. who  6. how  测试用例由【输入数据】和预期的【输出数据】两部分组成 性能测试主要包括两个方面【时间性能】和【空间性能】 验收测试主要包括两方面内容【α测试】和【β测试】 自顶向下测试有两种组合策略【深度优先策略】和【广度优先策略】 测试计划的指定必须要注意： 测试策略 测试">
@@ -373,8 +373,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-22T21:10:20+08:00">
-                2018-12-22
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-29T15:17:10+08:00">
+                2018-12-29
               </time>
             
           </span>
@@ -438,7 +438,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  2.6k
                 </span>
               
 
@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  8
                 </span>
               
             </div>
@@ -619,7 +619,116 @@
 <li>进行测试设计、写作测试文档（测试计划、测试方案、测试用例）</li>
 <li>执行测试、发现软件缺陷、提交缺陷报告、并确认缺陷最终得到了修正</li>
 </ul>
-<h5 id="黑盒测试与白盒测试各自的优缺点。"><a href="#黑盒测试与白盒测试各自的优缺点。" class="headerlink" title="黑盒测试与白盒测试各自的优缺点。"></a>黑盒测试与白盒测试各自的优缺点。</h5><p>* </p>
+<h1 id="复习四"><a href="#复习四" class="headerlink" title="复习四"></a>复习四</h1><ol>
+<li>软件测试的工作量占整个软件开发工作量的 <strong><font color="purple" size="5px">70%</font></strong></li>
+<li>软件的六大质量特性包括：<ul>
+<li><strong>功能性</strong></li>
+<li><strong>可靠性</strong></li>
+<li><strong>可用性</strong></li>
+<li><strong>效率</strong></li>
+<li><strong>可维护</strong></li>
+<li><strong>可移植</strong></li>
+</ul>
+</li>
+<li><p>等价类划分方法设计测试用例的描述：</p>
+<ol>
+<li>如果等价类中的一个测试用例能够捕获一个缺陷，则选择该等价类中的其他测试用例也能捕获该缺陷</li>
+<li>正确而地划分等价类，可以大大减少测试用例的数量，测试会更加准确有效<br>3.<strong> 等价类划分方法常常需要和边界值分析法结合使用</strong><br>× 若某个输入条件是一个布尔量，则无法确定有效等价类和无效等价类</li>
+</ol>
+</li>
+<li><p>白盒测试侧重于<strong>程序结构</strong>。黑盒测试侧重于<strong>功能</strong></p>
+</li>
+<li><p>功能（黑盒）测试的方法：</p>
+<ul>
+<li><strong>等价类划分法</strong></li>
+<li><strong>边界值分析法</strong></li>
+<li><strong>基于决策表的测试</strong></li>
+</ul>
+</li>
+<li>针对是否对<strong>无效数据</strong>进行测试，可以将等价类测试分为：<ol>
+<li><strong>标准（一般）等价类测试</strong></li>
+<li><strong>健壮等价类测试</strong></li>
+</ol>
+</li>
+<li>在设计测试用例时，【<strong>等价类划分</strong>】是用得最多的一种黑盒测试方法</li>
+<li>用等价类划分法设计8位长数字类型用户名登录操作的测试用例，可以分成4份。</li>
+<li>常用的黑盒测试方法有边值分析、等价类划分、错误猜测、因果图等。其中（边值分析）经常与其他方法结合起来使用。</li>
+<li>用边界值分析法，假定X为整数，10&lt;= x &lt;= 100,则X在测试中应该取<strong>（x=9,x=10,x=100,x=101）</strong>边界值</li>
+<li>在用白盒测试中的逻辑覆盖法设计测试用例时，有语句覆盖、分支覆盖、条件覆盖、条件/判定覆盖、条件组合覆盖和路径覆盖中，其中<br><strong>【路径覆盖】时最强的覆盖准则</strong></li>
+<li>实际的<strong>逻辑覆盖测试</strong>中，一般以<strong>条件组合覆盖</strong>为主设计测试用例</li>
+<li>使用<strong>白盒测试方法</strong>时，确定测试数据应根据【<strong>程序内部逻辑</strong>】和【<strong>指定的覆盖标准</strong>】</li>
+<li>逻辑覆盖方法：<ul>
+<li><strong>组合覆盖</strong></li>
+<li><strong>判定覆盖</strong></li>
+<li><strong>条件覆盖</strong><br><strong>接口覆盖</strong>不属于<strong>逻辑覆盖方法</strong></li>
+</ul>
+</li>
+<li>条件/判定覆盖是设计足够多的测试用例，使得程序中每个判定包含的每个条件的所有情况。（真/假）至少出现一次<br>，并且每个判定本身的判定结果（真/假）也至少出现一次。</li>
+<li>在进行单元测试时常用的方法：【<strong>采用白盒测试，辅之以黑盒测试</strong>。】</li>
+<li>单元测试的描述：<ul>
+<li><strong>单元测试</strong>的主要目的时<strong>针对编码过程中可能存在的各种错误</strong></li>
+<li>单元测试一般是由<strong>程序开发人员</strong>完成的</li>
+<li><strong>单元测试属于白盒测试的一种方法</strong></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>单元测试是一种不需要关注程序结构的测试 ❌</li>
+</ul>
+<ol start="18">
+<li><strong>单元测试</strong>将根据在【<strong>详细设计</strong>】阶段中产生的规格说明进行</li>
+<li><strong>单元测试</strong>的依据：【<strong>模块功能规格说明</strong>】</li>
+<li><p>软件测试是软件质量保证的重要手段，【单元测试】是软件测试的最基础环节<br>21.JUnit描述</p>
+<ul>
+<li><strong>JUnit是Java语言的单元测试框架</strong></li>
+<li><strong>JUnit推荐先测试后实现的方法</strong></li>
+<li><strong>setUp和tearDown函数只执行一次</strong><br>JUnit只能测试公共函数 ❌</li>
+</ul>
+</li>
+<li><p>JUnit中，testXxxx()方法就是一个测试用例，测试方法是：public void testXxxx()</p>
+</li>
+<li><strong>划分软件测试属于白盒测试还是黑盒测试的依据</strong>是：【<strong>是否执行程序代码</strong>】</li>
+<li>正确：<ul>
+<li><strong>测试不能证明软件的正确性</strong></li>
+<li>测试员需要良好的沟通技巧</li>
+<li>QA与Testing属于一个层次的概念（❌）</li>
+<li>成功测试时发现了错误的测试</li>
+</ul>
+</li>
+<li>属于界面元素测试：<ul>
+<li><strong>窗口测试</strong></li>
+<li><strong>文字测试</strong></li>
+<li><strong>功能点测试</strong></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><strong>不属于界面元素测试</strong>：<strong>鼠标测试</strong></li>
+</ul>
+<ol start="26">
+<li>对Web网站进行的测试中属于功能测试的是：<strong>连接速度测试</strong></li>
+<li>使用软件测试工具的目的是：<strong>更好的协助开发工具</strong></li>
+<li>基本路径测试：<strong>白盒测试</strong></li>
+<li>通过<strong>疲劳强度测试</strong>，最容易发现【<strong>内存泄漏问题</strong>】</li>
+<li>在性能测试中关于数据准备：<ol>
+<li><strong>识别数据状态验证测试案例</strong></li>
+<li><strong>初始数据提供了基线是用来评估测试执行的结果</strong></li>
+<li><strong>业务数据提供负载压力背景</strong></li>
+<li><strong>脚本中真实模拟负载</strong></li>
+</ol>
+</li>
+<li>功能测试工具：<strong>WinRunner</strong></li>
+<li>测试工程师一般采用<strong>负载压力</strong>作为测试工具</li>
+<li>Web应用系统复杂压力测试中<strong>属于衡量业务执行效率的指标</strong>：<ul>
+<li><strong>并发请求数</strong></li>
+<li><strong>每秒访问量</strong></li>
+<li><strong>交易执行实践响应时间</strong></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>交易执行吞吐量 并不是 衡量业务执行效率的指标。</li>
+</ul>
 
       
     </div>
@@ -897,7 +1006,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#复习一"><span class="nav-number">1.</span> <span class="nav-text">复习一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习二"><span class="nav-number">2.</span> <span class="nav-text">复习二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌫复习三"><span class="nav-number">3.</span> <span class="nav-text">🌫复习三</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#软件测试工程师的一些工作。"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">软件测试工程师的一些工作。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#黑盒测试与白盒测试各自的优缺点。"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">黑盒测试与白盒测试各自的优缺点。</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#复习一"><span class="nav-number">1.</span> <span class="nav-text">复习一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习二"><span class="nav-number">2.</span> <span class="nav-text">复习二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌫复习三"><span class="nav-number">3.</span> <span class="nav-text">🌫复习三</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#软件测试工程师的一些工作。"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">软件测试工程师的一些工作。</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#复习四"><span class="nav-number"></span> <span class="nav-text">复习四</span></a></li></div>
             
 
           </div>
@@ -942,7 +1051,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共25.1k字</span>
+  <span class="post-count">博客全站共26.3k字</span>
 </div>
 
         
