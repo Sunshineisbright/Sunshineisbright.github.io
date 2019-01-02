@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件 主数据文件（PR">
+<meta name="description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件  主数据文件（P">
 <meta name="keywords" content="SQL Server复习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL Server复习">
 <meta property="og:url" content="https://www.openmind.ink/2018/12/24/SQL-Server复习/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件 主数据文件（PR">
+<meta property="og:description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件  主数据文件（P">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-02T02:08:11.296Z">
+<meta property="og:updated_time" content="2019-01-02T02:10:12.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL Server复习">
-<meta name="twitter:description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件 主数据文件（PR">
+<meta name="twitter:description" content="复习一数据库文件和文件组 数据库的存储结构  逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。     一个数据库至少应该包含一个主数据文件和一个事务日志文件  SQL Server中数据文件分为3类： 数据文件  主数据文件（P">
 
 
 
@@ -373,7 +373,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-02T10:08:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-02T10:10:12+08:00">
                 2019-01-02
               </time>
             
@@ -487,19 +487,14 @@
 <p>一个数据库至少应该包含一个主数据文件和一个事务日志文件</p>
 </blockquote>
 <h5 id="SQL-Server中数据文件分为3类："><a href="#SQL-Server中数据文件分为3类：" class="headerlink" title="SQL Server中数据文件分为3类："></a>SQL Server中数据文件分为3类：</h5><ul>
-<li>数据文件<ul>
-<li>主数据文件（PRIMARY）<ul>
-<li>存放数据 .mdf</li>
+<li><p>数据文件</p>
+<ul>
+<li>主数据文件（PRIMARY)— 存放数据 .mdf</li>
+<li>次数据文件（SECONDARY)— 将数据分散存储到磁盘上 .ndf</li>
 </ul>
 </li>
-<li>次数据文件（SECONDARY)<ul>
-<li>将数据分散存储到磁盘上 .ndf</li>
-</ul>
+<li><p>事务日志文件（TRANSACTION LOG)— 存放事务日志 .ldf</p>
 </li>
-</ul>
-</li>
-<li>事务日志文件（TRANSACTION LOG)<pre><code>* 存放事务日志 .ldf
-</code></pre></li>
 </ul>
 
       
