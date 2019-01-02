@@ -58,7 +58,7 @@
   <entry>
     <title><![CDATA[SQL Server复习]]></title>
     <url>%2F2018%2F12%2F24%2FSQL-Server%E5%A4%8D%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[复习一数据库文件和文件组 数据库的存储结构 逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。 一个数据库至少应该包含一个主数据文件和一个事务日志文件 SQL Server2008数据库文件有3类： 主数据文件（primary） 存放数据。每个数据库都必须有一个主数据文件（扩展名.mdf） * 次数据文件（secondary） 存放数据。一个数据库可以有0个或多个次数据文件。]]></content>
+    <content type="text"><![CDATA[复习一数据库文件和文件组 数据库的存储结构 逻辑存储结构：数据库由哪些信息所组成。（SQL Server数据库是由表、视图、索引等不同的数据库对象所组成）。 物理存储结构：如何在磁盘上存储数据库文件的（数据库在磁盘上以文件（数据文件和事务日志文件）为单位存储的。 一个数据库至少应该包含一个主数据文件和一个事务日志文件 SQL Server中数据文件分为3类： 数据文件 主数据文件（PRIMARY） 存放数据 .mdf 次数据文件（SECONDARY) 将数据分散存储到磁盘上 .ndf 事务日志文件（TRANSACTION LOG)* 存放事务日志 .ldf]]></content>
       <categories>
         <category>SQL Server复习</category>
       </categories>
