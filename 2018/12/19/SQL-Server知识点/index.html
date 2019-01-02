@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="复习一数据库的特点： 1.数据共享2.数据完整性3.数据独立性高  SQL Server中系统数据库：master、model、msdb DBMS的定义· DBMS是位于用户与操作系统之间的一层数据库管理软件，—&amp;gt; 系统软件，它为用户或应用程序提供访问数据库的方法。对于数据库在建立、使用和维护时由其统一管理、统一控制 SQL的视图从基本表或视图中导出的 是sql数据库文件的后缀的是：.mdf">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-20T10:51:43.373Z">
+<meta property="og:updated_time" content="2019-01-02T02:13:20.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SQL Server知识点">
 <meta name="twitter:description" content="复习一数据库的特点： 1.数据共享2.数据完整性3.数据独立性高  SQL Server中系统数据库：master、model、msdb DBMS的定义· DBMS是位于用户与操作系统之间的一层数据库管理软件，—&amp;gt; 系统软件，它为用户或应用程序提供访问数据库的方法。对于数据库在建立、使用和维护时由其统一管理、统一控制 SQL的视图从基本表或视图中导出的 是sql数据库文件的后缀的是：.mdf">
@@ -373,8 +373,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-20T18:51:43+08:00">
-                2018-12-20
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-02T10:13:20+08:00">
+                2019-01-02
               </time>
             
           </span>
@@ -505,9 +505,9 @@
 <p>数据模型所包含的<strong>两个方面</strong>：<br></p>
 </blockquote>
 <p>1 . 数据的<strong>静态特性</strong>：</p>
-<pre><code>* **基本结构**
-* **数据间的关系**
-* **数据间相互约束的特性**
+<pre><code>* 基本结构
+* 数据间的关系
+* 数据间相互约束的特性
 </code></pre><p>2 . 数据的<strong>动态特性</strong>：主要包括<strong>对数据进行操作</strong>的方法。</p>
 <blockquote>
 <p>（从E-R图中可以直观的看出E-R主要体现的是这一方面）</p>
@@ -553,7 +553,7 @@
 <blockquote>
 <p><strong>完全函数</strong>指<strong>不能</strong>存在<strong>仅依赖主关键字一部分属性</strong>，否则这个属性和主关键字的一部分分离出来形成一个新的实体，<strong>新实体和原实体之间是一对多的关系</strong>。</p>
 </blockquote>
-<h6 id="第三范式（确保每列都和主键列直接相关，而不是简介相关）"><a href="#第三范式（确保每列都和主键列直接相关，而不是简介相关）" class="headerlink" title="第三范式（确保每列都和主键列直接相关，而不是简介相关）"></a>第三范式（确保每列都和主键列直接相关，而不是简介相关）</h6><p>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能简介相关。</p>
+<h6 id="第三范式（确保每列都和主键列直接相关，而不是间接相关）"><a href="#第三范式（确保每列都和主键列直接相关，而不是间接相关）" class="headerlink" title="第三范式（确保每列都和主键列直接相关，而不是间接相关）"></a>第三范式（确保每列都和主键列直接相关，而不是间接相关）</h6><p>第三范式需要确保数据表中的每一列数据都和主键直接相关，而不能简介相关。</p>
 <h4 id="遵守三种范式的作用："><a href="#遵守三种范式的作用：" class="headerlink" title="遵守三种范式的作用："></a>遵守三种范式的作用：</h4><ul>
 <li>减少数据冗余；</li>
 <li>改进数据整体组织；</li>
@@ -1033,7 +1033,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复习一"><span class="nav-number">1.</span> <span class="nav-text">复习一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库概念设计"><span class="nav-number">1.1.</span> <span class="nav-text">数据库概念设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念设计的理论基础"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">概念设计的理论基础</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R模型"><span class="nav-number">1.2.</span> <span class="nav-text">E-R模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的逻辑设计"><span class="nav-number">1.3.</span> <span class="nav-text">数据库的逻辑设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据库规范化原则"><span class="nav-number">1.3.0.0.1.</span> <span class="nav-text">数据库规范化原则</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#第一范式（原子性【列】）"><span class="nav-number">1.3.0.0.1.1.</span> <span class="nav-text">第一范式（原子性【列】）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#第二范式（确保表中的每列都和主键相关）"><span class="nav-number">1.3.0.0.1.2.</span> <span class="nav-text">第二范式（确保表中的每列都和主键相关）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#第三范式（确保每列都和主键列直接相关，而不是简介相关）"><span class="nav-number">1.3.0.0.1.3.</span> <span class="nav-text">第三范式（确保每列都和主键列直接相关，而不是简介相关）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遵守三种范式的作用："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">遵守三种范式的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的物理设计"><span class="nav-number">1.4.</span> <span class="nav-text">数据库的物理设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习二"><span class="nav-number">2.</span> <span class="nav-text">复习二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明一个长度为16的字符型变量“cname”，并赋初值为‘数据库系统概述’。"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">声明一个长度为16的字符型变量“cname”，并赋初值为‘数据库系统概述’。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在字符串中，我们应该怎样来产生一个回车并生成一个新行？"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">在字符串中，我们应该怎样来产生一个回车并生成一个新行？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表"><span class="nav-number">2.0.1.</span> <span class="nav-text">表</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#复习一"><span class="nav-number">1.</span> <span class="nav-text">复习一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库概念设计"><span class="nav-number">1.1.</span> <span class="nav-text">数据库概念设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#概念设计的理论基础"><span class="nav-number">1.1.0.0.1.</span> <span class="nav-text">概念设计的理论基础</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#E-R模型"><span class="nav-number">1.2.</span> <span class="nav-text">E-R模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的逻辑设计"><span class="nav-number">1.3.</span> <span class="nav-text">数据库的逻辑设计</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数据库规范化原则"><span class="nav-number">1.3.0.0.1.</span> <span class="nav-text">数据库规范化原则</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#第一范式（原子性【列】）"><span class="nav-number">1.3.0.0.1.1.</span> <span class="nav-text">第一范式（原子性【列】）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#第二范式（确保表中的每列都和主键相关）"><span class="nav-number">1.3.0.0.1.2.</span> <span class="nav-text">第二范式（确保表中的每列都和主键相关）</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#第三范式（确保每列都和主键列直接相关，而不是间接相关）"><span class="nav-number">1.3.0.0.1.3.</span> <span class="nav-text">第三范式（确保每列都和主键列直接相关，而不是间接相关）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遵守三种范式的作用："><span class="nav-number">1.3.0.1.</span> <span class="nav-text">遵守三种范式的作用：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的物理设计"><span class="nav-number">1.4.</span> <span class="nav-text">数据库的物理设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习二"><span class="nav-number">2.</span> <span class="nav-text">复习二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#声明一个长度为16的字符型变量“cname”，并赋初值为‘数据库系统概述’。"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">声明一个长度为16的字符型变量“cname”，并赋初值为‘数据库系统概述’。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在字符串中，我们应该怎样来产生一个回车并生成一个新行？"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">在字符串中，我们应该怎样来产生一个回车并生成一个新行？</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表"><span class="nav-number">2.0.1.</span> <span class="nav-text">表</span></a></li></div>
             
 
           </div>
