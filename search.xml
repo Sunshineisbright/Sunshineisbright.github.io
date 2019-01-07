@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[JavaScript札记]]></title>
     <url>%2F2019%2F01%2F06%2FJavaScript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[JavaScript语法 JavaScript是什么? 客户端脚本语言 基于对象（Object）和事件驱动（Event） JS基本数据类型 Number String Null Undenfined Boolean 变量定义以及命名规则：先定义后使用，直接使用会出错。 var m,n; //声明变量 var x,y,z = 10; 注释两种 // /***/ 类型转换 parseInt(“123”) 123 parseInt(“a123”) NaN parseInt(“5.455”) 5 parseInt(“5.455”) 5.455 运算符 关键词 描述 () ! ++ == - 一元操作符 * / + - 算术运算符 &lt; &lt;= &gt; &gt;= 关系运算符 &amp;&amp;.. 逻辑运算符 = += *= /= %= 赋值运算符 7.]]></content>
+    <content type="text"><![CDATA[JavaScript语法 JavaScript是什么? 客户端脚本语言 基于对象（Object）和事件驱动（Event） JS基本数据类型 Number String Null Undenfined Boolean 变量定义以及命名规则：先定义后使用，直接使用会出错。 var m,n; //声明变量 var x,y,z = 10; 注释两种 // /***/ 类型转换 parseInt(“123”) 123 parseInt(“a123”) NaN parseInt(“5.455”) 5 parseInt(“5.455”) 5.455 运算符 关键词 描述 () ! ++ == - 一元操作符 * / + - 算术运算符 &lt; &lt;= &gt; &gt;= 关系运算符 &amp;&amp;.. 逻辑运算符 = += *= /= %= 赋值运算符]]></content>
       <categories>
         <category>JavaScript</category>
       </categories>
