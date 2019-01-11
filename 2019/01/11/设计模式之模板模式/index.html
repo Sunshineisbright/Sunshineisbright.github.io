@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="设计模式之模板模式,">
 
 
 
@@ -92,16 +92,25 @@
 
 
 
-<meta name="description" content="非学无以广才 非志无以成学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sunshineisbright">
-<meta property="og:url" content="https://www.openmind.ink/archives/2018/page/2/index.html">
+<meta name="description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法    集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点 封装性好 复用性好 屏蔽">
+<meta name="keywords" content="设计模式之模板模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设计模式之模板模式">
+<meta property="og:url" content="https://www.openmind.ink/2019/01/11/设计模式之模板模式/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="非学无以广才 非志无以成学">
+<meta property="og:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法    集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点 封装性好 复用性好 屏蔽">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4xTU.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4OO0.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4jmV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4Lyq.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4qln.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX5UhQ.png">
+<meta property="og:updated_time" content="2019-01-11T11:49:48.272Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sunshineisbright">
-<meta name="twitter:description" content="非学无以广才 非志无以成学">
+<meta name="twitter:title" content="设计模式之模板模式">
+<meta name="twitter:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法    集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点 封装性好 复用性好 屏蔽">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/01/11/FX4xTU.png">
 
 
 
@@ -131,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="https://www.openmind.ink/archives/2018/page/2/">
+  <link rel="canonical" href="https://www.openmind.ink/2019/01/11/设计模式之模板模式/">
 
 
 
 
 
-  <title>归档 | Sunshineisbright</title>
+  <title>设计模式之模板模式 | Sunshineisbright</title>
   
 
 
@@ -156,7 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/Sunshineisbright" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -312,390 +321,602 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 37 篇日志。 继续努力。
-      </span>
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/2019/01/11/设计模式之模板模式/">
 
-      
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wangzhuang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshineisbright">
+    </span>
+
+    
+      <header class="post-header">
 
         
         
+          <h1 class="post-title" itemprop="name headline">设计模式之模板模式</h1>
         
 
-        
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-11T19:01:40+08:00">
+                2019-01-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T19:49:48+08:00">
+                2019-01-11
+              </time>
+            
+          </span>
+
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/21/常用的英语单词/" itemprop="url">
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
               
-                <span itemprop="name">常用的英语单词</span>
+                <span class="post-meta-item-text">分类于</span>
               
-            </a>
-        
-      </h2>
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-21T17:05:34+08:00" content="2018-12-21">
-          12-21
-        </time>
-      </div>
+                
+                
+              
+            </span>
+          
 
-    </header>
-  </article>
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/11/设计模式之模板模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/11/设计模式之模板模式/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.2k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="设计模式之模板模式"><a href="#设计模式之模板模式" class="headerlink" title="设计模式之模板模式"></a>设计模式之模板模式</h1><h3 id="模板方法模式的实现要素"><a href="#模板方法模式的实现要素" class="headerlink" title="模板方法模式的实现要素"></a>模板方法模式的实现要素</h3><blockquote>
+<ul>
+<li>准备一个<strong>抽象类</strong></li>
+<li><strong>将部分逻辑以具体方法的形式实现</strong></li>
+<li>声明一些<strong>抽象方法交由子类实现剩余逻辑</strong></li>
+<li>用钩子方法给予子类更大的灵活性</li>
+<li>最后将方法汇总构成一个不可改变的模板方法</li>
+</ul>
+</blockquote>
+<h5 id="集成共性处理异点"><a href="#集成共性处理异点" class="headerlink" title=" 集成共性处理异点"></a><font color="red" size="2"> 集成共性处理异点</font></h5><h3 id="模板方法模式的适用场景"><a href="#模板方法模式的适用场景" class="headerlink" title="模板方法模式的适用场景"></a>模板方法模式的适用场景</h3><ol>
+<li>算法或操作遵循相似的逻辑</li>
+<li>重构时（把相同的代码抽取到父类中）</li>
+<li>重要、复杂的算法，核心算法设计为模板算法</li>
+</ol>
+<h3 id="模板方法模式的优点"><a href="#模板方法模式的优点" class="headerlink" title="模板方法模式的优点"></a>模板方法模式的优点</h3><ul>
+<li>封装性好</li>
+<li>复用性好</li>
+<li>屏蔽细节</li>
+<li>便于维护</li>
+</ul>
+<h3 id="模板方法模式的缺点"><a href="#模板方法模式的缺点" class="headerlink" title="模板方法模式的缺点"></a>模板方法模式的缺点</h3><ul>
+<li>继承性</li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>什么是模板方法模式</li>
+<li>如何实现模板方法模式</li>
+<li>模板方法模式的特点</li>
+<li>模板方法模式在项目中的应用</li>
+</ul>
+<h3 id="生活中的模板"><a href="#生活中的模板" class="headerlink" title="生活中的模板"></a>生活中的模板</h3><p><a href="https://imgchr.com/i/FX4xTU" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4xTU.png" alt="FX4xTU.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4OO0" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4OO0.png" alt="FX4OO0.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4jmV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4jmV.png" alt="FX4jmV.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4Lyq" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4Lyq.png" alt="FX4Lyq.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4qln" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4qln.png" alt="FX4qln.png"></a></p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="抽象基类，为所有子类提供一个算法框架"><a href="#抽象基类，为所有子类提供一个算法框架" class="headerlink" title="抽象基类，为所有子类提供一个算法框架"></a>抽象基类，为所有子类提供一个算法框架</h3><pre>
+
+package com.imooc.template;
+
+/**
+ * 抽象基类，为所有子类提供一个算法框架
+ * 
+ *  业务：提神饮料
+ * */
+public abstract class RefreshBeverage {
+
+    /**
+     * 制备饮料的模板方法
+     * 封装了所有子类共同遵循的算法框架
+     * */
+    public final void prepareBeverageTemplate() {
+        //步骤一：将水煮沸
+        boilWater();
+        //步骤二: 泡制饮料
+        brew();
+        //步骤三：将饮料倒入杯中
+        pourInCup();
+        //步骤四：加入调味料 （添加个性化操作），默认的模式下加入调料
+        if(isCustomerWantsCondiments()) { 
+            addCondiments(); 
+        }
+    }
+
+    /**
+     * Hook，钩子函数，提供一个默认或空的实现
+     * 具体的子类可以自行决定是否挂钩以及如何挂钩
+     * 询问用户是否加入调料
+     * */
+    protected boolean isCustomerWantsCondiments() {
+
+        return true;
+    }
+
+    /*
+     * 基本方法，将水煮沸
+     * */
+    private void boilWater() {
+        // TODO Auto-generated method stub
+        System.out.println("将水煮沸");
+    }
+
+    /**
+     *基本方法，将饮料倒入杯中
+     * */
+    private void pourInCup() {
+        // TODO Auto-generated method stub
+        System.out.println("将饮料倒入杯中");
+    }
+
+
+    /*
+     * 抽象的基本方法，泡制饮料
+     * */
+    protected abstract void brew();
+
+    /**
+     * 抽象的基本方法，加入调味料
+     * */
+    protected abstract void addCondiments();
+
+}
+</pre>
+
+<h3 id="具体子类咖啡制作的具体实现"><a href="#具体子类咖啡制作的具体实现" class="headerlink" title="具体子类咖啡制作的具体实现"></a>具体子类咖啡制作的具体实现</h3><pre>
+
+package com.imooc.template;
+
+public class Coffee extends RefreshBeverage{
+
+    /**
+     * 具体子类，提供了咖啡制备的具体实现
+     * */
+
+    @Override
+    protected void brew() {
+        System.out.println("用沸水冲泡咖啡...");
+    }
+
+    @Override
+    protected void addCondiments() {
+        System.out.println("加入糖和牛奶...");
+    }
+
+}
+
+</pre>
+
+<h3 id="具体子类茶的具体实现"><a href="#具体子类茶的具体实现" class="headerlink" title="具体子类茶的具体实现"></a>具体子类茶的具体实现</h3><pre>
+
+package com.imooc.template;
+
+public class Coffee extends RefreshBeverage{
+
+    /**
+     * 具体子类，提供了咖啡制备的具体实现
+     * */
+
+    @Override
+    protected void brew() {
+        System.out.println("用沸水冲泡咖啡...");
+    }
+
+    @Override
+    protected void addCondiments() {
+        System.out.println("加入糖和牛奶...");
+    }
+
+}
+
+</pre>
+
+<h3 id="基于基类和其子类创建相应的对象并实现指定的功能"><a href="#基于基类和其子类创建相应的对象并实现指定的功能" class="headerlink" title="基于基类和其子类创建相应的对象并实现指定的功能"></a>基于基类和其子类创建相应的对象并实现指定的功能</h3><pre>
+
+package com.imooc.template;
+
+public class RefreshBeverageTest {
+
+    public static void main(String[] args) {
+        System.out.println("《《《《《制做咖啡》》》》》");
+        RefreshBeverage b1 = new Coffee();
+        b1.prepareBeverageTemplate();
+        System.out.println("《《《《《Over》》》》》");
+
+        System.out.println("*******************************");
+
+        System.out.println("——————泡茶——————");
+        RefreshBeverage b2 = new Tea();
+        b2.prepareBeverageTemplate();
+        System.out.println("-----Over-----");
+
+    }
+}
+
+//《《《《《制做咖啡》》》》》
+//将水煮沸
+//用沸水冲泡咖啡...
+//将饮料倒入杯中
+//加入糖和牛奶...
+//《《《《《Over》》》》》
+//*******************************
+//——————泡茶——————
+//将水煮沸
+//用80度的热水浸泡茶叶5分钟
+//将饮料倒入杯中
+//加入柠檬🍋
+//-----Over-----
+
+</pre>
+
+
+
+<hr>
+
+<h3 id="模板方法模式的实现要素-1"><a href="#模板方法模式的实现要素-1" class="headerlink" title="模板方法模式的实现要素"></a>模板方法模式的实现要素</h3><pre><code>* 抽象基类
+* 具体子类
+</code></pre><h1 id="具体分析"><a href="#具体分析" class="headerlink" title="具体分析"></a>具体分析</h1><h3 id="抽象基类"><a href="#抽象基类" class="headerlink" title="抽象基类"></a>抽象基类</h3><p>####（1）基本方法</p>
+<pre>
+
+/**
+* 基本方法，将水煮沸
+*/
+private void boilWater(){
+    System.out.println("将水煮沸");
+}
+
+/**
+* 基本方法，将饮料倒入杯中
+*/
+private void pourInCup(){
+    System.out.println("将饮料倒入杯中");
+}
+</pre>
+
+<h4 id="2-抽象方法"><a href="#2-抽象方法" class="headerlink" title="(2) 抽象方法"></a>(2) 抽象方法</h4><pre>
+/*
+* 抽象的基本方法，泡制饮料
+*/
+protected abstract void brew();
+
+/*
+* 抽象的基本方法，加入调味料
+*/
+protected abstract void addCondiments();
+</pre>
+
+<h4 id="3-可选的钩子"><a href="#3-可选的钩子" class="headerlink" title="(3) 可选的钩子"></a>(3) 可选的钩子</h4><pre>
+/*
+* Hook， 钩子函数，提供一个默认或空的实现具体的子类可以自行决定是否挂钩以及如何挂钩询问用户是否加入调味料
+*/
+protected boolean isCustomerWantsCondiments(){
+    return true;
+}
+
+</pre>
+
+<p><a href="https://imgchr.com/i/FX5UhQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX5UhQ.png" alt="FX5UhQ.png"></a></p>
+<h3 id="具体子类"><a href="#具体子类" class="headerlink" title="具体子类"></a>具体子类</h3><h4 id="（1）实现基类中的抽象方法"><a href="#（1）实现基类中的抽象方法" class="headerlink" title="（1）实现基类中的抽象方法"></a>（1）实现基类中的抽象方法</h4><ul>
+<li>eg：咖啡 —&gt; 冲泡</li>
+</ul>
+<pre>
+
+/*
+* 具体子类，提供了咖啡制备的具体实现
+*/
+public class Coffee extends RefreshBeverage{
+    @Override
+    protected void brew(){
+        System.out.println("用沸水冲泡咖啡");
+    }
+
+    @Override
+    protected void addCondiments(){
+        System.out.println("加入糖和牛奶");
+    }
+}
+
+</pre>
+
+<ul>
+<li>eg: 茶 —&gt; 浸泡</li>
+</ul>
+<p>/*</p>
+<ul>
+<li>具体子类， 提供了制备茶的具体实现<br>*/</li>
+</ul>
+<p>public class Tea extends RefreshBeverage{</p>
+<pre><code>@Override
+protected void brew(){
+    System.out.println(&quot;用80度的热水浸泡茶叶5分钟&quot;);
+}
+
+@Override
+protected void addCondiments(){
+    System.out.println(&quot;加入柠檬🍋&quot;);
+}
+</code></pre><p>}</p>
+<p></p>
+<h4 id="（2）覆盖钩子（Hook-方法"><a href="#（2）覆盖钩子（Hook-方法" class="headerlink" title="（2）覆盖钩子（Hook)方法"></a>（2）覆盖钩子（Hook)方法</h4><blockquote>
+<p>茶（不加调料）</p>
+</blockquote>
+<pre>
+
+/*
+* 具体子类，提供了制备茶的具体实现
+*/
+
+public class Tea extends RefreshBeverage{
+    @Override    
+    protected void brew(){...}
+    @Override
+    protected void addCondiments(){...}
+    @Override
+    /**
+    * 子类通过覆盖的形式选择挂载钩子函数
+    */
+    protected boolean isCustomenrWantsCondiments(){
+        return false; //不要调料
+    }
+}
+
+</pre>
+
+
+<blockquote>
+<p>咖啡（加糖和牛奶）</p>
+</blockquote>
+<pre>
+
+/*
+* 具体子类，提供了咖啡制备的具体实现
+*/
+
+    public class Coffee extends RefreshBeverage{
+        @Override
+        protected void brew(){
+            System.out.println("用沸水冲泡咖啡");
+        }
+
+        @Override
+        protected void addCondiments(){
+            System.out.println("加入糖和牛奶");
+        }
+    }
+</pre>
+
 
 
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/21/VSCode-IDE学习/" itemprop="url">
-              
-                <span itemprop="name">VSCode IDE学习</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-21T17:01:26+08:00" content="2018-12-21">
-          12-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/21/JavaScript知识点/" itemprop="url">
-              
-                <span itemprop="name">JavaScript知识点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-21T10:11:27+08:00" content="2018-12-21">
-          12-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/20/SQL-三级模式两级映射/" itemprop="url">
-              
-                <span itemprop="name">SQL---三级模式两级映射</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-20T21:18:09+08:00" content="2018-12-20">
-          12-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/20/SQL-Server知识点2/" itemprop="url">
-              
-                <span itemprop="name">SQL-Server知识点2</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-20T18:53:20+08:00" content="2018-12-20">
-          12-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/19/SQL-Server知识点/" itemprop="url">
-              
-                <span itemprop="name">SQL Server知识点</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-19T09:25:15+08:00" content="2018-12-19">
-          12-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/17/JavaWebCoreNote-JavaScript&jQuery/" itemprop="url">
-              
-                <span itemprop="name">JavaWebCoreNote--           JavaScript&jQuery</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-17T08:32:22+08:00" content="2018-12-17">
-          12-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/16/JavaWebCoreNote-HTML-CSS/" itemprop="url">
-              
-                <span itemprop="name">JavaWebCoreNote--HTML&CSS</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-16T21:26:46+08:00" content="2018-12-16">
-          12-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/16/JavaWebCoreNote/" itemprop="url">
-              
-                <span itemprop="name">JavaWebCoreNote</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-16T21:14:07+08:00" content="2018-12-16">
-          12-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/16/window常用命令/" itemprop="url">
-              
-                <span itemprop="name">window常用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-16T20:33:38+08:00" content="2018-12-16">
-          12-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>鼓励一下😜</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="https://s1.ax1x.com/2018/12/15/FaJbVg.png" alt="Wangzhuang 比特币">
+        <p>比特币</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/设计模式之模板模式/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>设计模式之模板模式</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/11/设计模式之单例模式/" rel="next" title="设计模式之单例模式">
+                <i class="fa fa-chevron-left"></i> 设计模式之单例模式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2018/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2018/page/3/">3</a><a class="extend next" rel="next" href="/archives/2018/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -703,6 +924,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -723,8 +951,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -834,6 +1071,22 @@
 			
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之模板模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式之模板模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的实现要素"><span class="nav-number">1.0.1.</span> <span class="nav-text">模板方法模式的实现要素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#集成共性处理异点"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text"> 集成共性处理异点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的适用场景"><span class="nav-number">1.0.2.</span> <span class="nav-text">模板方法模式的适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的优点"><span class="nav-number">1.0.3.</span> <span class="nav-text">模板方法模式的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的缺点"><span class="nav-number">1.0.4.</span> <span class="nav-text">模板方法模式的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">1.0.5.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生活中的模板"><span class="nav-number">1.0.6.</span> <span class="nav-text">生活中的模板</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">1.1.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象基类，为所有子类提供一个算法框架"><span class="nav-number">1.1.1.</span> <span class="nav-text">抽象基类，为所有子类提供一个算法框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类咖啡制作的具体实现"><span class="nav-number">1.1.2.</span> <span class="nav-text">具体子类咖啡制作的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类茶的具体实现"><span class="nav-number">1.1.3.</span> <span class="nav-text">具体子类茶的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于基类和其子类创建相应的对象并实现指定的功能"><span class="nav-number">1.1.4.</span> <span class="nav-text">基于基类和其子类创建相应的对象并实现指定的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的实现要素-1"><span class="nav-number">1.1.5.</span> <span class="nav-text">模板方法模式的实现要素</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体分析"><span class="nav-number">2.</span> <span class="nav-text">具体分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象基类"><span class="nav-number">2.0.1.</span> <span class="nav-text">抽象基类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-抽象方法"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">(2) 抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-可选的钩子"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">(3) 可选的钩子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类"><span class="nav-number">2.0.2.</span> <span class="nav-text">具体子类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）实现基类中的抽象方法"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">（1）实现基类中的抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）覆盖钩子（Hook-方法"><span class="nav-number">2.0.2.2.</span> <span class="nav-text">（2）覆盖钩子（Hook)方法</span></a></li></ol></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1012,6 +1265,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
