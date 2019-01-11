@@ -101,7 +101,7 @@
 <meta property="og:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法        * 抽象基类     * 具体子类   #####   集成共性处理异点  ### 模板方法模式的适用场景  1. 算法或操作遵循相似的逻辑 2. 重构时（把相同的代码抽取到父类中）">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX5UhQ.png">
-<meta property="og:updated_time" content="2019-01-11T12:02:48.801Z">
+<meta property="og:updated_time" content="2019-01-11T12:08:20.188Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之模板模式">
 <meta name="twitter:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法        * 抽象基类     * 具体子类   #####   集成共性处理异点  ### 模板方法模式的适用场景  1. 算法或操作遵循相似的逻辑 2. 重构时（把相同的代码抽取到父类中）">
@@ -375,7 +375,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T20:02:48+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T20:08:20+08:00">
                 2019-01-11
               </time>
             
@@ -691,9 +691,6 @@ public class RefreshBeverageTest {
 
 
 
-<hr>
-
-
 
 
 <h1 id="具体分析"><a href="#具体分析" class="headerlink" title="具体分析"></a>具体分析</h1><h2 id="抽象基类"><a href="#抽象基类" class="headerlink" title="抽象基类"></a>抽象基类</h2><p>####（1）基本方法</p>
@@ -737,9 +734,9 @@ protected boolean isCustomerWantsCondiments(){
 </pre>
 
 <p><a href="https://imgchr.com/i/FX5UhQ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX5UhQ.png" alt="FX5UhQ.png"></a></p>
-<h3 id="具体子类"><a href="#具体子类" class="headerlink" title="具体子类"></a>具体子类</h3><h4 id="（1）实现基类中的抽象方法"><a href="#（1）实现基类中的抽象方法" class="headerlink" title="（1）实现基类中的抽象方法"></a>（1）实现基类中的抽象方法</h4><ul>
-<li>eg：咖啡 —&gt; 冲泡</li>
-</ul>
+<h3 id="具体子类"><a href="#具体子类" class="headerlink" title="具体子类"></a>具体子类</h3><h4 id="（1）实现基类中的抽象方法"><a href="#（1）实现基类中的抽象方法" class="headerlink" title="（1）实现基类中的抽象方法"></a>（1）实现基类中的抽象方法</h4><blockquote>
+<p><strong>eg：咖啡 —&gt; 冲泡</strong></p>
+</blockquote>
 <pre>
 
 /*
@@ -759,26 +756,34 @@ public class Coffee extends RefreshBeverage{
 
 </pre>
 
-<ul>
-<li>eg: 茶 —&gt; 浸泡</li>
-</ul>
-<p></p>
-<p>/*</p>
-<ul>
-<li>具体子类， 提供了制备茶的具体实现<br>*/</li>
-</ul>
-<p>public class Tea extends RefreshBeverage{</p>
-<pre><code>@Override
-protected void brew(){
-    System.out.println(&quot;用80度的热水浸泡茶叶5分钟&quot;);
+
+
+<blockquote>
+<p><strong>eg: 茶 —&gt; 浸泡</strong></p>
+</blockquote>
+<pre>
+
+/*
+* 具体子类， 提供了制备茶的具体实现
+*/
+
+public class Tea extends RefreshBeverage{
+
+    @Override
+    protected void brew(){
+        System.out.println("用80度的热水浸泡茶叶5分钟");
+    }
+
+    @Override
+    protected void addCondiments(){
+        System.out.println("加入柠檬🍋");
+    }
 }
 
-@Override
-protected void addCondiments(){
-    System.out.println(&quot;加入柠檬🍋&quot;);
-}
-</code></pre><p>}</p>
-<p></p>
+</pre>
+
+
+
 <h4 id="（2）覆盖钩子（Hook-方法"><a href="#（2）覆盖钩子（Hook-方法" class="headerlink" title="（2）覆盖钩子（Hook)方法"></a>（2）覆盖钩子（Hook)方法</h4><blockquote>
 <p>茶（不加调料）</p>
 </blockquote>
