@@ -92,20 +92,25 @@
 
 
 
-<meta name="description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法        * 抽象基类     * 具体子类   #####   集成共性处理异点  ### 模板方法模式的适用场景  1. 算法或操作遵循相似的逻辑 2. 重构时（把相同的代码抽取到父类中）">
+<meta name="description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法 抽象基类 具体子类      集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点">
 <meta name="keywords" content="设计模式之模板模式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="设计模式之模板模式">
 <meta property="og:url" content="https://www.openmind.ink/2019/01/11/设计模式之模板模式/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法        * 抽象基类     * 具体子类   #####   集成共性处理异点  ### 模板方法模式的适用场景  1. 算法或操作遵循相似的逻辑 2. 重构时（把相同的代码抽取到父类中）">
+<meta property="og:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法 抽象基类 具体子类      集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4xTU.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4OO0.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4jmV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4Lyq.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX4qln.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/01/11/FX5UhQ.png">
-<meta property="og:updated_time" content="2019-01-11T14:00:46.239Z">
+<meta property="og:updated_time" content="2019-01-11T14:03:10.736Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="设计模式之模板模式">
-<meta name="twitter:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法        * 抽象基类     * 具体子类   #####   集成共性处理异点  ### 模板方法模式的适用场景  1. 算法或操作遵循相似的逻辑 2. 重构时（把相同的代码抽取到父类中）">
-<meta name="twitter:image" content="https://s2.ax1x.com/2019/01/11/FX5UhQ.png">
+<meta name="twitter:description" content="设计模式之模板模式模板方法模式的实现要素  准备一个抽象类 将部分逻辑以具体方法的形式实现 声明一些抽象方法交由子类实现剩余逻辑 用钩子方法给予子类更大的灵活性 最后将方法汇总构成一个不可改变的模板方法 抽象基类 具体子类      集成共性处理异点模板方法模式的适用场景 算法或操作遵循相似的逻辑 重构时（把相同的代码抽取到父类中） 重要、复杂的算法，核心算法设计为模板算法  模板方法模式的优点">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/01/11/FX4xTU.png">
 
 
 
@@ -375,7 +380,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T22:00:46+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T22:03:10+08:00">
                 2019-01-11
               </time>
             
@@ -440,7 +445,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  1.2k
                 </span>
               
 
@@ -456,7 +461,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5
+                  4
                 </span>
               
             </div>
@@ -483,60 +488,39 @@
 <li><strong>将部分逻辑以具体方法的形式实现</strong></li>
 <li>声明一些<strong>抽象方法交由子类实现剩余逻辑</strong></li>
 <li>用钩子方法给予子类更大的灵活性</li>
-<li>最后将方法汇总构成一个不可改变的模板方法</li>
+<li>最后将方法汇总构成一个不可改变的模板方法<ul>
+<li>抽象基类</li>
+<li>具体子类</li>
+</ul>
+</li>
 </ul>
 </blockquote>
-<pre>
-    * 抽象基类
-    * 具体子类
-
-</pre>
-#####  <font color="red" size="2"> 集成共性处理异点</font>
-
-### 模板方法模式的适用场景
-
-1. 算法或操作遵循相似的逻辑
-2. 重构时（把相同的代码抽取到父类中）
-3. 重要、复杂的算法，核心算法设计为模板算法
-
-### 模板方法模式的优点
-
-* 封装性好
-* 复用性好
-* 屏蔽细节
-* 便于维护
-
-### 模板方法模式的缺点
-
-* 继承性
-
-### 知识点
-
-* 什么是模板方法模式
-* 如何实现模板方法模式
-* 模板方法模式的特点
-* 模板方法模式在项目中的应用
-
-### 生活中的模板
-
-
-[![FX4xTU.png](https://s2.ax1x.com/2019/01/11/FX4xTU.png)](https://imgchr.com/i/FX4xTU)
-
-[![FX4OO0.png](https://s2.ax1x.com/2019/01/11/FX4OO0.png)](https://imgchr.com/i/FX4OO0)
-
-[![FX4jmV.png](https://s2.ax1x.com/2019/01/11/FX4jmV.png)](https://imgchr.com/i/FX4jmV)
-
-[![FX4Lyq.png](https://s2.ax1x.com/2019/01/11/FX4Lyq.png)](https://imgchr.com/i/FX4Lyq)
-
-[![FX4qln.png](https://s2.ax1x.com/2019/01/11/FX4qln.png)](https://imgchr.com/i/FX4qln)
-
-
-## 实例
-
-### 抽象基类，为所有子类提供一个算法框架
-
-
-<pre>
+<h5 id="集成共性处理异点"><a href="#集成共性处理异点" class="headerlink" title=" 集成共性处理异点"></a><font color="red" size="2"> 集成共性处理异点</font></h5><h3 id="模板方法模式的适用场景"><a href="#模板方法模式的适用场景" class="headerlink" title="模板方法模式的适用场景"></a>模板方法模式的适用场景</h3><ol>
+<li>算法或操作遵循相似的逻辑</li>
+<li>重构时（把相同的代码抽取到父类中）</li>
+<li>重要、复杂的算法，核心算法设计为模板算法</li>
+</ol>
+<h3 id="模板方法模式的优点"><a href="#模板方法模式的优点" class="headerlink" title="模板方法模式的优点"></a>模板方法模式的优点</h3><ul>
+<li>封装性好</li>
+<li>复用性好</li>
+<li>屏蔽细节</li>
+<li>便于维护</li>
+</ul>
+<h3 id="模板方法模式的缺点"><a href="#模板方法模式的缺点" class="headerlink" title="模板方法模式的缺点"></a>模板方法模式的缺点</h3><ul>
+<li>继承性</li>
+</ul>
+<h3 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h3><ul>
+<li>什么是模板方法模式</li>
+<li>如何实现模板方法模式</li>
+<li>模板方法模式的特点</li>
+<li>模板方法模式在项目中的应用</li>
+</ul>
+<h3 id="生活中的模板"><a href="#生活中的模板" class="headerlink" title="生活中的模板"></a>生活中的模板</h3><p><a href="https://imgchr.com/i/FX4xTU" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4xTU.png" alt="FX4xTU.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4OO0" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4OO0.png" alt="FX4OO0.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4jmV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4jmV.png" alt="FX4jmV.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4Lyq" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4Lyq.png" alt="FX4Lyq.png"></a></p>
+<p><a href="https://imgchr.com/i/FX4qln" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/01/11/FX4qln.png" alt="FX4qln.png"></a></p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="抽象基类，为所有子类提供一个算法框架"><a href="#抽象基类，为所有子类提供一个算法框架" class="headerlink" title="抽象基类，为所有子类提供一个算法框架"></a>抽象基类，为所有子类提供一个算法框架</h3><pre>
 
 package com.imooc.template;
 
@@ -1108,7 +1092,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之模板模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式之模板模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的实现要素"><span class="nav-number">1.0.1.</span> <span class="nav-text">模板方法模式的实现要素</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类咖啡制作的具体实现"><span class="nav-number">1.0.2.</span> <span class="nav-text">具体子类咖啡制作的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类茶的具体实现"><span class="nav-number">1.0.3.</span> <span class="nav-text">具体子类茶的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于基类和其子类创建相应的对象并实现指定的功能"><span class="nav-number">1.0.4.</span> <span class="nav-text">基于基类和其子类创建相应的对象并实现指定的功能</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#具体分析"><span class="nav-number">2.</span> <span class="nav-text">具体分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象基类"><span class="nav-number">2.1.</span> <span class="nav-text">抽象基类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-抽象方法"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">(2) 抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-可选的钩子"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">(3) 可选的钩子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类"><span class="nav-number">2.1.1.</span> <span class="nav-text">具体子类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）实现基类中的抽象方法"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">（1）实现基类中的抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）覆盖钩子（Hook-方法"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">（2）覆盖钩子（Hook)方法</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式之模板模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式之模板模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的实现要素"><span class="nav-number">1.0.1.</span> <span class="nav-text">模板方法模式的实现要素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#集成共性处理异点"><span class="nav-number">1.0.1.0.1.</span> <span class="nav-text"> 集成共性处理异点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的适用场景"><span class="nav-number">1.0.2.</span> <span class="nav-text">模板方法模式的适用场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的优点"><span class="nav-number">1.0.3.</span> <span class="nav-text">模板方法模式的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板方法模式的缺点"><span class="nav-number">1.0.4.</span> <span class="nav-text">模板方法模式的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点"><span class="nav-number">1.0.5.</span> <span class="nav-text">知识点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生活中的模板"><span class="nav-number">1.0.6.</span> <span class="nav-text">生活中的模板</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实例"><span class="nav-number">1.1.</span> <span class="nav-text">实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象基类，为所有子类提供一个算法框架"><span class="nav-number">1.1.1.</span> <span class="nav-text">抽象基类，为所有子类提供一个算法框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类咖啡制作的具体实现"><span class="nav-number">1.1.2.</span> <span class="nav-text">具体子类咖啡制作的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类茶的具体实现"><span class="nav-number">1.1.3.</span> <span class="nav-text">具体子类茶的具体实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于基类和其子类创建相应的对象并实现指定的功能"><span class="nav-number">1.1.4.</span> <span class="nav-text">基于基类和其子类创建相应的对象并实现指定的功能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体分析"><span class="nav-number">2.</span> <span class="nav-text">具体分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象基类"><span class="nav-number">2.1.</span> <span class="nav-text">抽象基类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-抽象方法"><span class="nav-number">2.1.0.1.</span> <span class="nav-text">(2) 抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-可选的钩子"><span class="nav-number">2.1.0.2.</span> <span class="nav-text">(3) 可选的钩子</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体子类"><span class="nav-number">2.1.1.</span> <span class="nav-text">具体子类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）实现基类中的抽象方法"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">（1）实现基类中的抽象方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）覆盖钩子（Hook-方法"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">（2）覆盖钩子（Hook)方法</span></a></li></ol></li></ol></li></div>
             
 
           </div>
