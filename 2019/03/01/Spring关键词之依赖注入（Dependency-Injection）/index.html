@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-02T04:05:15.449Z">
+<meta property="og:updated_time" content="2019-03-02T04:20:23.090Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring关键词之依赖注入（Dependency Injection)">
 <meta name="twitter:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
@@ -373,7 +373,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T12:05:15+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T12:20:23+08:00">
                 2019-03-02
               </time>
             
@@ -653,9 +653,10 @@ public class User {
 <h3 id="Spring-Inner-Bean-内部嵌套的-Bean"><a href="#Spring-Inner-Bean-内部嵌套的-Bean" class="headerlink" title="Spring Inner Bean - 内部嵌套的 Bean"></a>Spring Inner Bean - 内部嵌套的 Bean</h3><blockquote>
 <p>一个 Bean 中嵌套了另一个 Bean ，即所谓的内部嵌套 Bean 的配置方法，内部嵌套的 Bean 支持属性（ property ）注入和构造函数（ constructor - arg ）注入。</p>
 </blockquote>
-<ul>
-<li>setter方法注入</li>
-<li>构造方法注入</li>
+<h4 id="这里的Bean装配方式总的来说都是XML装配还有其他的两种-注解装配和自动装配"><a href="#这里的Bean装配方式总的来说都是XML装配还有其他的两种-注解装配和自动装配" class="headerlink" title="这里的Bean装配方式总的来说都是XML装配还有其他的两种(注解装配和自动装配)"></a>这里的Bean装配方式总的来说都是XML装配还有其他的两种(<font color="SlateGray">注解装配和自动装配</font>)</h4><ul>
+<li><font color="DeepSkyBlue">setter方法</font>注入</li>
+<li><font color="DeepSkyBlue">构造方法</font>注入</li>
+<li><font color="DeepSkyBlue">ref属性</font>注入</li>
 </ul>
 <h4 id="实例-CustomerBean中被注入PersonBean"><a href="#实例-CustomerBean中被注入PersonBean" class="headerlink" title="实例 CustomerBean中被注入PersonBean"></a>实例 CustomerBean中被注入PersonBean</h4><blockquote>
 <p>即Customer类依赖于Person</p>
@@ -778,7 +779,7 @@ public String toString() {
 &lt;/bean&gt;
 </code></pre><p></p>
 <ul>
-<li>③ 通过ref属性引用来构建两者的关系即将<strong>一个对象作为引用</strong>被<strong>注入到另一个对象之中（两者独立创建通过</strong>ref**进行关联）</li>
+<li>③ 通过ref属性引用来构建两者的关系即将<strong>一个对象作为引用</strong>被<strong>注入到另一个对象之中（两者独立创建通过</strong> <strong>ref</strong> 进行关联）</li>
 </ul>
 <p><code></code></p>
 <pre><code>////////////////////////////////////
@@ -1077,7 +1078,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><span class="nav-number">1.</span> <span class="nav-text"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的方法"><span class="nav-number"></span> <span class="nav-text">传统的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#耦合的两面性（two-headed-beast）"><span class="nav-number">0.1.</span> <span class="nav-text">耦合的两面性（two-headed beast）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架之后"><span class="nav-number"></span> <span class="nav-text">Spring框架之后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DI的理解关键："><span class="nav-number"></span> <span class="nav-text">DI的理解关键：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。"><span class="nav-number"></span> <span class="nav-text">理解IoC&amp;DI ===》 同一个概念的不同角度描述。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中给Bean属性注入value"><span class="nav-number"></span> <span class="nav-text">Spring中给Bean属性注入value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性setter方法注入"><span class="nav-number"></span> <span class="nav-text">属性setter方法注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Inner-Bean-内部嵌套的-Bean"><span class="nav-number"></span> <span class="nav-text">Spring Inner Bean - 内部嵌套的 Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例-CustomerBean中被注入PersonBean"><span class="nav-number">1.</span> <span class="nav-text">实例 CustomerBean中被注入PersonBean</span></a></li></ol></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><span class="nav-number">1.</span> <span class="nav-text"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的方法"><span class="nav-number"></span> <span class="nav-text">传统的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#耦合的两面性（two-headed-beast）"><span class="nav-number">0.1.</span> <span class="nav-text">耦合的两面性（two-headed beast）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架之后"><span class="nav-number"></span> <span class="nav-text">Spring框架之后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DI的理解关键："><span class="nav-number"></span> <span class="nav-text">DI的理解关键：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。"><span class="nav-number"></span> <span class="nav-text">理解IoC&amp;DI ===》 同一个概念的不同角度描述。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中给Bean属性注入value"><span class="nav-number"></span> <span class="nav-text">Spring中给Bean属性注入value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性setter方法注入"><span class="nav-number"></span> <span class="nav-text">属性setter方法注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Inner-Bean-内部嵌套的-Bean"><span class="nav-number"></span> <span class="nav-text">Spring Inner Bean - 内部嵌套的 Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#这里的Bean装配方式总的来说都是XML装配还有其他的两种-注解装配和自动装配"><span class="nav-number">1.</span> <span class="nav-text">这里的Bean装配方式总的来说都是XML装配还有其他的两种(注解装配和自动装配)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例-CustomerBean中被注入PersonBean"><span class="nav-number">2.</span> <span class="nav-text">实例 CustomerBean中被注入PersonBean</span></a></li></ol></li></ol></li></div>
             
 
           </div>
