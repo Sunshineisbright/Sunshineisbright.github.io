@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-01T15:33:35.369Z">
+<meta property="og:updated_time" content="2019-03-02T03:43:29.661Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="依赖注入（Dependency Injection）之小结">
 <meta name="twitter:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
@@ -373,8 +373,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-01T23:33:35+08:00">
-                2019-03-01
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T11:43:29+08:00">
+                2019-03-02
               </time>
             
           </span>
@@ -438,7 +438,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  299
+                  1.6k
                 </span>
               
 
@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  7
                 </span>
               
             </div>
@@ -503,10 +503,298 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="Spring框架之后"><a href="#Spring框架之后" class="headerlink" title="Spring框架之后"></a>Spring框架之后</h3><blockquote>
+<h2 id="Spring框架之后"><a href="#Spring框架之后" class="headerlink" title="Spring框架之后"></a>Spring框架之后</h2><blockquote>
 <p>对象的实例不再由调用者创建，而是由Spring容器创建，Spring容器负责控制程序之间的关系， </p>
 </blockquote>
-<h3 id="DI的理解关键："><a href="#DI的理解关键：" class="headerlink" title="DI的理解关键："></a>DI的理解关键：</h3>
+<h3 id="DI的理解关键："><a href="#DI的理解关键：" class="headerlink" title="DI的理解关键："></a>DI的理解关键：</h3><blockquote>
+<p>“<strong>谁依赖谁，为什么需要依赖</strong>“<br><br>“<strong>谁注入谁，为什么需要注入</strong>“<br></p>
+</blockquote>
+<ul>
+<li><strong>谁依赖谁</strong></li>
+</ul>
+<blockquote>
+<p>即某个容器<strong>管理的对象依赖于IoC容器</strong></p>
+</blockquote>
+<ul>
+<li><strong>为什么需要依赖</strong></li>
+</ul>
+<blockquote>
+<p>即某个容器管理的对象需要IoC容器来提供对象所需要的外部资源</p>
+</blockquote>
+<ul>
+<li><strong>谁注入了谁</strong></li>
+</ul>
+<blockquote>
+<p>IoC容器注入依赖对象的对象（即某个容器管理的对象）</p>
+</blockquote>
+<ul>
+<li><strong>注入了什么</strong></li>
+</ul>
+<blockquote>
+<p>注入了某个对象所需要的外部资源（eg：对象、资源、常量数据）</p>
+</blockquote>
+<h3 id="理解IoC-amp-DI-》-同一个概念的不同角度描述。"><a href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。" class="headerlink" title="理解IoC&amp;DI ===》 同一个概念的不同角度描述。"></a>理解IoC&amp;DI ===》 同一个概念的不同角度描述。</h3><ul>
+<li><strong>IoC：对象的创建交由外部容器完成。</strong></li>
+<li><strong>DI： 实现对象之间的依赖关系。</strong></li>
+</ul>
+<h2 id="Spring中给Bean属性注入value"><a href="#Spring中给Bean属性注入value" class="headerlink" title="Spring中给Bean属性注入value"></a>Spring中给<font color="red">Bean属性注入value</font></h2><p><strong>一般三种方法</strong></p>
+<ol>
+<li>属性<font color="blue">setter</font>方法注入</li>
+<li>构造方法<font color="blue">constructor</font>注入</li>
+<li><font color="blue">p schema</font>方法</li>
+</ol>
+<h3 id="属性setter方法注入"><a href="#属性setter方法注入" class="headerlink" title="属性setter方法注入"></a>属性setter方法注入</h3><blockquote>
+<p>☞ 使用设值注入<br>条件</p>
+<blockquote>
+<ol>
+<li>提供默认空参构造方法</li>
+<li>为所有属性提供setter方法</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><blockquote>
+<p>POJO类</p>
+</blockquote>
+<pre>
+
+public class User {
+
+/**
+ *  1. 使用构造注入
+ *  1.1 提供带所有参数的有参构造方法
+ * */
+    private String userName;
+    private Integer password;
+    private List<string> list;
+
+    public User(String userName, Integer password, List<string> list){
+        super();
+        this.userName = userName;
+        this.password = password;
+        this.list = list;
+    }
+
+
+    /**
+     * 2. 使用设值注入
+     * 2.1 提供默认空参构造方法
+     * 2.2 为所有属性提供setter方法
+     * */
+
+    public User(){
+
+    }
+
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+    public void setPassword(Integer password){
+        this.password = password;
+    }
+    public void setList(List<string> list){
+        this.list = list;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", password=" + password +
+                ", list=" + list +
+                '}';
+    }
+}
+
+</string></string></string></pre>
+
+<blockquote>
+<p>配置文件</p>
+</blockquote>
+<ul>
+<li>① 使用设值setter注入方式装配User实例</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user2&quot; class=&quot;com.itheima.assemble.U
+    &lt;property name=&quot;userName&quot; value=&quot;张三&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;632554&quot;&gt;&lt;/property&gt;
+    &lt;!--
+        注入list集合
+    --&gt;
+    &lt;property name=&quot;list&quot;&gt;
+        &lt;list&gt;
+            &lt;value&gt;&quot;setListValue1&quot;&lt;/value&gt;
+            &lt;value&gt;&quot;setListValue2&quot;&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>② 使用构造方法constructor注入方式装配User实例</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user1&quot; class=&quot;com.itheima.assemble.User&quot;&gt;
+    &lt;constructor-arg index=&quot;0&quot; type=&quot;java.lang.String&quot; value=&quot;Tom&quot;/&gt;
+    &lt;constructor-arg index=&quot;1&quot; type=&quot;java.lang.Integer&quot; value=&quot;123456&quot;/&gt;
+    &lt;constructor-arg index=&quot;2&quot;&gt;
+
+        &lt;list&gt;
+            &lt;value&gt;&quot;constructorValue1&quot;&lt;/value&gt;
+            &lt;value&gt;&quot;constructorValue2&quot;&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre><p> </p>
+<ul>
+<li>③ 使用p:schema命名空间注入（不推荐使用）</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user3&quot; class=&quot;com.itheima.assemble.User&quot; p:userName=&quot;W3c&quot; p:password=&quot;123&quot; p:list=&quot;test1&quot;/&gt;
+</code></pre><p></p>
+<h3 id="Spring-Inner-Bean-内部嵌套的-Bean"><a href="#Spring-Inner-Bean-内部嵌套的-Bean" class="headerlink" title="Spring Inner Bean - 内部嵌套的 Bean"></a>Spring Inner Bean - 内部嵌套的 Bean</h3><blockquote>
+<p>一个 Bean 中嵌套了另一个 Bean ，即所谓的内部嵌套 Bean 的配置方法，内部嵌套的 Bean 支持属性（ property ）注入和构造函数（ constructor - arg ）注入。</p>
+</blockquote>
+<ul>
+<li>setter方法注入</li>
+<li>构造方法注入</li>
+</ul>
+<h4 id="实例-CustomerBean中被注入PersonBean"><a href="#实例-CustomerBean中被注入PersonBean" class="headerlink" title="实例 CustomerBean中被注入PersonBean"></a>实例 CustomerBean中被注入PersonBean</h4><blockquote>
+<p>即Customer类依赖于Person</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p>POJO类</p>
+</blockquote>
+<ul>
+<li>Person.java</li>
+</ul>
+<p><code></code></p>
+<pre><code>public class Person {
+
+private String name;
+private String address;
+private int age;
+
+public String getName() {
+    return name;
+}
+
+public void setName(String name) {
+    this.name = name;
+}
+
+public String getAddress() {
+    return address;
+}
+
+public void setAddress(String address) {
+    this.address = address;
+}
+
+public int getAge() {
+    return age;
+}
+
+public void setAge(int age) {
+    this.age = age;
+}
+
+@Override
+public String toString() {
+    return &quot;Person{&quot; +
+            &quot;name=&apos;&quot; + name + &apos;\&apos;&apos; +
+            &quot;, address=&apos;&quot; + address + &apos;\&apos;&apos; +
+            &quot;, age=&quot; + age +
+            &apos;}&apos;;
+    }
+}    
+</code></pre><p></p>
+<ul>
+<li>Customer.java</li>
+</ul>
+<p><code></code></p>
+<pre><code>public class Customer {
+
+//==========构造方法注入==========
+private Person person;
+
+// 带参构造方法
+public Customer(Person person){
+    this.person = person;
+}
+
+//==========setter方法注入==========
+// 有带参构造方法一定要有默认构造方法
+public Customer(){}
+
+public void setPerson(Person person){
+    this.person = person;
+}
+
+@Override
+public String toString() {
+    return &quot;Customer{&quot; +
+            &quot;person=&quot; + person +
+            &apos;}&apos;;
+    }
+}
+</code></pre><p></p>
+<blockquote>
+<p>配置文件</p>
+</blockquote>
+<ul>
+<li>① 通过property属性即<strong>setter方法注入</strong>（<strong>要有一个无参构造器，两者的创建、关联融合在一起</strong>）<blockquote>
+<p>此方法步骤:<br></p>
+<ol>
+<li>在customerBean的创建同时实例化另一个personBean(需要在Customer中写入【private Person person; + person‘s setter】)<br></li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;!-- 第二种方法 在Customer的Bean中声明一个内部Bean--&gt;
+&lt;bean id=&quot;customerBean2&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+    &lt;property name=&quot;person&quot;&gt;
+        &lt;bean class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;wangzhuang&quot;/&gt;
+            &lt;property name=&quot;age&quot; value=&quot;20&quot;/&gt;
+            &lt;property name=&quot;address&quot; value=&quot;Nanjing&quot;/&gt;
+        &lt;/bean&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>② 通过有参构造器同样在被注入对象的内部通过<strong>构造器注入</strong>（<strong>两者的创建、关联融合在一起</strong>）</li>
+</ul>
+<p><code></code></p>
+<pre><code> &lt;!-- 第三种方法 通过Customer的构造函数中注入--&gt;
+&lt;bean id=&quot;customerBean3&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+    &lt;constructor-arg&gt;
+        &lt;bean class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;Erick&quot;/&gt;
+            &lt;property name=&quot;address&quot; value=&quot;jiangsu&quot;/&gt;
+            &lt;property name=&quot;age&quot; value=&quot;25&quot;/&gt;
+        &lt;/bean&gt;
+    &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>③ 通过ref属性引用来构建两者的关系即将<strong>一个对象作为引用**</strong>被<strong>注入到另一个对象之中（两者独立创建通过</strong>ref**进行关联）</li>
+</ul>
+<p><code></code></p>
+<pre><code>////////////////////////////////////
+&lt;bean id=&quot;customerBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot; p:person-ref=&quot;personBean&quot;/&gt;&lt;br/&gt;
+// 也可以改为&lt;br/&gt;
+&lt;bean id=&quot;customerBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+ &lt;property name=&quot;person&quot; ref=&quot;PersonBean&quot; /&gt;
+&lt;/bean&gt;
+///////////////////////////////////
+&lt;bean id=&quot;personBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+    &lt;property name=&quot;name&quot; value=&quot;shiyanlou&quot;/&gt;
+    &lt;property name=&quot;address&quot; value=&quot;chengdu&quot;/&gt;
+    &lt;property name=&quot;age&quot; value=&quot;25&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+
       
     </div>
     
@@ -779,7 +1067,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><span class="nav-number">1.</span> <span class="nav-text"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的方法"><span class="nav-number"></span> <span class="nav-text">传统的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#耦合的两面性（two-headed-beast）"><span class="nav-number">0.1.</span> <span class="nav-text">耦合的两面性（two-headed beast）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring框架之后"><span class="nav-number"></span> <span class="nav-text">Spring框架之后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DI的理解关键："><span class="nav-number"></span> <span class="nav-text">DI的理解关键：</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><span class="nav-number">1.</span> <span class="nav-text"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的方法"><span class="nav-number"></span> <span class="nav-text">传统的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#耦合的两面性（two-headed-beast）"><span class="nav-number">0.1.</span> <span class="nav-text">耦合的两面性（two-headed beast）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架之后"><span class="nav-number"></span> <span class="nav-text">Spring框架之后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DI的理解关键："><span class="nav-number"></span> <span class="nav-text">DI的理解关键：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。"><span class="nav-number"></span> <span class="nav-text">理解IoC&amp;DI ===》 同一个概念的不同角度描述。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中给Bean属性注入value"><span class="nav-number"></span> <span class="nav-text">Spring中给Bean属性注入value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性setter方法注入"><span class="nav-number"></span> <span class="nav-text">属性setter方法注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Inner-Bean-内部嵌套的-Bean"><span class="nav-number"></span> <span class="nav-text">Spring Inner Bean - 内部嵌套的 Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例-CustomerBean中被注入PersonBean"><span class="nav-number">1.</span> <span class="nav-text">实例 CustomerBean中被注入PersonBean</span></a></li></ol></li></ol></li></div>
             
 
           </div>
@@ -824,7 +1112,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共34.7k字</span>
+  <span class="post-count">博客全站共36k字</span>
 </div>
 
         
