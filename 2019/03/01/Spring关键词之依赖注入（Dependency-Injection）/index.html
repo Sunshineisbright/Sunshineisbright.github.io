@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="软件测试期末复习,">
+  <meta name="keywords" content="Dpendency Injection,">
 
 
 
@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="软件测试试题 面向对象软件测试的白盒测试不能不加改变地照搬传统软件的白盒测试准则 从测试阶段角度，测试结束的正确顺序： 单元测试 -&amp;gt; 集成测试 -&amp;gt; 系统测试 -&amp;gt; 确认测试     用于数据库恢复的重要文件是：日志文件 属于白盒测试方法：条件覆盖 有一组测试用例，它使被测程序中的每一个分支至少执行一次，它满足的覆盖标准是：判定覆盖  alpha测试需要用户代表参加是验收测试的">
-<meta name="keywords" content="软件测试期末复习">
+<meta name="description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
+<meta name="keywords" content="Dpendency Injection">
 <meta property="og:type" content="article">
-<meta property="og:title" content="软件测试基础知识点01">
-<meta property="og:url" content="https://www.openmind.ink/2018/12/22/软件测试/index.html">
+<meta property="og:title" content="Spring关键词之依赖注入（Dependency Injection)">
+<meta property="og:url" content="https://www.openmind.ink/2019/03/01/Spring关键词之依赖注入（Dependency-Injection）/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="软件测试试题 面向对象软件测试的白盒测试不能不加改变地照搬传统软件的白盒测试准则 从测试阶段角度，测试结束的正确顺序： 单元测试 -&amp;gt; 集成测试 -&amp;gt; 系统测试 -&amp;gt; 确认测试     用于数据库恢复的重要文件是：日志文件 属于白盒测试方法：条件覆盖 有一组测试用例，它使被测程序中的每一个分支至少执行一次，它满足的覆盖标准是：判定覆盖  alpha测试需要用户代表参加是验收测试的">
+<meta property="og:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-11T05:38:12.237Z">
+<meta property="og:updated_time" content="2019-03-02T04:05:15.449Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="软件测试基础知识点01">
-<meta name="twitter:description" content="软件测试试题 面向对象软件测试的白盒测试不能不加改变地照搬传统软件的白盒测试准则 从测试阶段角度，测试结束的正确顺序： 单元测试 -&amp;gt; 集成测试 -&amp;gt; 系统测试 -&amp;gt; 确认测试     用于数据库恢复的重要文件是：日志文件 属于白盒测试方法：条件覆盖 有一组测试用例，它使被测程序中的每一个分支至少执行一次，它满足的覆盖标准是：判定覆盖  alpha测试需要用户代表参加是验收测试的">
+<meta name="twitter:title" content="Spring关键词之依赖注入（Dependency Injection)">
+<meta name="twitter:description" content="依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中） 装配：创建应用组件之间协作的行为   任何一个有实际意义的应用都会由两个或者更多的类组成，这些类之间的相互协作来完成特定的业务逻辑。  传统的方法 每个对象负责管理与自己相互协作的对象（即它所依赖的对象）的引用。   坏处   模块之间高度耦合 难以测试的代码   耦合的两面性（two-headed">
 
 
 
@@ -133,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://www.openmind.ink/2018/12/22/软件测试/">
+  <link rel="canonical" href="https://www.openmind.ink/2019/03/01/Spring关键词之依赖注入（Dependency-Injection）/">
 
 
 
 
 
-  <title>软件测试基础知识点01 | Sunshineisbright</title>
+  <title>Spring关键词之依赖注入（Dependency Injection) | Sunshineisbright</title>
   
 
 
@@ -328,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/2018/12/22/软件测试/">
+    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/2019/03/01/Spring关键词之依赖注入（Dependency-Injection）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangzhuang">
@@ -345,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">软件测试基础知识点01</h1>
+          <h1 class="post-title" itemprop="name headline">Spring关键词之依赖注入（Dependency Injection)</h1>
         
 
         <div class="post-meta">
@@ -357,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T19:42:10+08:00">
-                2018-12-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-01T23:04:21+08:00">
+                2019-03-01
               </time>
             
 
@@ -373,8 +373,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-01-11T13:38:12+08:00">
-                2019-01-11
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T12:05:15+08:00">
+                2019-03-02
               </time>
             
           </span>
@@ -392,8 +392,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/软件测试期末复习/" itemprop="url" rel="index">
-                    <span itemprop="name">软件测试期末复习</span>
+                  <a href="/categories/Spring关键词/" itemprop="url" rel="index">
+                    <span itemprop="name">Spring关键词</span>
                   </a>
                 </span>
 
@@ -410,8 +410,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/22/软件测试/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/22/软件测试/" itemprop="commentCount"></span>
+                <a href="/2019/03/01/Spring关键词之依赖注入（Dependency-Injection）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/01/Spring关键词之依赖注入（Dependency-Injection）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -438,7 +438,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5.8k
+                  1.6k
                 </span>
               
 
@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  19
+                  7
                 </span>
               
             </div>
@@ -475,601 +475,325 @@
       
 
       
-        <h3 id="软件测试试题"><a href="#软件测试试题" class="headerlink" title="软件测试试题"></a>软件测试试题</h3><ul>
-<li>面向对象软件测试的白盒测试不能不加改变地照搬传统软件的白盒测试准则</li>
-<li>从测试阶段角度，测试结束的正确顺序：<ul>
-<li>单元测试 -&gt; 集成测试 -&gt; 系统测试 -&gt; 确认测试</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>用于数据库恢复的重要文件是：日志文件</li>
-<li>属于白盒测试方法：条件覆盖</li>
-<li><p>有一组测试用例，它使被测程序中的每一个分支至少执行一次，它满足的覆盖标准是：<strong>判定覆盖</strong></p>
-</li>
-<li><p><strong>alpha测试</strong>需要<strong>用户代表参加</strong>是<strong>验收测试</strong>的一种</p>
-</li>
-<li><p>属于动态分析的是：</p>
-<ul>
-<li>系统压力测试</li>
-<li>程序数据流分析</li>
-</ul>
-</li>
-<li><p>划分软件测试属于白盒测试还是黑盒测试的依据是：是否能看到被测原程序</p>
-</li>
-<li><p>从E-R模型向关系模型转换时，一个M:N联系转换为关系模式时，该关系模式的主键为：<strong>M端实体的码与N端实体的码的组合</strong>。</p>
-</li>
-</ul>
-<ul>
-<li>事务Transaction是一个：<strong>操作序列</strong></li>
-<li>层次模型不能直接表示： <strong>m:n关系</strong></li>
-</ul>
-<ul>
-<li>属于黑盒测试方法的<ul>
-<li>测试用例覆盖</li>
-<li>输入覆盖</li>
-<li>输出覆盖</li>
-</ul>
-</li>
-<li>SQL语言中，删除一个表的命令是DELETE ❌</li>
-<li>单元测试通常应该先进行“人工走查”，在以白盒为主，辅以黑盒法进行动态测试 ✔</li>
-<li>数据的逻辑独立性：模式改变，外模式和应用程序不变 ✔</li>
-<li>逻辑设计可以独立于数据库管理系统 ❌</li>
-<li><p>好的测试员不懈追求完美 ✔</p>
-</li>
-<li><p>数据库中的数据表可以有多个主键 ❌</p>
-</li>
-<li>实体完整性规则：关系中主键不允许有空格 ✔</li>
-<li>如果事务T获得了数据项Q上的排他锁，则T对Q只能读不能写。 ✔</li>
-<li>在SELECT语句中，可以将查询结果直接存放在一个新表中。 ✔</li>
-<li><p>数据库恢复的基础是利用转储的冗余数据。 ✔</p>
-</li>
-<li><p>测试后程序残存的错误数目中与该程序中已经发现的错误数目或检错率成正比。 ✔</p>
-</li>
-<li>代码评审是检查源代码是否达到模块设计的要求 ❌</li>
-<li>在数据库设计中，将E-R图转换成关系数据模型的过程属于<strong>逻辑设计阶段</strong> ✔</li>
-<li><p>E-R图就是数据库的逻辑模型 ❌</p>
-</li>
-<li><p>SELECT语句查询条件中“!=ALL”与运算符 <strong>not in</strong> 等价</p>
-</li>
-<li>在E-R模型中<ul>
-<li>菱形框：联系</li>
-<li>椭圆形：属性</li>
-<li>矩形：实体</li>
-</ul>
-</li>
-<li>数据库中的索引有两种类型：<ul>
-<li>聚集索引</li>
-<li>非聚集索引</li>
-</ul>
-</li>
-<li>数据库保护包括：<ul>
-<li>安全性保护</li>
-<li>完整性保护</li>
-<li>并发控制</li>
-<li>故障恢复</li>
-</ul>
-</li>
-<li>层次和网状数据库操作的处理单位是： <strong>记录</strong>。</li>
-<li>关系数据库数据操作的处理单位是：<strong>关系</strong></li>
-<li>当关系R和S自然连接时，会自动去掉重复的列 ✔</li>
-<li>在SELECT语句中，当使用order by子句时，一定要使用group by子句。 ❌❌❌</li>
-<li>层次模型不能直接表示 多对多关系。 ✔</li>
-<li>在数据库技术中，尚未提交的随后又被撤销的数据被称为冗余数据。 ❌</li>
-<li>相对于非关系模型，关系数据模型的缺点之一是：数据结构简单。  ❌</li>
-<li>软件测试主要有白盒测试、黑盒测试、灰盒测试、手工测试、自动化测试、静态测试等7种测试方法</li>
-<li>数据独立性<ul>
-<li>逻辑数据独立性</li>
-<li>物理数据独立性</li>
-</ul>
-</li>
-<li>数据库保护：<ul>
-<li>安全性保护</li>
-<li>完整性保护</li>
-<li>并发控制</li>
-<li>故障恢复</li>
-</ul>
-</li>
-<li>SQL语句，用于授权的命令是：<strong>grant</strong></li>
-<li>SQL语言分为：<strong>DML、DDL、DCL、DQL</strong></li>
-<li>从数据库管理系统的角度划分数据库的体系结构，可分为三层：<ul>
-<li>外模式</li>
-<li>模式</li>
-<li>内模式</li>
-</ul>
-</li>
-<li>软件验收测试：α测试、β测试、UAT测试</li>
-<li>二维表种的列和行在关系模型中分别称为：属性、元祖</li>
-</ul>
-<ul>
-<li>查询不仅可以重组表中的数据，还可以修改数据。 ❌</li>
-<li>触发器可以在程序中被调用执行 ❌</li>
-<li>Web网站测试需要考虑数据库测试 ✔</li>
-<li>没有可运行的程序，我无法进行测试工作 ❌</li>
-<li><p>相对于非关系模型，关系数据模型的缺点之一是数据结构简单 ❌</p>
-</li>
-<li><p><strong>验收测试</strong>是以用户为主导的测试</p>
-</li>
-<li><p>数据库后备副本的用途是：故障后的恢复</p>
-</li>
-<li><p>软件测试设计活动主要有：</p>
-<ul>
-<li>工作量分析</li>
-<li>确定并说明测试用例</li>
-<li>确立并结构化测试过程</li>
-<li>复审并评估测试覆盖</li>
-</ul>
-</li>
-<li>TCP/IP模型中传输层协议：TCP和UDP</li>
-<li><p>典型的瀑布模型的四个阶段：</p>
-<ul>
-<li>分析</li>
-<li>设计</li>
-<li>编码</li>
-<li>测试</li>
-</ul>
-</li>
-<li><p>Beta测试是验收测试的一种 ✔</p>
-</li>
-<li>测试需求一定要写的很细很细 ✔</li>
-<li>在数据库设计中，将E-R图转换关系数据模型的过程属于逻辑设计阶段 ✔</li>
-<li>测试用例一般由测试设计人员写的 ✔</li>
-<li><p>当两个关系没有公共属性时，其自然连接操作结果集为空集 ❌</p>
-</li>
-<li><p>验收测试的测试用例主要根据<strong>需求分析</strong>的结果来设计。</p>
-</li>
-<li>改变文件所有者的命令为：cat</li>
-<li>健壮性等价类测试的测试用例要求在有效等价类中取值。</li>
-<li>如果互联的局域网高层分别采用TCP/IP协议与SPX/IPX协议，可以选择的互联设备应该是：<strong>路由器</strong></li>
-<li>驱动模块模拟的是：主程序</li>
-<li>OSI模型中通过产生并检测电压来发送和接受数据信号的是<strong>物理层</strong></li>
-<li><p>OSI模型中用于端到端数据传输的是<strong>传输层</strong></p>
-</li>
-<li><p>数据库设计前只需要数据库分析设计人员 ❌</p>
-</li>
-<li>在表或视图上执行INSERT、UPDATE、DELETE语句可以激活触发器 ✔</li>
-<li>发现错误是软件测试的唯一目的。 ❌</li>
-<li>SQL语言中，删除一个表的命令是DELETE ❌</li>
-<li>软件测试等于程序测试 ❌</li>
-<li>满足1NF的关系消除了属性之间的传递依赖 ❌</li>
-<li>测试用例一般是由测试设计人员写的 √</li>
-<li>软件质量管理（QM）应有质量保证（QA）和质量控制（QC）组成属于QC的是：<ul>
-<li>测试</li>
-<li>跟踪</li>
-<li>监督</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>逻辑覆盖方法：</p>
-<ul>
-<li>组合覆盖</li>
-<li>判定覆盖</li>
-<li>条件覆盖<ul>
-<li>接口覆盖不属于逻辑覆盖的方法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>条件覆盖的目的是：使程序中的每个判定中每个条件的可能值至少满足一次。</p>
-</li>
-<li>一程序中所含有的路径数与程序的复杂度有着直接的关系</li>
-<li>动态黑盒子测试： 直接测试底层功能、过程、子程序和库</li>
-<li>在自低向上测试中，要编写称为<strong>测试驱动模块</strong>来测验正在测试的模块。</li>
-<li>准确度和精确度高不是自动化测试的优点</li>
-<li>软件测试主要分为：单元测试、集成测试、系统测试、验收测试等四类。</li>
-<li>软件缺陷产生的原因包括需求、设计、编码以及其他原因</li>
-<li>对面向过程的系统采用的集成策略自顶向下集成、自定向上集成两种。</li>
-<li>黑盒测试用例设计方法包括等价类划分、边界值分析、以及因果图，错误推测法等。</li>
-<li><p>软件开发模式：</p>
-<ul>
-<li>大棒模式</li>
-<li>边写边改模式</li>
-<li>流水模式</li>
-<li>螺旋模式</li>
-</ul>
-</li>
-<li><p>黑盒测试用例设计方法包括等价类划分法、边界值法以及因果图法、错误推测法等</p>
-</li>
-<li>测试过程中，测试计划用于描述测试的整体方案，缺陷报告描述依据测试案例找出的问题。</li>
-<li>传统的等价类划分测试的实现分为两步进行：<ul>
-<li>划分等价类表</li>
-<li>设计相应的测试用例</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>在兼容性测试中，向前兼容是指可以使用软件的以前版本，向后兼容是指可以使用软件的未来版本</li>
-<li>不需要修复软件缺陷的原因包括<ul>
-<li>没有时间</li>
-<li>不能算真正的软件缺陷</li>
-<li>风险太大</li>
-<li>不值得修复</li>
-</ul>
-</li>
-<li><p>动态测试的两个基本要素</p>
-<ul>
-<li>被测试程序</li>
-<li>测试数据</li>
-</ul>
-</li>
-<li><p>在软件底层进行的测试称为：单元测试</p>
-</li>
-<li>在确定黑盒测试策略时，优先选用的方法时：等价类划分</li>
-<li>测试人员主观认为不合理的地方不属于软件缺陷</li>
-<li>产品发布后修复软件缺陷比项目开发早期这样的费用要高：100倍或更高</li>
-<li>灰盒测试把黑盒测试和白盒测试的界限打乱了</li>
-</ul>
-<ul>
-<li>软件测试的目的是尽可能多的找出软件地缺陷。 ✔</li>
-<li>Beta测试是验收测试的一种。 ✔</li>
-<li>验收测试是由最终用户来实施的。 ❌</li>
-<li>项目立项前测试人员不需要提交任何工作 ✔</li>
-<li><p>单元测试能发现约80%的软件缺陷 ✔</p>
-</li>
-<li><p>代码审查是检查源代码是否达到模块设计的要求。 ❌</p>
-</li>
-<li>自低向上集成需要测试员编写驱动程序  ✔</li>
-<li>负载测试是验证要检验的系统的能力最高能达到什么程序。 ❌</li>
-<li>测试人员要坚持原则，缺陷未修复完坚决不予通过。 ❌</li>
-<li><p>代码评审员一般由测试员担任 ❌</p>
-</li>
-<li><p>根据IEEE对软件测试做出的定义，软件测试主要体现在评错和度量两个方面</p>
-</li>
-<li>单元测试的类型主要分为：<ul>
-<li>逻辑单元测试</li>
-<li>集成单元测试</li>
-<li>功能单元测试</li>
-</ul>
-</li>
-<li><p>软件缺陷产生的原因包括：</p>
-<ul>
-<li>软件说明书</li>
-<li>设计</li>
-<li>编写代码</li>
-</ul>
-</li>
-<li><p>测试过程中，测试计划用于描述测试的整体方案， 缺陷报告描述依据测试案例找出的问题。</p>
-</li>
-</ul>
-<ul>
-<li>传统的等价类划分测试的实现分两步进行：<ul>
-<li>划分等价类表</li>
-<li>设计相应的测试用例</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>白盒测试的条件覆盖标准强于判定覆盖 ❌</li>
-<li>软件是包括 程序、数据、相关文档的完整集合</li>
-<li>硬件与软件的最大区别:软件产品是逻辑产品，硬件产品是物质产品</li>
-<li>计算机软件和计算机硬件构成了完整的计算机系统</li>
-<li>软件的逻辑模型是形成于<strong>需求分析阶段</strong></li>
-<li>边界值分析法属于 <strong>黑盒测试方法</strong></li>
-<li>白盒和黑盒最大的不同在于：测试的任务不同</li>
-<li>使用白盒测试方法时，确定测试数据应根据程序的内部逻辑和指定覆盖标准</li>
-<li>单元测试一般以白盒法为主，测试的依据是程序内部逻辑规格说明</li>
-<li>编码阶段产生的错误由单元测试检查出来</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th style="text-align:right">关键词</th>
-<th style="text-align:right">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">单元测试</td>
-<td style="text-align:right">详细设计说明书，测试程序代码</td>
-</tr>
-<tr>
-<td style="text-align:right">集成测试</td>
-<td style="text-align:right">静态测试说明书，测试软件结构</td>
-</tr>
-<tr>
-<td style="text-align:right">确认测试</td>
-<td style="text-align:right">需求说明书为指导</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>代码复审属于静态测试（人工测试），不实际运行程序</li>
-<li>动态测试分为黑盒测试法，白盒测试法</li>
-<li>边界值分析法属于黑盒测试法</li>
-<li><p>逻辑覆盖属于白盒测试法</p>
-<ul>
-<li>语句覆盖</li>
-<li>分支覆盖</li>
-<li>条件覆盖</li>
-<li>条件组合覆盖</li>
-<li>路径覆盖</li>
-</ul>
-</li>
-<li><p>软件测试是按照特定的规程，发现软件错误的过程。</p>
-</li>
-<li>测试用例是专门为了发现软件错误而设计的一组或多组数据，它由测试输入和预期的输出数据组成</li>
-<li><p>测试过程的三个测试阶段的主要📕</p>
-<ul>
-<li>需求规格说明书</li>
-<li>概要设计</li>
-<li>详细设计</li>
-</ul>
-</li>
-<li><p>实际的逻辑覆盖测试一般以条件组合为主设计测试用例</p>
-</li>
-<li>发现错误能力最弱的覆盖准则是： 语句覆盖</li>
-<li>单元测试所使用的主要测试方法： 白盒测试</li>
-<li>对于软件缺陷的修复费用，在分析阶段的花费最小</li>
-<li>集成测试所使用的主要测试方法： 黑盒测试</li>
-<li>对于一些关键代码或新人写的代码，主要采取的<strong>会议审查</strong></li>
-<li>当程序有修改，必须要求保证原有功能正常的情况下，采用回归测试</li>
-<li>驱动程序，可以被模拟被测试的上级模块</li>
-<li>性能测试： 时间性能 和 空间性能</li>
-<li>验收测试：α测试和β测试</li>
-<li><p>自顶向下测试有两种组合策略：深度优先策略和广度优先策略</p>
-</li>
-<li><p>系统流程图用于可行性分析中的当前运行系统描述</p>
-</li>
-<li>系统流程图是描述物理系统的工具</li>
-<li>DFD工具在软件详细设计过程中不采用</li>
-<li>程序的三种基本结构的共同特点是：只有一个入口和一个出口</li>
-</ul>
-<hr>
-<h2 id="复习一"><a href="#复习一" class="headerlink" title="复习一"></a>复习一</h2><ol>
-<li>测试计划编写要六个要素：<pre>
- 1. what
- 2. why
- 3. when
- 4. where
- 5. who
- 6. how
-</pre></li>
-<li>测试用例由【<strong>输入数据</strong>】和预期的【<strong>输出数据</strong>】两部分组成</li>
-<li>性能测<strong>试主要包括两个方面【</strong>时间性能<strong>】和【</strong>空间性能】</li>
-<li>验收测试主要包括两方面内容【<strong>α测试</strong>】和【<strong>β测试</strong>】</li>
-<li>自顶向下测试有两种组合策略【<strong>深度优先策略</strong>】和【<strong>广度优先策略</strong>】</li>
-<li>测试计划的指定必须要注意：<ul>
-<li><strong>测试策略 测试范围</strong></li>
-<li><strong>测试方法 测试安排</strong></li>
-<li><strong>测试风险 测试管理</strong></li>
-</ul>
-</li>
-<li>制定测试计划的步骤：<ul>
-<li><strong>确定测试范围、确定测试策略、确定测试标准、确定测试架构、确定项目管理机制、预计测试工作量、测试计划评审</strong></li>
-</ul>
-</li>
-<li>软件测试用例主要由【<strong>测试输入数据</strong>】和【<strong>测试的预期结果</strong>】两部分组成</li>
-<li>设计测试用例相关的文档是：<ol>
-<li><strong>项目开发计划</strong></li>
-<li><strong>需求规格说明书</strong></li>
-<li><strong>软件设计说明书</strong></li>
-</ol>
-</li>
-<li>在设计测试用例时，<strong>等价类划分</strong>是用得最多的一种黑盒测试方法</li>
-<li>黑盒测试方法的优点<strong>可发现实现功能需求种的错误</strong></li>
-<li>软件测试项目周期：<ul>
-<li><strong>需求阶段</strong></li>
-<li><strong>测试计划</strong></li>
-<li><strong>阶段测试</strong></li>
-<li><strong>设计阶段测试</strong></li>
-<li><strong>执行阶段</strong></li>
-</ul>
-</li>
-<li>软件测试过程模型有：<ul>
-<li><strong>V、H、W、X</strong></li>
-</ul>
-</li>
-<li>负载测试属于：<strong>性能测试</strong></li>
-<li>Loadrunner主要用来做<strong>性能测试</strong></li>
-</ol>
-<ul>
-<li><strong>项目立项前测试人员不需要提交任何工作</strong></li>
-<li><strong>Beta测试是验收测试的一种</strong></li>
-<li><strong>验收测试是由最终用户来实施的</strong></li>
-<li><strong>不存在质量很高且可靠性很差的产品</strong></li>
-</ul>
-<h2 id="复习二"><a href="#复习二" class="headerlink" title="复习二"></a>复习二</h2><ul>
-<li>软件测试主要分为：<strong>单元测试、综合测试、确认测试、系统测试</strong>四类测试。</li>
-<li>软件缺陷产生的原因：<ul>
-<li>编写说明书</li>
-<li>设计</li>
-<li>编写代码</li>
-<li>等</li>
-</ul>
-</li>
-<li><p>黑盒测试用例设计方法：</p>
-<pre>
-  1.等价类划分 
-  2.边界值分析法
-  3.因果图法
-  4.错误推测法
-</pre>
-</li>
-<li><p>测试的过程：</p>
-<ul>
-<li><strong>测试计划</strong>用于描述测试的整体方案。</li>
-<li><strong>缺陷报告</strong>描述依据测试案例找出的问题。</li>
-</ul>
-</li>
-<li><p>传统的等价类划分测试的实现两步进行：</p>
-<ul>
-<li><strong>划分等价类表</strong></li>
-<li><strong>设计相应的测试用例</strong></li>
-</ul>
-</li>
-<li><p>在兼容性测试中</p>
-<ul>
-<li><strong>向前兼容</strong>指可以使用软件的以前版本</li>
-<li><strong>向后兼容</strong>指可以使用软件的未来版本</li>
-</ul>
-</li>
-<li><p>白盒测试：结果测试或逻辑驱动测试。</p>
-</li>
-<li>黑盒测试：功能测试或数据驱动测试或基于规格说明书的测试。</li>
-<li>动态测试的两个基本要素是：被测试程序、测试数据（测试用例）</li>
-</ul>
-<h2 id="🌫复习三"><a href="#🌫复习三" class="headerlink" title="🌫复习三"></a>🌫复习三</h2><ol>
-<li>软件测试按照测试层次可分为：<strong>单元测试</strong>、<strong>集成测试</strong>和<strong>系统测试</strong></li>
-<li>软件测试是采用<strong>测试用例</strong>执行软件的活动。</li>
-<li>软件测试是软件开发过程中的重要手段，是软件指令保证的重要手段。软件测试的主要任务：<ul>
-<li>预防软件发生错误</li>
-<li>发现程序错误</li>
-<li>提供诊断错误信息</li>
-</ul>
-</li>
-<li><p>导致软件缺陷的最大原因：</p>
-<blockquote>
-<p>   <strong>软件需求说明书</strong></p>
+        <h4 id="依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><a href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）" class="headerlink" title=" 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"></a><font color="red"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</font></h4><blockquote>
+<p>装配：创建应用组件之间协作的行为</p>
 </blockquote>
-</li>
-<li><p>测试用例是为达到最佳的测试效果或高效的揭露隐藏的错误而精心设计的少量测试数据，至少包括：</p>
-<ul>
-<li>测试输入</li>
-<li>执行条件</li>
-<li>预期的结束</li>
-</ul>
-</li>
-<li>软件缺陷修复的最高阶段为：<strong>发布阶段</strong></li>
-<li><strong>产品的异常情况</strong>是关于软件缺陷的描述</li>
-<li>N-S图，至少需要<strong>16</strong>个测试用例完成逻辑覆盖。</li>
-<li><strong>边界值分析法</strong>设计出的测试用例发现程序错误的方法最强。</li>
-<li><strong>功能测试</strong>是根据<strong>软件的规格说明</strong>来设计测试用例。</li>
-<li>在软件修改之后，再次运行一千为发现错误而执行程曾用过的测试用例，这种测试称之为：<strong>回归测试</strong></li>
-<li><strong>因果图法</strong>是根据输出对输入的依赖关系来设计测试用例的。</li>
-<li>测试工程师的工作范围包括<strong>检视代码、评审开发文档</strong>属于<strong>静态测试</strong></li>
-<li>对于一个含有n个变量的程序，采用基本边界值分析法测试程序会产生<strong>4n+1</strong>个测试用例。</li>
-<li>关于测试用例特征：<ol>
-<li>最有可能抓住错误的</li>
-<li>一组相似测试用例中最有效的</li>
-<li>既不是简单，也不是太复杂</li>
-</ol>
-</li>
-<li><strong>数据流测试</strong>是一种关注变量定义赋值点（语句）和引用或使用这些值得点（语句）的结构性测试，主要用作路径测试的真实姓检查。</li>
-</ol>
 <blockquote>
+<p>任何一个有<strong>实际意义的应用</strong>都会由两个或者更多的类组成，这些类之间的<strong>相互协作</strong>来完成特定的<strong>业务逻辑</strong>。</p>
+</blockquote>
+<h2 id="传统的方法"><a href="#传统的方法" class="headerlink" title="传统的方法"></a>传统的方法</h2><blockquote>
+<p>每个对象负责<strong>管理</strong>与自己<strong>相互协作</strong>的对象（即它所依赖的对象）的<strong>引用</strong>。 </p>
+</blockquote>
+<p><strong><em>坏处</em></strong></p>
 <blockquote>
-<blockquote>
-<hr>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>单元测试属于动态测试<br>验收测试是以最终用户为主的测试<br>没有发现错误的测试是没有价值的</p>
-<h5 id="软件测试工程师的一些工作。"><a href="#软件测试工程师的一些工作。" class="headerlink" title="软件测试工程师的一些工作。"></a>软件测试工程师的一些工作。</h5><ul>
-<li>监视代码、评审开发文档（静态测试方法）</li>
-<li>进行测试设计、写作测试文档（测试计划、测试方案、测试用例）</li>
-<li>执行测试、发现软件缺陷、提交缺陷报告、并确认缺陷最终得到了修正</li>
-</ul>
-<h1 id="复习四"><a href="#复习四" class="headerlink" title="复习四"></a>复习四</h1><ol>
-<li>软件测试的工作量占整个软件开发工作量的 <strong><font color="purple" size="5px">70%</font></strong></li>
-<li>软件的六大质量特性包括：<ul>
-<li><strong>功能性</strong></li>
-<li><strong>可靠性</strong></li>
-<li><strong>可用性</strong></li>
-<li><strong>效率</strong></li>
-<li><strong>可维护</strong></li>
-<li><strong>可移植</strong></li>
-</ul>
-</li>
-<li><p>等价类划分方法设计测试用例的描述：</p>
 <ol>
-<li>如果等价类中的一个测试用例能够捕获一个缺陷，则选择该等价类中的其他测试用例也能捕获该缺陷</li>
-<li>正确而地划分等价类，可以大大减少测试用例的数量，测试会更加准确有效<br>3.<strong> 等价类划分方法常常需要和边界值分析法结合使用</strong><br>× 若某个输入条件是一个布尔量，则无法确定有效等价类和无效等价类</li>
+<li>模块之间高度耦合</li>
+<li>难以测试的代码</li>
 </ol>
+</blockquote>
+<h5 id="耦合的两面性（two-headed-beast）"><a href="#耦合的两面性（two-headed-beast）" class="headerlink" title="耦合的两面性（two-headed beast）"></a><font color="blue">耦合的两面性（two-headed beast）</font></h5><ul>
+<li><p>紧耦合代码</p>
+<blockquote>
+<p>难以测试、难以复用、难以理解，将出现典型的“打地鼠”式的bug（修复一个bug，将出现一个或更多的bug）。</p>
+</blockquote>
 </li>
-<li><p>白盒测试侧重于<strong>程序结构</strong>。黑盒测试侧重于<strong>功能</strong></p>
+<li><p>无耦合代码</p>
+<blockquote>
+<p>完全没有耦合的代码什么也做不了。为了有实际意义的功能，不同的类必须以适当的方式进行交互。</p>
+</blockquote>
 </li>
-<li><p>功能（黑盒）测试的方法：</p>
+</ul>
+<h2 id="Spring框架之后"><a href="#Spring框架之后" class="headerlink" title="Spring框架之后"></a>Spring框架之后</h2><blockquote>
+<p>对象的实例不再由调用者创建，而是由Spring容器创建，Spring容器负责控制程序之间的关系， </p>
+</blockquote>
+<h3 id="DI的理解关键："><a href="#DI的理解关键：" class="headerlink" title="DI的理解关键："></a>DI的理解关键：</h3><blockquote>
+<p>“<strong>谁依赖谁，为什么需要依赖</strong>“<br><br>“<strong>谁注入谁，为什么需要注入</strong>“<br></p>
+</blockquote>
 <ul>
-<li><strong>等价类划分法</strong></li>
-<li><strong>边界值分析法</strong></li>
-<li><strong>基于决策表的测试</strong></li>
+<li><strong>谁依赖谁</strong></li>
 </ul>
-</li>
-<li>针对是否对<strong>无效数据</strong>进行测试，可以将等价类测试分为：<ol>
-<li><strong>标准（一般）等价类测试</strong></li>
-<li><strong>健壮等价类测试</strong></li>
-</ol>
-</li>
-<li>在设计测试用例时，【<strong>等价类划分</strong>】是用得最多的一种黑盒测试方法</li>
-<li>用等价类划分法设计8位长数字类型用户名登录操作的测试用例，可以分成4份。</li>
-<li>常用的黑盒测试方法有边值分析、等价类划分、错误猜测、因果图等。其中（边值分析）经常与其他方法结合起来使用。</li>
-<li>用边界值分析法，假定X为整数，10&lt;= x &lt;= 100,则X在测试中应该取<strong>（x=9,x=10,x=100,x=101）</strong>边界值</li>
-<li>在用白盒测试中的逻辑覆盖法设计测试用例时，有语句覆盖、分支覆盖、条件覆盖、条件/判定覆盖、条件组合覆盖和路径覆盖中，其中<br><strong>【路径覆盖】时最强的覆盖准则</strong></li>
-<li>实际的<strong>逻辑覆盖测试</strong>中，一般以<strong>条件组合覆盖</strong>为主设计测试用例</li>
-<li>使用<strong>白盒测试方法</strong>时，确定测试数据应根据【<strong>程序内部逻辑</strong>】和【<strong>指定的覆盖标准</strong>】</li>
-<li>逻辑覆盖方法：<ul>
-<li><strong>组合覆盖</strong></li>
-<li><strong>判定覆盖</strong></li>
-<li><strong>条件覆盖</strong><br><strong>接口覆盖</strong>不属于<strong>逻辑覆盖方法</strong></li>
-</ul>
-</li>
-<li>条件/判定覆盖是设计足够多的测试用例，使得程序中每个判定包含的每个条件的所有情况。（真/假）至少出现一次<br>，并且每个判定本身的判定结果（真/假）也至少出现一次。</li>
-<li>在进行单元测试时常用的方法：【<strong>采用白盒测试，辅之以黑盒测试</strong>。】</li>
-<li>单元测试的描述：<ul>
-<li><strong>单元测试</strong>的主要目的时<strong>针对编码过程中可能存在的各种错误</strong></li>
-<li>单元测试一般是由<strong>程序开发人员</strong>完成的</li>
-<li><strong>单元测试属于白盒测试的一种方法</strong></li>
-</ul>
-</li>
-</ol>
+<blockquote>
+<p>即某个容器<strong>管理的对象依赖于IoC容器</strong></p>
+</blockquote>
 <ul>
-<li>单元测试是一种不需要关注程序结构的测试 ❌</li>
+<li><strong>为什么需要依赖</strong></li>
 </ul>
-<ol start="18">
-<li><strong>单元测试</strong>将根据在【<strong>详细设计</strong>】阶段中产生的规格说明进行</li>
-<li><strong>单元测试</strong>的依据：【<strong>模块功能规格说明</strong>】</li>
-<li><p>软件测试是软件质量保证的重要手段，【单元测试】是软件测试的最基础环节<br>21.JUnit描述</p>
+<blockquote>
+<p>即某个容器管理的对象需要IoC容器来提供对象所需要的外部资源</p>
+</blockquote>
 <ul>
-<li><strong>JUnit是Java语言的单元测试框架</strong></li>
-<li><strong>JUnit推荐先测试后实现的方法</strong></li>
-<li><strong>setUp和tearDown函数只执行一次</strong><br>JUnit只能测试公共函数 ❌</li>
+<li><strong>谁注入了谁</strong></li>
 </ul>
-</li>
-<li><p>JUnit中，testXxxx()方法就是一个测试用例，测试方法是：public void testXxxx()</p>
-</li>
-<li><strong>划分软件测试属于白盒测试还是黑盒测试的依据</strong>是：【<strong>是否执行程序代码</strong>】</li>
-<li>正确：<ul>
-<li><strong>测试不能证明软件的正确性</strong></li>
-<li>测试员需要良好的沟通技巧</li>
-<li>QA与Testing属于一个层次的概念（❌）</li>
-<li>成功测试时发现了错误的测试</li>
-</ul>
-</li>
-<li>属于界面元素测试：<ul>
-<li><strong>窗口测试</strong></li>
-<li><strong>文字测试</strong></li>
-<li><strong>功能点测试</strong></li>
-</ul>
-</li>
-</ol>
+<blockquote>
+<p>IoC容器注入依赖对象的对象（即某个容器管理的对象）</p>
+</blockquote>
 <ul>
-<li><strong>不属于界面元素测试</strong>：<strong>鼠标测试</strong></li>
+<li><strong>注入了什么</strong></li>
 </ul>
-<ol start="26">
-<li>对Web网站进行的测试中属于功能测试的是：<strong>连接速度测试</strong></li>
-<li>使用软件测试工具的目的是：<strong>更好的协助开发工具</strong></li>
-<li>基本路径测试：<strong>白盒测试</strong></li>
-<li>通过<strong>疲劳强度测试</strong>，最容易发现【<strong>内存泄漏问题</strong>】</li>
-<li>在性能测试中关于数据准备：<ol>
-<li><strong>识别数据状态验证测试案例</strong></li>
-<li><strong>初始数据提供了基线是用来评估测试执行的结果</strong></li>
-<li><strong>业务数据提供负载压力背景</strong></li>
-<li><strong>脚本中真实模拟负载</strong></li>
-</ol>
-</li>
-<li>功能测试工具：<strong>WinRunner</strong></li>
-<li>测试工程师一般采用<strong>负载压力</strong>作为测试工具</li>
-<li>Web应用系统复杂压力测试中<strong>属于衡量业务执行效率的指标</strong>：<ul>
-<li><strong>并发请求数</strong></li>
-<li><strong>每秒访问量</strong></li>
-<li><strong>交易执行实践响应时间</strong></li>
+<blockquote>
+<p>注入了某个对象所需要的外部资源（eg：对象、资源、常量数据）</p>
+</blockquote>
+<h3 id="理解IoC-amp-DI-》-同一个概念的不同角度描述。"><a href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。" class="headerlink" title="理解IoC&amp;DI ===》 同一个概念的不同角度描述。"></a>理解IoC&amp;DI ===》 同一个概念的不同角度描述。</h3><ul>
+<li><strong>IoC：对象的创建交由外部容器完成。</strong></li>
+<li><strong>DI： 实现对象之间的依赖关系。</strong></li>
 </ul>
-</li>
+<h2 id="Spring中给Bean属性注入value"><a href="#Spring中给Bean属性注入value" class="headerlink" title="Spring中给Bean属性注入value"></a>Spring中给<font color="red">Bean属性注入value</font></h2><p><strong>一般三种方法</strong></p>
+<ol>
+<li>属性<font color="blue">setter</font>方法注入</li>
+<li>构造方法<font color="blue">constructor</font>注入</li>
+<li><font color="blue">p schema</font>方法</li>
 </ol>
+<h3 id="属性setter方法注入"><a href="#属性setter方法注入" class="headerlink" title="属性setter方法注入"></a>属性setter方法注入</h3><blockquote>
+<p>☞ 使用设值注入<br>条件</p>
+<blockquote>
+<ol>
+<li>提供默认空参构造方法</li>
+<li>为所有属性提供setter方法</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><blockquote>
+<p>POJO类</p>
+</blockquote>
+<pre>
+
+public class User {
+
+/**
+ *  1. 使用构造注入
+ *  1.1 提供带所有参数的有参构造方法
+ * */
+    private String userName;
+    private Integer password;
+    private List<string> list;
+
+    public User(String userName, Integer password, List<string> list){
+        super();
+        this.userName = userName;
+        this.password = password;
+        this.list = list;
+    }
+
+
+    /**
+     * 2. 使用设值注入
+     * 2.1 提供默认空参构造方法
+     * 2.2 为所有属性提供setter方法
+     * */
+
+    public User(){
+
+    }
+
+    public void setUserName(String userName){
+        this.userName = userName;
+    }
+    public void setPassword(Integer password){
+        this.password = password;
+    }
+    public void setList(List<string> list){
+        this.list = list;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userName='" + userName + '\'' +
+                ", password=" + password +
+                ", list=" + list +
+                '}';
+    }
+}
+
+</string></string></string></pre>
+
+<blockquote>
+<p>配置文件</p>
+</blockquote>
 <ul>
-<li>交易执行吞吐量 并不是 衡量业务执行效率的指标。</li>
+<li>① 使用设值setter注入方式装配User实例</li>
 </ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user2&quot; class=&quot;com.itheima.assemble.U
+    &lt;property name=&quot;userName&quot; value=&quot;张三&quot;&gt;&lt;/property&gt;
+    &lt;property name=&quot;password&quot; value=&quot;632554&quot;&gt;&lt;/property&gt;
+    &lt;!--
+        注入list集合
+    --&gt;
+    &lt;property name=&quot;list&quot;&gt;
+        &lt;list&gt;
+            &lt;value&gt;&quot;setListValue1&quot;&lt;/value&gt;
+            &lt;value&gt;&quot;setListValue2&quot;&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>② 使用构造方法constructor注入方式装配User实例</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user1&quot; class=&quot;com.itheima.assemble.User&quot;&gt;
+    &lt;constructor-arg index=&quot;0&quot; type=&quot;java.lang.String&quot; value=&quot;Tom&quot;/&gt;
+    &lt;constructor-arg index=&quot;1&quot; type=&quot;java.lang.Integer&quot; value=&quot;123456&quot;/&gt;
+    &lt;constructor-arg index=&quot;2&quot;&gt;
+
+        &lt;list&gt;
+            &lt;value&gt;&quot;constructorValue1&quot;&lt;/value&gt;
+            &lt;value&gt;&quot;constructorValue2&quot;&lt;/value&gt;
+        &lt;/list&gt;
+    &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre><p> </p>
+<ul>
+<li>③ 使用p:schema命名空间注入（不推荐使用）</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;bean id=&quot;user3&quot; class=&quot;com.itheima.assemble.User&quot; p:userName=&quot;W3c&quot; p:password=&quot;123&quot; p:list=&quot;test1&quot;/&gt;
+</code></pre><p></p>
+<h3 id="Spring-Inner-Bean-内部嵌套的-Bean"><a href="#Spring-Inner-Bean-内部嵌套的-Bean" class="headerlink" title="Spring Inner Bean - 内部嵌套的 Bean"></a>Spring Inner Bean - 内部嵌套的 Bean</h3><blockquote>
+<p>一个 Bean 中嵌套了另一个 Bean ，即所谓的内部嵌套 Bean 的配置方法，内部嵌套的 Bean 支持属性（ property ）注入和构造函数（ constructor - arg ）注入。</p>
+</blockquote>
+<ul>
+<li>setter方法注入</li>
+<li>构造方法注入</li>
+</ul>
+<h4 id="实例-CustomerBean中被注入PersonBean"><a href="#实例-CustomerBean中被注入PersonBean" class="headerlink" title="实例 CustomerBean中被注入PersonBean"></a>实例 CustomerBean中被注入PersonBean</h4><blockquote>
+<p>即Customer类依赖于Person</p>
+</blockquote>
+<p><br></p>
+<blockquote>
+<p>POJO类</p>
+</blockquote>
+<ul>
+<li>Person.java</li>
+</ul>
+<p><code></code></p>
+<pre><code>public class Person {
+
+private String name;
+private String address;
+private int age;
+
+public String getName() {
+    return name;
+}
+
+public void setName(String name) {
+    this.name = name;
+}
+
+public String getAddress() {
+    return address;
+}
+
+public void setAddress(String address) {
+    this.address = address;
+}
+
+public int getAge() {
+    return age;
+}
+
+public void setAge(int age) {
+    this.age = age;
+}
+
+@Override
+public String toString() {
+    return &quot;Person{&quot; +
+            &quot;name=&apos;&quot; + name + &apos;\&apos;&apos; +
+            &quot;, address=&apos;&quot; + address + &apos;\&apos;&apos; +
+            &quot;, age=&quot; + age +
+            &apos;}&apos;;
+    }
+}    
+</code></pre><p></p>
+<ul>
+<li>Customer.java</li>
+</ul>
+<p><code></code></p>
+<pre><code>public class Customer {
+
+//==========构造方法注入==========
+private Person person;
+
+// 带参构造方法
+public Customer(Person person){
+    this.person = person;
+}
+
+//==========setter方法注入==========
+// 有带参构造方法一定要有默认构造方法
+public Customer(){}
+
+public void setPerson(Person person){
+    this.person = person;
+}
+
+@Override
+public String toString() {
+    return &quot;Customer{&quot; +
+            &quot;person=&quot; + person +
+            &apos;}&apos;;
+    }
+}
+</code></pre><p></p>
+<blockquote>
+<p>配置文件</p>
+</blockquote>
+<ul>
+<li>① 通过property属性即<strong>setter方法注入</strong>（<strong>要有一个无参构造器，两者的创建、关联融合在一起</strong>）<blockquote>
+<p>此方法步骤:<br></p>
+<ol>
+<li>在customerBean的创建同时实例化另一个personBean(需要在Customer中写入【private Person person; + person‘s setter】)<br></li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<p><code></code></p>
+<pre><code>&lt;!-- 第二种方法 在Customer的Bean中声明一个内部Bean--&gt;
+&lt;bean id=&quot;customerBean2&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+    &lt;property name=&quot;person&quot;&gt;
+        &lt;bean class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;wangzhuang&quot;/&gt;
+            &lt;property name=&quot;age&quot; value=&quot;20&quot;/&gt;
+            &lt;property name=&quot;address&quot; value=&quot;Nanjing&quot;/&gt;
+        &lt;/bean&gt;
+    &lt;/property&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>② 通过有参构造器同样在被注入对象的内部通过<strong>构造器注入</strong>（<strong>两者的创建、关联融合在一起</strong>）</li>
+</ul>
+<p><code></code></p>
+<pre><code> &lt;!-- 第三种方法 通过Customer的构造函数中注入--&gt;
+&lt;bean id=&quot;customerBean3&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+    &lt;constructor-arg&gt;
+        &lt;bean class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+            &lt;property name=&quot;name&quot; value=&quot;Erick&quot;/&gt;
+            &lt;property name=&quot;address&quot; value=&quot;jiangsu&quot;/&gt;
+            &lt;property name=&quot;age&quot; value=&quot;25&quot;/&gt;
+        &lt;/bean&gt;
+    &lt;/constructor-arg&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
+<ul>
+<li>③ 通过ref属性引用来构建两者的关系即将<strong>一个对象作为引用</strong>被<strong>注入到另一个对象之中（两者独立创建通过</strong>ref**进行关联）</li>
+</ul>
+<p><code></code></p>
+<pre><code>////////////////////////////////////
+&lt;bean id=&quot;customerBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot; p:person-ref=&quot;personBean&quot;/&gt;&lt;br/&gt;
+// 也可以改为&lt;br/&gt;
+&lt;bean id=&quot;customerBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Customer&quot;&gt;
+ &lt;property name=&quot;person&quot; ref=&quot;PersonBean&quot; /&gt;
+&lt;/bean&gt;
+///////////////////////////////////
+&lt;bean id=&quot;personBean&quot; class=&quot;com.shiyanlou.spring.innerbean.Person&quot;&gt;
+    &lt;property name=&quot;name&quot; value=&quot;shiyanlou&quot;/&gt;
+    &lt;property name=&quot;address&quot; value=&quot;chengdu&quot;/&gt;
+    &lt;property name=&quot;age&quot; value=&quot;25&quot;/&gt;
+&lt;/bean&gt;
+</code></pre><p></p>
 
       
     </div>
@@ -1121,7 +845,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/软件测试期末复习/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>软件测试期末复习</a>
+            <a href="/tags/Dpendency-Injection/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>Dpendency Injection</a>
           
         </div>
       
@@ -1134,8 +858,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/Artificial-Intelligence/" rel="next" title="Artificial Intelligence">
-                <i class="fa fa-chevron-left"></i> Artificial Intelligence
+              <a href="/2019/02/28/集合框架之Map和List遍历/" rel="next" title="集合框架之Map和List遍历">
+                <i class="fa fa-chevron-left"></i> 集合框架之Map和List遍历
               </a>
             
           </div>
@@ -1143,10 +867,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/23/程-计算机基础知识/" rel="prev" title="程-计算机基础知识">
-                程-计算机基础知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1357,7 +1077,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#软件测试试题"><span class="nav-number">1.</span> <span class="nav-text">软件测试试题</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#复习一"><span class="nav-number"></span> <span class="nav-text">复习一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#复习二"><span class="nav-number"></span> <span class="nav-text">复习二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#🌫复习三"><span class="nav-number"></span> <span class="nav-text">🌫复习三</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#软件测试工程师的一些工作。"><span class="nav-number">0.0.1.</span> <span class="nav-text">软件测试工程师的一些工作。</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#复习四"><span class="nav-number"></span> <span class="nav-text">复习四</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖注入：-应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）"><span class="nav-number">1.</span> <span class="nav-text"> 依赖注入： 应用组件的创建、装配由容器在运行期决定（即由容器动态的将某个依赖关系注入到组件之中）</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#传统的方法"><span class="nav-number"></span> <span class="nav-text">传统的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#耦合的两面性（two-headed-beast）"><span class="nav-number">0.1.</span> <span class="nav-text">耦合的两面性（two-headed beast）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架之后"><span class="nav-number"></span> <span class="nav-text">Spring框架之后</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DI的理解关键："><span class="nav-number"></span> <span class="nav-text">DI的理解关键：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#理解IoC-amp-DI-》-同一个概念的不同角度描述。"><span class="nav-number"></span> <span class="nav-text">理解IoC&amp;DI ===》 同一个概念的不同角度描述。</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中给Bean属性注入value"><span class="nav-number"></span> <span class="nav-text">Spring中给Bean属性注入value</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性setter方法注入"><span class="nav-number"></span> <span class="nav-text">属性setter方法注入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例"><span class="nav-number">1.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Spring-Inner-Bean-内部嵌套的-Bean"><span class="nav-number"></span> <span class="nav-text">Spring Inner Bean - 内部嵌套的 Bean</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实例-CustomerBean中被注入PersonBean"><span class="nav-number">1.</span> <span class="nav-text">实例 CustomerBean中被注入PersonBean</span></a></li></ol></li></ol></li></div>
             
 
           </div>
