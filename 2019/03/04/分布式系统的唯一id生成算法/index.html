@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 独立数据库自动id此种做">
+<meta name="description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 数据库自动生成id此种做">
 <meta name="keywords" content="Java学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="分布式系统的唯一id生成算法">
 <meta property="og:url" content="https://www.openmind.ink/2019/03/04/分布式系统的唯一id生成算法/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 独立数据库自动id此种做">
+<meta property="og:description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 数据库自动生成id此种做">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-04T11:38:37.003Z">
+<meta property="og:updated_time" content="2019-03-04T12:34:59.590Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分布式系统的唯一id生成算法">
-<meta name="twitter:description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 独立数据库自动id此种做">
+<meta name="twitter:description" content="设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。  方法一： 数据库自动生成id此种做">
 
 
 
@@ -373,7 +373,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-04T19:38:37+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-04T20:34:59+08:00">
                 2019-03-04
               </time>
             
@@ -478,7 +478,7 @@
         <blockquote>
 <p>设想开发一个订单系统，每此订单都会作为一次记录，记录在数据库中当然订单会根据类型的不同分布在几种不同的表中以自增的id作为主键，但如果有一个业务统一记录所有的订单记录，则会出现相同的订单id。<br><br>面对这种问题就会想到每一次订单都让系统产生一个独立于数据库的唯一主键，唯一是在整个分布式系统之中就全局而言的，然后插入各个表中，保证每个表内的唯一标识id是全局唯一的。</p>
 </blockquote>
-<h3 id="方法一：-独立数据库自动id"><a href="#方法一：-独立数据库自动id" class="headerlink" title="方法一： 独立数据库自动id"></a>方法一： 独立数据库自动id</h3><p>此种做法依据数据库本身的特性设置一个自增组件在面对单一简单的业务时插入信息没有太多压力但面对高并发的情况下就明显不能够解决此种问题。</p>
+<h3 id="方法一：-数据库自动生成id"><a href="#方法一：-数据库自动生成id" class="headerlink" title="方法一： 数据库自动生成id"></a>方法一： 数据库自动生成id</h3><p>此种做法依据数据库本身的特性设置一个自增组件在面对单一简单的业务时插入信息没有太多压力但面对高并发的情况下就明显不能够解决此种问题。</p>
 <h3 id="方法二：UUID-通用唯一识别码（Universally-Unique-Identifier）"><a href="#方法二：UUID-通用唯一识别码（Universally-Unique-Identifier）" class="headerlink" title="方法二：UUID 通用唯一识别码（Universally Unique Identifier）"></a>方法二：UUID 通用唯一识别码（Universally Unique Identifier）</h3><h5 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h5><ul>
 <li>全局唯一，依赖每个系统本地生成不用基于数据库</li>
 </ul>
@@ -504,7 +504,8 @@ public static void main(String[] args) {
         System.out.println(new Test2().getUid());
     }
 }
-</code></pre><p>}<br></p>
+}
+</code></pre><p></p>
 <h3 id="方案三：-根据实际业务和多种随机数共同组件（eg：系统当前时间）"><a href="#方案三：-根据实际业务和多种随机数共同组件（eg：系统当前时间）" class="headerlink" title="方案三： 根据实际业务和多种随机数共同组件（eg：系统当前时间）"></a>方案三： 根据实际业务和多种随机数共同组件（eg：系统当前时间）</h3><blockquote>
 <p>如果只用系统时间作为唯一id，在并发很高的时候，eg：1秒并发几千，会有重复的情况。</p>
 </blockquote>
@@ -595,8 +596,8 @@ public static void main(String[] args) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/03/Spring实战之Spring之旅/" rel="next" title="Spring实战之Spring之旅">
-                <i class="fa fa-chevron-left"></i> Spring实战之Spring之旅
+              <a href="/2019/03/03/什么是Spring？/" rel="next" title="💐The Spring Framework itself">
+                <i class="fa fa-chevron-left"></i> 💐The Spring Framework itself
               </a>
             
           </div>
@@ -722,7 +723,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">27</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -814,7 +815,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：-独立数据库自动id"><span class="nav-number">1.</span> <span class="nav-text">方法一： 独立数据库自动id</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：UUID-通用唯一识别码（Universally-Unique-Identifier）"><span class="nav-number">2.</span> <span class="nav-text">方法二：UUID 通用唯一识别码（Universally Unique Identifier）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#好处"><span class="nav-number">2.0.1.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#坏处"><span class="nav-number">2.0.2.</span> <span class="nav-text">坏处</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Java生成UUID"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">Java生成UUID</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#方案三：-根据实际业务和多种随机数共同组件（eg：系统当前时间）"><span class="nav-number">3.</span> <span class="nav-text">方案三： 根据实际业务和多种随机数共同组件（eg：系统当前时间）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法四：snowflake算法"><span class="nav-number">4.</span> <span class="nav-text">方法四：snowflake算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#核心思想："><span class="nav-number">4.0.1.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snowflake算法的代码实现"><span class="nav-number">5.</span> <span class="nav-text">snowflake算法的代码实现</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法一：-数据库自动生成id"><span class="nav-number">1.</span> <span class="nav-text">方法一： 数据库自动生成id</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法二：UUID-通用唯一识别码（Universally-Unique-Identifier）"><span class="nav-number">2.</span> <span class="nav-text">方法二：UUID 通用唯一识别码（Universally Unique Identifier）</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#好处"><span class="nav-number">2.0.1.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#坏处"><span class="nav-number">2.0.2.</span> <span class="nav-text">坏处</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Java生成UUID"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">Java生成UUID</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#方案三：-根据实际业务和多种随机数共同组件（eg：系统当前时间）"><span class="nav-number">3.</span> <span class="nav-text">方案三： 根据实际业务和多种随机数共同组件（eg：系统当前时间）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法四：snowflake算法"><span class="nav-number">4.</span> <span class="nav-text">方法四：snowflake算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#核心思想："><span class="nav-number">4.0.1.</span> <span class="nav-text">核心思想：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snowflake算法的代码实现"><span class="nav-number">5.</span> <span class="nav-text">snowflake算法的代码实现</span></a></li></div>
             
 
           </div>
@@ -859,7 +860,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共39.6k字</span>
+  <span class="post-count">博客全站共39.7k字</span>
 </div>
 
         
