@@ -19,7 +19,7 @@
   <entry>
     <title><![CDATA[💐Spring学习-Bean👩‍💻的配置和作用范围]]></title>
     <url>%2FSpring%E5%AD%A6%E4%B9%A0-Bean%E7%9A%84%E9%85%8D%E7%BD%AE%E5%92%8C%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[Spring可以被看作为一个大型工厂其作用是生产和管理产品 -&gt; Bean，如果在工厂中生产指定的Bean就需要在XML文件或者Properties各种Spring支持的配置文件中配置文件。 名称和标识（id、name、class） 属性名称 描述 id Bean的唯一标识符，Spring容器对Bean的配置、管理通过该属性完成 name Spring容器可通过此属性对容器中的Bean进行配置和管理，name属性可有多个用”,”或”;”分开 class 该属性指定Bean的具体实现类，必须是一个完整的类名，使用类的全限定名 设置对象生命周期方法 init-method : Bean被初始化的时候执行的方法 destroy-method: Bean被销毁的时候执行的方法（Bean是单例创建，工厂关闭） 12&lt;!--id: 为自己起的名称 class：类的全路径--&gt;&lt;bean id=&quot;user&quot; class=&quot;com.niit.test.User&quot; init-method=&quot;init&quot; destroy-method=&quot;destroy&quot;]]></content>
       <categories>
         <category>Spring-Learning</category>
       </categories>

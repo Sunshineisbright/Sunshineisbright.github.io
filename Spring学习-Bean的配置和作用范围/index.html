@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="非学无以广才 非志无以成学">
+<meta name="description" content="Spring可以被看作为一个大型工厂其作用是生产和管理产品 -&amp;gt; Bean，如果在工厂中生产指定的Bean就需要在XML文件或者Properties各种Spring支持的配置文件中配置文件。  名称和标识（id、name、class）   属性名称 描述     id Bean的唯一标识符，Spring容器对Bean的配置、管理通过该属性完成   name Spring容器可通过此属性对容">
 <meta name="keywords" content="Bean的配置和作用范围">
 <meta property="og:type" content="article">
 <meta property="og:title" content="💐Spring学习-Bean👩‍💻的配置和作用范围">
 <meta property="og:url" content="https://www.openmind.ink/Spring学习-Bean的配置和作用范围/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="非学无以广才 非志无以成学">
+<meta property="og:description" content="Spring可以被看作为一个大型工厂其作用是生产和管理产品 -&amp;gt; Bean，如果在工厂中生产指定的Bean就需要在XML文件或者Properties各种Spring支持的配置文件中配置文件。  名称和标识（id、name、class）   属性名称 描述     id Bean的唯一标识符，Spring容器对Bean的配置、管理通过该属性完成   name Spring容器可通过此属性对容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T06:24:59.451Z">
+<meta property="og:updated_time" content="2019-03-05T08:41:50.185Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="💐Spring学习-Bean👩‍💻的配置和作用范围">
-<meta name="twitter:description" content="非学无以广才 非志无以成学">
+<meta name="twitter:description" content="Spring可以被看作为一个大型工厂其作用是生产和管理产品 -&amp;gt; Bean，如果在工厂中生产指定的Bean就需要在XML文件或者Properties各种Spring支持的配置文件中配置文件。  名称和标识（id、name、class）   属性名称 描述     id Bean的唯一标识符，Spring容器对Bean的配置、管理通过该属性完成   name Spring容器可通过此属性对容">
 
 
 
@@ -374,7 +374,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T14:24:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T16:41:50+08:00">
                 2019-03-05
               </time>
             
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  251
                 </span>
               
 
@@ -476,7 +476,36 @@
       
 
       
-        
+        <blockquote>
+<p>Spring可以被看作为一个大型工厂其作用是生产和管理产品 -&gt; Bean，如果在工厂中生产指定的Bean就需要在XML文件或者Properties各种Spring支持的配置文件中配置文件。</p>
+</blockquote>
+<h3 id="名称和标识（id、name、class）"><a href="#名称和标识（id、name、class）" class="headerlink" title="名称和标识（id、name、class）"></a>名称和标识（id、name、class）</h3><table>
+<thead>
+<tr>
+<th style="text-align:right">属性名称</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">id</td>
+<td style="text-align:right"><strong>Bean的唯一标识符</strong>，Spring容器对Bean的配置、管理通过该属性完成</td>
+</tr>
+<tr>
+<td style="text-align:right">name</td>
+<td style="text-align:right">Spring容器可通过此属性对容器中的Bean进行配置和管理，<strong>name属性可有多个用”,”或”;”分开</strong></td>
+</tr>
+<tr>
+<td style="text-align:right">class</td>
+<td style="text-align:right">该属性指定<strong>Bean的具体实现类，必须是一个完整的类名</strong>，使用类的全限定名</td>
+</tr>
+</tbody>
+</table>
+<h3 id="设置对象生命周期方法"><a href="#设置对象生命周期方法" class="headerlink" title="设置对象生命周期方法"></a>设置对象生命周期方法</h3><ul>
+<li>init-method : <strong>Bean被初始化的时候执行的方法</strong></li>
+<li>destroy-method: <strong>Bean被销毁的时候执行的方法（Bean是单例创建，工厂关闭）</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--id: 为自己起的名称 class：类的全路径--&gt;</span><br><span class="line">&lt;bean id=&quot;user&quot; class=&quot;com.niit.test.User&quot; init-method=&quot;init&quot; destroy-method=&quot;destroy&quot;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -633,8 +662,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -745,6 +783,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#名称和标识（id、name、class）"><span class="nav-number">1.</span> <span class="nav-text">名称和标识（id、name、class）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置对象生命周期方法"><span class="nav-number">2.</span> <span class="nav-text">设置对象生命周期方法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -783,7 +837,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共40.7k字</span>
+  <span class="post-count">博客全站共41k字</span>
 </div>
 
         
