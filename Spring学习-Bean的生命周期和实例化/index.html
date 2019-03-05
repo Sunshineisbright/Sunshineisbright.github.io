@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="非学无以广才 非志无以成学">
+<meta name="description" content="在传统的Java应用中，bean的生命周期非常简单。使用Java关键字new进行实例化，然后该bean就可以使用了。一旦该bean不再被使用，则由Java GC进行回收。相比之下Spring中的bean生命周期非常负责可以利用Spring提供的扩展点来自定义bean的创建过程。  💉Bean的生命周期Bean定义 -&amp;gt; Bean初始化 -&amp;gt; Bean使用 -&amp;gt; Bean销毁">
 <meta name="keywords" content="Bean的生命周期和实例化方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="💐Spring学习-Bean👩‍💻的生命周期和实例化">
 <meta property="og:url" content="https://www.openmind.ink/Spring学习-Bean的生命周期和实例化/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="非学无以广才 非志无以成学">
+<meta property="og:description" content="在传统的Java应用中，bean的生命周期非常简单。使用Java关键字new进行实例化，然后该bean就可以使用了。一旦该bean不再被使用，则由Java GC进行回收。相比之下Spring中的bean生命周期非常负责可以利用Spring提供的扩展点来自定义bean的创建过程。  💉Bean的生命周期Bean定义 -&amp;gt; Bean初始化 -&amp;gt; Bean使用 -&amp;gt; Bean销毁">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-05T06:29:43.315Z">
+<meta property="og:updated_time" content="2019-03-05T14:00:13.388Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="💐Spring学习-Bean👩‍💻的生命周期和实例化">
-<meta name="twitter:description" content="非学无以广才 非志无以成学">
+<meta name="twitter:description" content="在传统的Java应用中，bean的生命周期非常简单。使用Java关键字new进行实例化，然后该bean就可以使用了。一旦该bean不再被使用，则由Java GC进行回收。相比之下Spring中的bean生命周期非常负责可以利用Spring提供的扩展点来自定义bean的创建过程。  💉Bean的生命周期Bean定义 -&amp;gt; Bean初始化 -&amp;gt; Bean使用 -&amp;gt; Bean销毁">
 
 
 
@@ -374,7 +374,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T14:29:43+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-05T22:00:13+08:00">
                 2019-03-05
               </time>
             
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0
+                  768
                 </span>
               
 
@@ -455,7 +455,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -476,7 +476,75 @@
       
 
       
-        
+        <blockquote>
+<p>在传统的Java应用中，bean的生命周期非常简单。使用Java关键字new进行实例化，然后该bean就可以使用了。一旦该bean不再被使用，则由Java GC进行回收。相比之下Spring中的bean生命周期非常负责可以利用Spring提供的扩展点来自定义bean的创建过程。</p>
+</blockquote>
+<h1 id="💉Bean的生命周期"><a href="#💉Bean的生命周期" class="headerlink" title="💉Bean的生命周期"></a>💉Bean的生命周期</h1><p><strong>Bean定义 -&gt; Bean初始化 -&gt; Bean使用 -&gt; Bean销毁</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Name</th>
+<th style="text-align:right">Desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bean的定义</td>
+<td style="text-align:right">一般Bean使用XML文件的方式进行定义，定义的时候将Bean之间的依赖关系和属性的赋值都进行了定义</td>
+</tr>
+<tr>
+<td style="text-align:center">Bean的初始化</td>
+<td style="text-align:right">其实Bean的初始化包括Bean的创建和初始化两个方法，Bean的创建和初始化一般是同步进行的，Bean在完成创建后直接就会进行初始化操作，创建的时机与Bean的lazy-init属性的设置有关。</td>
+</tr>
+<tr>
+<td style="text-align:center">Bean的使用</td>
+<td style="text-align:right">在web程序运行期间，发生对某一个Bean的调用时，就会使用这个Bean实例，如果使用编码的方式来获取Bean同样也是Bean的使用，Bean的编码使用方式有三种，第一种是使用BeanWarpper，第二种是使用BeanFactory，第三种就是使用ApplicationContext</td>
+</tr>
+<tr>
+<td style="text-align:center">Bean的销毁</td>
+<td style="text-align:right">Bean实例在程序退出的时候会进行销毁，而在销毁之前会自动调用Bean的destory-method属性指定名称的方法。</td>
+</tr>
+</tbody>
+</table>
+<h1 id="💉Bean的实例化-1-xml实例化-2-注解实例化"><a href="#💉Bean的实例化-1-xml实例化-2-注解实例化" class="headerlink" title="💉Bean的实例化(1.xml实例化 2.注解实例化)"></a>💉Bean的实例化(1.xml实例化 2.注解实例化)</h1><blockquote>
+<p>XML中3种方式：1.构造器实例化 2.静态工厂方式实例化 3.实例化工厂方式实例化</p>
+</blockquote>
+<h3 id="🏮XML实例化"><a href="#🏮XML实例化" class="headerlink" title="🏮XML实例化"></a>🏮XML实例化</h3><h4 id="🍷构造器实例化：使用类的无参构造创建，首先类中必须要有无参构造器"><a href="#🍷构造器实例化：使用类的无参构造创建，首先类中必须要有无参构造器" class="headerlink" title="🍷构造器实例化：使用类的无参构造创建，首先类中必须要有无参构造器"></a>🍷构造器实例化：使用类的<strong>无参构造</strong>创建，首先类中必须要有无参构造器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;user&quot; class=&quot;com.niit.test.User&quot;&gt;&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="🍷静态工厂实例化：创建静态方法，返回类对象"><a href="#🍷静态工厂实例化：创建静态方法，返回类对象" class="headerlink" title="🍷静态工厂实例化：创建静态方法，返回类对象"></a>🍷静态工厂实例化：创建静态方法，返回类对象</h4><ul>
+<li>工厂类</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Bean2Factory&#123;</span><br><span class="line"></span><br><span class="line">	// 静态的方法，返回Bean2对象</span><br><span class="line">	public static Bean2 getBean2()&#123;</span><br><span class="line">		return new Bean2();	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--使用静态工厂创建对象--&gt;</span><br><span class="line">&lt;bean id=&quot;bean2&quot; class=&quot;com.niit.test.Bean2Factory&quot; factory-method=&quot;getBean2&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象"><a href="#🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象" class="headerlink" title="🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象"></a>🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象</h4><ul>
+<li>工厂类</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">public class Bean2Facotory&#123;</span><br><span class="line"></span><br><span class="line">	//普通的方法，返回Bean3对象</span><br><span class="line">	public Bean3 getBean3()&#123;</span><br><span class="line">		return new Bean3();</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 使用实例工厂创建对象 --&gt;</span><br><span class="line">&lt;!-- 创建工厂对象 --&gt;</span><br><span class="line"></span><br><span class="line">&lt;bean id=&quot;bean3Facotry&quot; class=&quot;com.niit.test.Bean3Facotry/&gt;</span><br><span class="line">&lt;bean id=&quot;bean3&quot; factory-bean=&quot;bean3Factory&quot; factory-method=&quot;getBean3&quot;/&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="🏮注解方式"><a href="#🏮注解方式" class="headerlink" title="🏮注解方式"></a>🏮注解方式</h3><ol>
+<li>创建类对象，在对象上使用注解实现</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">@Component(value=&quot;user&quot;) // == &lt;bean id=&quot;user&quot; class&quot;...&quot;/&gt;</span><br><span class="line">public class User&#123;&#125;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>开启注解扫描（XML文件中）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;context:component-scan base-package=&quot;com.niit.test&quot;&gt;&lt;/context:component&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建对象由四个注解（功能时一样的都是创建对象为了在各层之间实例化的Bean功能清晰易于阅读）</li>
+</ul>
+<ol>
+<li>@Component</li>
+<li>@Controller： Web层</li>
+<li>@Service： Service层</li>
+<li>@Repository： DAO层</li>
+</ol>
+<p>—&gt; 都是创建对象</p>
+
       
     </div>
     
@@ -550,8 +618,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Spring学习-Bean的装配方式（DI的本质）/" rel="prev" title="Sping学习-Bean的装配方式（DI的本质）">
-                Sping学习-Bean的装配方式（DI的本质） <i class="fa fa-chevron-right"></i>
+              <a href="/Spring学习-Bean的装配方式（DI的本质）/" rel="prev" title="💐Sping学习-Bean👩‍💻的装配方式（DI的本质）">
+                💐Sping学习-Bean👩‍💻的装配方式（DI的本质） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,8 +701,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -673,7 +750,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-count">39</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -745,6 +822,22 @@ var jiathis_config={
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#💉Bean的生命周期"><span class="nav-number">1.</span> <span class="nav-text">💉Bean的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#💉Bean的实例化-1-xml实例化-2-注解实例化"><span class="nav-number">2.</span> <span class="nav-text">💉Bean的实例化(1.xml实例化 2.注解实例化)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#🏮XML实例化"><span class="nav-number">2.0.1.</span> <span class="nav-text">🏮XML实例化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#🍷构造器实例化：使用类的无参构造创建，首先类中必须要有无参构造器"><span class="nav-number">2.0.1.1.</span> <span class="nav-text">🍷构造器实例化：使用类的无参构造创建，首先类中必须要有无参构造器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#🍷静态工厂实例化：创建静态方法，返回类对象"><span class="nav-number">2.0.1.2.</span> <span class="nav-text">🍷静态工厂实例化：创建静态方法，返回类对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象"><span class="nav-number">2.0.1.3.</span> <span class="nav-text">🍷实例化工厂实例化：创建的不是静态方法而是返回类的对象</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#🏮注解方式"><span class="nav-number">2.0.2.</span> <span class="nav-text">🏮注解方式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -783,7 +876,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共41k字</span>
+  <span class="post-count">博客全站共42k字</span>
 </div>
 
         
