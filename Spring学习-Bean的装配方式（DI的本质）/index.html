@@ -93,13 +93,13 @@
 
 
 
-<meta name="description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值     3. p命名空间注入引入p命名空间: xmlns:p=”http://www.springframework">
+<meta name="description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值1&amp;lt;construtor-arg value=&amp;quot;ls&amp;quot; type=&amp;quot;String&amp;">
 <meta name="keywords" content="Bean的🛠装配方式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="💐Sping学习-Bean👩‍💻的装配方式（DI的本质）">
 <meta property="og:url" content="https://www.openmind.ink/Spring学习-Bean的装配方式（DI的本质）/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值     3. p命名空间注入引入p命名空间: xmlns:p=”http://www.springframework">
+<meta property="og:description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值1&amp;lt;construtor-arg value=&amp;quot;ls&amp;quot; type=&amp;quot;String&amp;">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kv114x.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kvYaN9.png">
@@ -111,10 +111,10 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kvYt74.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kvYdhR.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kvY091.png">
-<meta property="og:updated_time" content="2019-03-06T09:32:18.678Z">
+<meta property="og:updated_time" content="2019-03-06T09:46:38.818Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="💐Sping学习-Bean👩‍💻的装配方式（DI的本质）">
-<meta name="twitter:description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值     3. p命名空间注入引入p命名空间: xmlns:p=”http://www.springframework">
+<meta name="twitter:description" content="🔨装配：创建应用对象之间协作关系的行为  装配是DI的核心包括对象的属性（字面量）注入和对象所依赖对象的注入  装配机制在XML中进行显式配置1.set注入：通过setXxx()赋值赋值，默认使用的是set方法();DI底层是通过反射实现的。   2.构造器注入：通过构造方法赋值1&amp;lt;construtor-arg value=&amp;quot;ls&amp;quot; type=&amp;quot;String&amp;">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/03/06/kv114x.png">
 
 
@@ -385,7 +385,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T17:32:18+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T17:46:38+08:00">
                 2019-03-06
               </time>
             
@@ -450,7 +450,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  529
+                  641
                 </span>
               
 
@@ -494,8 +494,8 @@
 <h1 id="装配机制"><a href="#装配机制" class="headerlink" title="装配机制"></a>装配机制</h1><h2 id="在XML中进行显式配置"><a href="#在XML中进行显式配置" class="headerlink" title="在XML中进行显式配置"></a>在XML中进行显式配置</h2><h4 id="1-set注入：通过setXxx-赋值"><a href="#1-set注入：通过setXxx-赋值" class="headerlink" title="1.set注入：通过setXxx()赋值"></a>1.set注入：通过setXxx()赋值</h4><p>赋值，默认使用的是set方法();<br>DI底层是通过反射实现的。</p>
 <property ...>
 
-<h4 id="2-构造器注入：通过构造方法赋值"><a href="#2-构造器注入：通过构造方法赋值" class="headerlink" title="2.构造器注入：通过构造方法赋值"></a>2.构造器注入：通过构造方法赋值</h4><p><code><br>    <construtor-arg value="ls" type="String" index="0" name></construtor-arg><br></code></p>
-<h4 id="3-p命名空间注入"><a href="#3-p命名空间注入" class="headerlink" title="3. p命名空间注入"></a>3. p命名空间注入</h4><p>引入p命名空间: xmlns:p=”<a href="http://www.springframework.org/schema/p&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/p&quot;</a><br><code><br>    <bean id="course" class="org.lanqiao.entity.Course" p:courhour="300" p:coursename="hadoop" p:tea-ref="teacher"><br></bean></code></p>
+<h4 id="2-构造器注入：通过构造方法赋值"><a href="#2-构造器注入：通过构造方法赋值" class="headerlink" title="2.构造器注入：通过构造方法赋值"></a>2.构造器注入：通过构造方法赋值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;construtor-arg value=&quot;ls&quot; type=&quot;String&quot; index=&quot;0&quot; name&gt;&lt;/construtor-arg&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="3-p命名空间注入"><a href="#3-p命名空间注入" class="headerlink" title="3. p命名空间注入"></a>3. p命名空间注入</h4><p>引入p命名空间: xmlns:p=”<a href="http://www.springframework.org/schema/p&quot;" target="_blank" rel="noopener">http://www.springframework.org/schema/p&quot;</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;course&quot; class=&quot;org.lanqiao.entity.Course&quot; p:courHour=&quot;300&quot; p:courseName=&quot;hadoop&quot; p:tea-ref=&quot;teacher&quot;/&gt;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><p>简单类型：</p>
 <ul>
@@ -520,26 +520,27 @@
 </blockquote>
 <p>set、list、array 各自都有自己的标签<set><list><array>,但是也可以混着用。</array></list></set></p>
 <p><strong>给对象类型赋值null</strong></p>
-<p><code><br>    &lt;property name=”name&gt;<br>            <null>  —&gt; 可以知道没有<value><br>    </value></null></code></p></property><br><br><strong>赋空值 -&gt; “”</strong><p></p>
-<p><code><br>    <property name="name"><br>        <value></value><br>    </property><br></code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=&quot;name&gt;</span><br><span class="line">		&lt;null/&gt;  ---&gt; 可以知道没有&lt;value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>赋空值 -&gt; “”</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;property name=&quot;name&quot;&gt;</span><br><span class="line">	&lt;value&gt;&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>在IoC中定义bean的前提：该bean的类必须提供了无参构造。</strong></p>
 </blockquote>
 <h2 id="在Java中进行显示配置"><a href="#在Java中进行显示配置" class="headerlink" title="在Java中进行显示配置"></a>在Java中进行显示配置</h2><h2 id="隐式的bean发现机制和自动装配"><a href="#隐式的bean发现机制和自动装配" class="headerlink" title="隐式的bean发现机制和自动装配"></a>隐式的bean发现机制和自动装配</h2><blockquote>
 <p>自动装配（只适用于ref类型）： <strong>约定优于配置</strong></p>
 </blockquote>
-<h4 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h4><p><code><br>    <bean id=".." class="com.niit.entity.User" autowire="byName|byType|constructor|no"><br></bean></code></p>
+<h4 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;bean id=&quot;..&quot; class=&quot;com.niit.entity.User&quot; autowire=&quot;byName|byType|constructor|no&quot;&gt;</span><br></pre></td></tr></table></figure>
 <ul>
 <li>byName： 本质是byId，自动寻找：其他bean的id值 = 该Course类的属性名</li>
 <li>byType：其他bean的类型（class）是否与该Course类的构造方法参数的类型一致，此种方式的本质就是byType。</li>
 </ul>
 <p>可以在头文件种一次性将该IoC容器的所有bean统一设置成自动装配。</p>
-<p><code><br>    &lt;beans xmlns=”http:…&gt;<br>        &lt;default-autowire=”byName”&gt;<br>    <br></code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;beans xmlns=&quot;http:...&gt;</span><br><span class="line">	&lt;default-autowire=&quot;byName&quot;&gt;</span><br><span class="line">&lt;/beans&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>自动装配虽然可以减少代码量，但是会降低程序的可读性，使用时需要谨慎。</p>
 </blockquote>
 <p>使用注解定义bean：通过注解的形式将bean以及相应的属性值放入IoC容器</p>
-<p><code><br>    &lt;context:component-scan base-package=”org.lanqiao.dao”&gt;<br></code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;context:component-scan base-package=&quot;org.lanqiao.dao&quot;&gt;</span><br></pre></td></tr></table></figure>
 <p>@Component 细化：</p>
 <p>dao层注解：@Repository<br>service层注解：@Service<br>controller层注解：@Controller</p>
 <h3 id="value与注入方式的区别："><a href="#value与注入方式的区别：" class="headerlink" title="value与注入方式的区别："></a>value与<value>注入方式的区别：</value></h3><p><a href="https://imgchr.com/i/kv114x" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kv114x.png" alt="kv114x.png"></a></p>
@@ -551,7 +552,7 @@
 <p><a href="https://imgchr.com/i/kvYUAJ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kvYUAJ.md.png" alt="kvYUAJ.md.png"></a></p>
 <p><a href="https://imgchr.com/i/kvYYBF" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kvYYBF.md.png" alt="kvYYBF.md.png"></a></p>
 <h3 id="实例-constructor"><a href="#实例-constructor" class="headerlink" title="实例: constructor"></a>实例: constructor</h3><p><img src="https://s2.ax1x.com/2019/03/06/kvYt74.png" alt="kvYt74.png"><br><img src="https://s2.ax1x.com/2019/03/06/kvYdhR.png" alt="kvYdhR.png"><br><img src="https://s2.ax1x.com/2019/03/06/kvY091.png" alt="kvY091.png"></p>
-
+</property>
       
     </div>
     
@@ -883,7 +884,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共42.6k字</span>
+  <span class="post-count">博客全站共42.7k字</span>
 </div>
 
         
