@@ -93,26 +93,27 @@
 
 
 
-<meta name="description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 集合类型属性注入spEL表达式的属性注入 数组List集合 Set集合 Map集合">
+<meta name="description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入数组 List集合 Set集合 Map集合">
 <meta name="keywords" content="Bean的属性注入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="💐Spring学习-Bean👩‍💻的属性注入">
 <meta property="og:url" content="https://www.openmind.ink/Spring学习-Bean的属性注入/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 集合类型属性注入spEL表达式的属性注入 数组List集合 Set集合 Map集合">
+<meta property="og:description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入数组 List集合 Set集合 Map集合">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2epT.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2QB9.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj23A1.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2uX4.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2MnJ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2ncF.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2Et0.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2m1U.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/06/kj2VhV.png">
-<meta property="og:updated_time" content="2019-03-06T01:09:00.298Z">
+<meta property="og:updated_time" content="2019-03-06T01:15:25.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="💐Spring学习-Bean👩‍💻的属性注入">
-<meta name="twitter:description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 集合类型属性注入spEL表达式的属性注入 数组List集合 Set集合 Map集合">
+<meta name="twitter:description" content="构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入 数组 List集合 Set集合 Map集合    构造方法的方式属性注入 Setter方法的属性注入 Setter方法设置对象类型的属性 P名称空间的属性注入 spEL表达式的属性注入 集合类型属性注入数组 List集合 Set集合 Map集合">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/03/06/kj2epT.png">
 
 
@@ -383,7 +384,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T09:09:00+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-06T09:15:25+08:00">
                 2019-03-06
               </time>
             
@@ -503,8 +504,9 @@
 <h1 id="Setter方法的属性注入"><a href="#Setter方法的属性注入" class="headerlink" title="Setter方法的属性注入"></a>Setter方法的属性注入</h1><p><a href="https://imgchr.com/i/kj2QB9" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2QB9.png" alt="kj2QB9.png"></a></p>
 <h1 id="Setter方法设置对象类型的属性"><a href="#Setter方法设置对象类型的属性" class="headerlink" title="Setter方法设置对象类型的属性"></a>Setter方法设置对象类型的属性</h1><p><a href="https://imgchr.com/i/kj23A1" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj23A1.png" alt="kj23A1.png"></a></p>
 <h1 id="P名称空间的属性注入"><a href="#P名称空间的属性注入" class="headerlink" title="P名称空间的属性注入"></a>P名称空间的属性注入</h1><p><a href="https://imgchr.com/i/kj2uX4" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2uX4.png" alt="kj2uX4.png"></a></p>
-<h1 id="集合类型属性注入"><a href="#集合类型属性注入" class="headerlink" title="集合类型属性注入"></a>集合类型属性注入</h1><h1 id="spEL表达式的属性注入"><a href="#spEL表达式的属性注入" class="headerlink" title="spEL表达式的属性注入"></a>spEL表达式的属性注入</h1><p><a href="https://imgchr.com/i/kj2MnJ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2MnJ.png" alt="kj2MnJ.png"></a></p>
-<h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p><a href="https://imgchr.com/i/kj2Et0" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2Et0.png" alt="kj2Et0.png"></a></p>
+<h1 id="spEL表达式的属性注入"><a href="#spEL表达式的属性注入" class="headerlink" title="spEL表达式的属性注入"></a>spEL表达式的属性注入</h1><p><a href="https://imgchr.com/i/kj2MnJ" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2MnJ.png" alt="kj2MnJ.png"></a></p>
+<h1 id="集合类型属性注入"><a href="#集合类型属性注入" class="headerlink" title="集合类型属性注入"></a>集合类型属性注入</h1><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p><a href="https://imgchr.com/i/kj2ncF" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2ncF.png" alt="kj2ncF.png"></a></p>
+<h3 id="List集合"><a href="#List集合" class="headerlink" title="List集合"></a>List集合</h3><p><a href="https://imgchr.com/i/kj2Et0" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2Et0.png" alt="kj2Et0.png"></a></p>
 <h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p><a href="https://imgchr.com/i/kj2m1U" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2m1U.png" alt="kj2m1U.png"></a></p>
 <h3 id="Map集合"><a href="#Map集合" class="headerlink" title="Map集合"></a>Map集合</h3><p><a href="https://imgchr.com/i/kj2VhV" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/06/kj2VhV.png" alt="kj2VhV.png"></a></p>
 
@@ -790,7 +792,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法的方式属性注入"><span class="nav-number">1.</span> <span class="nav-text">构造方法的方式属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setter方法的属性注入"><span class="nav-number">2.</span> <span class="nav-text">Setter方法的属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setter方法设置对象类型的属性"><span class="nav-number">3.</span> <span class="nav-text">Setter方法设置对象类型的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P名称空间的属性注入"><span class="nav-number">4.</span> <span class="nav-text">P名称空间的属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合类型属性注入"><span class="nav-number">5.</span> <span class="nav-text">集合类型属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spEL表达式的属性注入"><span class="nav-number">6.</span> <span class="nav-text">spEL表达式的属性注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">6.0.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List集合"><span class="nav-number">6.0.2.</span> <span class="nav-text">List集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set集合"><span class="nav-number">6.0.3.</span> <span class="nav-text">Set集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合"><span class="nav-number">6.0.4.</span> <span class="nav-text">Map集合</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#构造方法的方式属性注入"><span class="nav-number">1.</span> <span class="nav-text">构造方法的方式属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setter方法的属性注入"><span class="nav-number">2.</span> <span class="nav-text">Setter方法的属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Setter方法设置对象类型的属性"><span class="nav-number">3.</span> <span class="nav-text">Setter方法设置对象类型的属性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#P名称空间的属性注入"><span class="nav-number">4.</span> <span class="nav-text">P名称空间的属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#spEL表达式的属性注入"><span class="nav-number">5.</span> <span class="nav-text">spEL表达式的属性注入</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#集合类型属性注入"><span class="nav-number">6.</span> <span class="nav-text">集合类型属性注入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">6.0.1.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List集合"><span class="nav-number">6.0.2.</span> <span class="nav-text">List集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set集合"><span class="nav-number">6.0.3.</span> <span class="nav-text">Set集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合"><span class="nav-number">6.0.4.</span> <span class="nav-text">Map集合</span></a></li></ol></li></ol></div>
             
 
           </div>
