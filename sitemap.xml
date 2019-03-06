@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.openmind.ink/MyBooks/index.html</loc>
+    
+    <lastmod>2019-03-06T10:20:42.361Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.openmind.ink/about/index.html</loc>
+    
+    <lastmod>2019-03-06T10:20:04.275Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.openmind.ink/Spring%E5%AD%A6%E4%B9%A0-Bean%E7%9A%84%E8%A3%85%E9%85%8D%E6%96%B9%E5%BC%8F%EF%BC%88DI%E7%9A%84%E6%9C%AC%E8%B4%A8%EF%BC%89/</loc>
     
     <lastmod>2019-03-06T09:46:38.818Z</lastmod>
@@ -166,13 +180,6 @@
     <loc>https://www.openmind.ink/JavaScript%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</loc>
     
     <lastmod>2019-01-07T13:10:51.667Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.openmind.ink/about/index.html</loc>
-    
-    <lastmod>2019-01-07T13:06:09.611Z</lastmod>
     
   </url>
   
@@ -348,13 +355,6 @@
     <loc>https://www.openmind.ink/The-usage-of-the-Hexo/</loc>
     
     <lastmod>2018-12-15T13:40:46.533Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.openmind.ink//404.html</loc>
-    
-    <lastmod>2018-12-15T11:46:25.181Z</lastmod>
     
   </url>
   
