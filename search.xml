@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[🗼捡芝麻_代理模式]]></title>
+    <url>%2F%E6%8D%A1%E8%8A%9D%E9%BA%BB-%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[代理模式 在代理模式（Proxy Pattern）中,一个类代表另一个类的功能。这种类型的设计模式属于结构性模式 意图：用户通过代理对象访问（控制）目标对象 何时使用：想在访问一个类时做一些控制 如何解决：增加中间层 关键代码：实现与代理类组合 应用实例 Windows中快捷方法 通过代理服务器访问外网 通过第三方平台实现资金转账 优点：1. 职责清晰 2. 高扩展性 3. 智能化 实例 在不适用jdk和cglib实现代理 Moveable接口 Car实现接口的类 Car2 通过集成的方式增强代码 Car3 通过集合的方式增强代码 CarTimeProxy 通过集合的方式增强代码 CarLogProxy 通过集合的方式增强代码 测试类 利用JDK实现动态代理 java.lang.reflect.Proxy:生成动态代理类和对象； java.lang.reflect.InvocationHandler（处理器接口）：可以通过invoke方法实现对真实角色的代理访问。每次通过 Proxy 生成的代理类对象都要指定对应的处理器对象。 要实现的接口 TimeHanlder处理器 jdk动态代理测试类 Car 实现核心业务的类 CGLIB实现动态代理 Cglib 动态代理是针对代理的类, 动态生成一个子类, 然后子类覆盖代理类中的方法, 如果是private或是final类修饰的方法,则不会被重写。 CGLIB是一个功能强大，高性能的代码生成包。它为没有实现接口的类提供代理，为JDK的动态代理提供了很好的补充。通常可以使用Java的动态代理创建代理，但当要代理的类没有实现接口或者为了更好的性能，CGLIB是一个好的选择。 需要被代理的目标对象 测试类 CglibProxy 代理类]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式☞代理模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[🎯捡芝麻-SimpleDateFormat]]></title>
     <url>%2F%E6%8D%A1%E8%8A%9D%E9%BA%BB-SimpleDateFormat%2F</url>
     <content type="text"><![CDATA[SimpleDateFormat函数的继承关系 java.lang.Object | +----java.text.Format | +----java.text.DateFormat | +----java.text.SimpleDateFormat public class SimpleDateFormat extends DateFormat SimpleDateFormat 是一个以国别敏感的方式格式化和分析数据的具体类。 它允许格式化 (date -&gt; text)、语法分析 (text -&gt; date)和标准化。 SimpleDateFormat函数语法 标识符 意义 y 年 M 月 d 日 h 12制-时 H 24制-时 m 分 s 秒 S 毫秒 E 星期 1234567891011121314151617181920import java.text.SimpleDateFormat;import java.util.Date;/** * Created by lxk on 2016/11/4 */public class Format &#123; public static void main(String[] args) &#123; Date ss = new Date(); System.out.println(&quot;一般日期输出：&quot; + ss); System.out.println(&quot;时间戳：&quot; + ss.getTime()); SimpleDateFormat format0 = new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;); String time = format0.format(ss.getTime());//这个就是把时间戳经过处理得到期望格式的时间 System.out.println(&quot;格式化结果0：&quot; + time); SimpleDateFormat format1 = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;); time = format1.format(ss.getTime()); System.out.println(&quot;格式化结果1：&quot; + time); &#125;&#125;]]></content>

@@ -80,7 +80,7 @@
 
 
 
-  <meta name="keywords" content="集合框架,">
+  <meta name="keywords" content="设计模式☞代理模式,">
 
 
 
@@ -93,18 +93,33 @@
 
 
 
-<meta name="description" content="集合接口   Type DESC     Collection 最基本的集合接口，代表一组Object，存储着不唯一，无序的对象   List 一个有序的Collection，是一个不唯一，有序（插入顺序）的对象   Set Set具有与Collection完全一样的接口，只是行为上不同，不会保存重复的元素，存储一组唯一，无序的对象   SortedSet 继承于Set保存有序的集合   Map">
-<meta name="keywords" content="集合框架">
+<meta name="description" content="代理模式 在代理模式（Proxy Pattern）中,一个类代表另一个类的功能。这种类型的设计模式属于结构性模式   意图：用户通过代理对象访问（控制）目标对象 何时使用：想在访问一个类时做一些控制 如何解决：增加中间层 关键代码：实现与代理类组合  应用实例  Windows中快捷方法 通过代理服务器访问外网 通过第三方平台实现资金转账  优点：1. 职责清晰  2. 高扩展性 3. 智能化 实">
+<meta name="keywords" content="设计模式☞代理模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="集合框架之Map和List遍历">
-<meta property="og:url" content="https://www.openmind.ink/集合框架之Map和List遍历/index.html">
+<meta property="og:title" content="🗼捡芝麻_代理模式">
+<meta property="og:url" content="https://www.openmind.ink/捡芝麻-代理模式/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="集合接口   Type DESC     Collection 最基本的集合接口，代表一组Object，存储着不唯一，无序的对象   List 一个有序的Collection，是一个不唯一，有序（插入顺序）的对象   Set Set具有与Collection完全一样的接口，只是行为上不同，不会保存重复的元素，存储一组唯一，无序的对象   SortedSet 继承于Set保存有序的集合   Map">
+<meta property="og:description" content="代理模式 在代理模式（Proxy Pattern）中,一个类代表另一个类的功能。这种类型的设计模式属于结构性模式   意图：用户通过代理对象访问（控制）目标对象 何时使用：想在访问一个类时做一些控制 如何解决：增加中间层 关键代码：实现与代理类组合  应用实例  Windows中快捷方法 通过代理服务器访问外网 通过第三方平台实现资金转账  优点：1. 职责清晰  2. 高扩展性 3. 智能化 实">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-02T03:52:33.862Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApfGQI.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Apf8SA.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApfQFe.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApflJH.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Apf1Wd.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApfneK.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApfJyt.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Apfbm6.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Apf7Ox.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Apfq0K.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/ApfLTO.md.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/AphuXq.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/AphQBV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/10/Aphl7T.md.png">
+<meta property="og:updated_time" content="2019-03-10T05:16:02.876Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="集合框架之Map和List遍历">
-<meta name="twitter:description" content="集合接口   Type DESC     Collection 最基本的集合接口，代表一组Object，存储着不唯一，无序的对象   List 一个有序的Collection，是一个不唯一，有序（插入顺序）的对象   Set Set具有与Collection完全一样的接口，只是行为上不同，不会保存重复的元素，存储一组唯一，无序的对象   SortedSet 继承于Set保存有序的集合   Map">
+<meta name="twitter:title" content="🗼捡芝麻_代理模式">
+<meta name="twitter:description" content="代理模式 在代理模式（Proxy Pattern）中,一个类代表另一个类的功能。这种类型的设计模式属于结构性模式   意图：用户通过代理对象访问（控制）目标对象 何时使用：想在访问一个类时做一些控制 如何解决：增加中间层 关键代码：实现与代理类组合  应用实例  Windows中快捷方法 通过代理服务器访问外网 通过第三方平台实现资金转账  优点：1. 职责清晰  2. 高扩展性 3. 智能化 实">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/03/10/ApfGQI.md.png">
 
 
 
@@ -134,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="https://www.openmind.ink/集合框架之Map和List遍历/">
+  <link rel="canonical" href="https://www.openmind.ink/捡芝麻-代理模式/">
 
 
 
 
 
-  <title>集合框架之Map和List遍历 | Sunshineisbright</title>
+  <title>🗼捡芝麻_代理模式 | Sunshineisbright</title>
   
 
 
@@ -319,7 +334,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/集合框架之Map和List遍历/">
+    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/捡芝麻-代理模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Wangzhuang">
@@ -336,7 +351,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">集合框架之Map和List遍历</h1>
+          <h1 class="post-title" itemprop="name headline">🗼捡芝麻_代理模式</h1>
         
 
         <div class="post-meta">
@@ -348,8 +363,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-28T18:02:15+08:00">
-                2019-02-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T12:47:42+08:00">
+                2019-03-10
               </time>
             
 
@@ -364,8 +379,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-02T11:52:33+08:00">
-                2019-03-02
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-10T13:16:02+08:00">
+                2019-03-10
               </time>
             
           </span>
@@ -383,8 +398,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/集合框架/" itemprop="url" rel="index">
-                    <span itemprop="name">集合框架</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -401,8 +416,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/集合框架之Map和List遍历/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/集合框架之Map和List遍历/" itemprop="commentCount"></span>
+                <a href="/捡芝麻-代理模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/捡芝麻-代理模式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  688
+                  489
                 </span>
               
 
@@ -445,7 +460,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  1
                 </span>
               
             </div>
@@ -466,139 +481,87 @@
       
 
       
-        <h3 id="集合接口"><a href="#集合接口" class="headerlink" title="集合接口"></a>集合接口</h3><table>
-<thead>
-<tr>
-<th style="text-align:right">Type</th>
-<th style="text-align:right">DESC</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right">Collection</td>
-<td style="text-align:right">最基本的集合接口，代表一组Object，存储着不唯一，无序的对象</td>
-</tr>
-<tr>
-<td style="text-align:right">List</td>
-<td style="text-align:right">一个有序的Collection，是一个不唯一，有序（插入顺序）的对象</td>
-</tr>
-<tr>
-<td style="text-align:right">Set</td>
-<td style="text-align:right">Set具有与Collection完全一样的接口，只是行为上不同，不会保存重复的元素，存储一组唯一，无序的对象</td>
-</tr>
-<tr>
-<td style="text-align:right">SortedSet</td>
-<td style="text-align:right">继承于Set保存有序的集合</td>
-</tr>
-<tr>
-<td style="text-align:right">Map</td>
-<td style="text-align:right">Map接口存储一组键值对象，提供key（键）到value（值）的映射</td>
-</tr>
-<tr>
-<td style="text-align:right">Map.Entry</td>
-<td style="text-align:right">描述在一个Map中的一个元素（键/值对）。是一个Map的内部类</td>
-</tr>
-<tr>
-<td style="text-align:right">SortedMap</td>
-<td style="text-align:right">继承于Map，使key保持在升序的排列</td>
-</tr>
-</tbody>
-</table>
-<h3 id="Set和List的区别"><a href="#Set和List的区别" class="headerlink" title="Set和List的区别"></a>Set和List的区别</h3><blockquote>
-<ul>
-<li>Set： 无顺序、无重复的数据<br>  </li>
-<li>List：有序、重复的数据<br></li>
-</ul>
+        <h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1><blockquote>
+<p>在代理模式（Proxy Pattern）中,一个类代表另一个类的功能。这种类型的设计模式属于结构性模式</p>
 </blockquote>
+<ul>
+<li>意图：<strong>用户通过代理对象访问（控制）目标对象</strong></li>
+<li>何时使用：想在访问一个类时做一些控制</li>
+<li>如何解决：增加中间层</li>
+<li>关键代码：实现与代理类组合</li>
+</ul>
+<p>应用实例</p>
+<ol>
+<li>Windows中快捷方法</li>
+<li>通过代理服务器访问外网</li>
+<li>通过第三方平台实现资金转账</li>
+</ol>
+<p>优点：1. 职责清晰  2. 高扩展性 3. 智能化</p>
+<h2 id="实例-在不适用jdk和cglib实现代理"><a href="#实例-在不适用jdk和cglib实现代理" class="headerlink" title="实例 在不适用jdk和cglib实现代理"></a>实例 在不适用jdk和cglib实现代理</h2><ul>
+<li>Moveable接口</li>
+</ul>
+<p><a href="https://imgchr.com/i/ApfGQI" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApfGQI.md.png" alt="ApfGQI.md.png"></a></p>
+<ul>
+<li>Car实现接口的类</li>
+</ul>
+<p><a href="https://imgchr.com/i/Apf8SA" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/Apf8SA.md.png" alt="Apf8SA.md.png"></a></p>
+<ul>
+<li><p>Car2 通过集成的方式增强代码<br><a href="https://imgchr.com/i/ApfQFe" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApfQFe.md.png" alt="ApfQFe.md.png"></a></p>
+</li>
+<li><p>Car3 通过集合的方式增强代码</p>
+</li>
+</ul>
+<p><a href="https://imgchr.com/i/ApflJH" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApflJH.md.png" alt="ApflJH.md.png"></a></p>
+<ul>
+<li>CarTimeProxy 通过集合的方式增强代码</li>
+</ul>
+<p><a href="https://imgchr.com/i/Apf1Wd" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/Apf1Wd.md.png" alt="Apf1Wd.md.png"></a></p>
+<ul>
+<li>CarLogProxy 通过集合的方式增强代码</li>
+</ul>
+<p><a href="https://imgchr.com/i/ApfneK" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApfneK.md.png" alt="ApfneK.md.png"></a></p>
+<ul>
+<li>测试类</li>
+</ul>
+<p><a href="https://imgchr.com/i/ApfJyt" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApfJyt.md.png" alt="ApfJyt.md.png"></a></p>
+<h2 id="利用JDK实现动态代理"><a href="#利用JDK实现动态代理" class="headerlink" title="利用JDK实现动态代理"></a>利用JDK实现动态代理</h2><ul>
+<li><strong>java.lang.reflect.Proxy</strong>:生成动态代理类和对象；</li>
+<li><p><strong>java.lang.reflect.InvocationHandler</strong>（处理器接口）：可以通过invoke方法实现对真实角色的代理访问。每次通过 Proxy 生成的代理类对象都要指定对应的处理器对象。</p>
+</li>
+<li><p>要实现的接口</p>
+</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/03/10/Apfbm6.png" alt="Apfbm6.png"></p>
+<ul>
+<li>TimeHanlder处理器</li>
+</ul>
+<p><a href="https://imgchr.com/i/Apf7Ox" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/Apf7Ox.md.png" alt="Apf7Ox.md.png"></a></p>
+<ul>
+<li>jdk动态代理测试类</li>
+</ul>
+<p><a href="https://imgchr.com/i/Apfq0K" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/Apfq0K.md.png" alt="Apfq0K.md.png"></a></p>
+<ul>
+<li>Car 实现核心业务的类</li>
+</ul>
+<p><a href="https://imgchr.com/i/ApfLTO" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/ApfLTO.md.png" alt="ApfLTO.md.png"></a></p>
+<h2 id="CGLIB实现动态代理"><a href="#CGLIB实现动态代理" class="headerlink" title="CGLIB实现动态代理"></a>CGLIB实现动态代理</h2><ul>
+<li>Cglib 动态代理是针对代理的类, 动态生成一个子类, 然后子类覆盖代理类中的方法, 如果是private或是final类修饰的方法,则不会被重写。</li>
+</ul>
 <blockquote>
-<ul>
-<li>Set检索效率低下，删除和插入效率高，插入和删除不会引起元素位置的改变<pre><code>* 实现类：HashSet、TreeSet
-</code></pre></li>
-<li>List和数据类似，只不过可以动态增长，根据实际存储的数据长度自动增长的List长度。插入删除效率低，因为会引起其他元素位置改变<pre><code>* 实现类： ArrayList、LinkedList、Vector
-</code></pre></li>
-</ul>
+<p>CGLIB是一个功能强大，高性能的代码生成包。它为没有实现接口的类提供代理，为JDK的动态代理提供了很好的补充。通常可以使用Java的动态代理创建代理，但当要代理的类没有实现接口或者为了更好的性能，CGLIB是一个好的选择。</p>
 </blockquote>
-<h3 id="遍历ArrayList"><a href="#遍历ArrayList" class="headerlink" title="遍历ArrayList"></a>遍历ArrayList</h3><p><code></code></p>
-<pre><code>package com.niit.count;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-public class TestArrayList {
-
-public static void main(String[] args) {
-    List&lt;String&gt; list = new ArrayList&lt;String&gt;();
-
-    list.add(&quot;test1&quot;);
-    list.add(&quot;test2&quot;);
-    list.add(&quot;test3&quot;);
-
-    //第一种遍历方法使用foreach遍历List
-    for(String str : list) {
-        // 也可以改写for(int i = 0 ; i &lt; list.size(); i ++)
-        System.out.println(str);
-    }
-
-    // 第二种遍历，把链表变为数组相关的内容进行遍历
-    String [] strArray = new String[list.size()];
-    list.toArray(strArray);
-    for(int i = 0; i &lt; strArray.length; i++) {
-        // 这里也可以改写为foreach(String str: strArray)
-        System.out.println(strArray[i]);
-    }
-
-    // 第三种遍历 使用迭代器进行遍历
-    Iterator&lt;String&gt; ite = list.iterator();
-
-    while(ite.hasNext()) {
-        System.out.println(ite.next());
-    }
-
-}
-</code></pre><p> }</p>
-<p></p>
-<h3 id="遍历Map"><a href="#遍历Map" class="headerlink" title="遍历Map"></a>遍历Map</h3><p><code></code></p>
-<pre><code>package com.niit.count;
-
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
-public class TestMap {
-
-public static void main(String[] args) {
-    Map&lt;String,String&gt; map = new HashMap&lt;String,String&gt;();
-    map.put(&quot;1&quot;, &quot;value1&quot;);
-    map.put(&quot;2&quot;,&quot;value2&quot;);
-    map.put(&quot;3&quot;,&quot;value3&quot;);
-
-    // 第一种， 普遍使用，二次取值
-
-    System.out.println(&quot;通过Map.keySet遍历key和value&quot;);
-    for(String key : map.keySet()) {
-        System.out.println(&quot;key= &quot; + key + &quot;, value= &quot; + map.get(key));
-    }
-
-    // 第二种， 
-    System.out.println(&quot;通过Map.EntrySet使用iterator遍历map&quot;);
-    Iterator&lt;Map.Entry&lt;String, String&gt;&gt; it = map.entrySet().iterator();
-            while(it.hasNext()) {
-                Map.Entry&lt;String, String&gt; entry = it.next();
-                System.out.println(&quot;key= &quot; + entry.getKey() + &quot; and value = &quot; + entry.getValue());
-    }
-    // 第三种，推荐尤其是容量大的
-    for(Map.Entry&lt;String,String&gt; entry : map.entrySet()) {
-        System.out.println(&quot;key= &quot; + entry.getKey() + &quot;and value= &quot; + entry.getKey());
-    }
-
-    // 第四种，通过Map.values()遍历所有的value但不能遍历所有的可以、
-    for(String v : map.values()) {
-            System.out.println(&quot;value= &quot; + v);
-        }
-    }
-}
-</code></pre><p>    </p>
+<ul>
+<li>需要被代理的目标对象</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/03/10/AphuXq.png" alt="AphuXq.png"></p>
+<ul>
+<li>测试类</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/03/10/AphQBV.png" alt="AphQBV.png"></p>
+<ul>
+<li>CglibProxy 代理类</li>
+</ul>
+<p><a href="https://imgchr.com/i/Aphl7T" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/03/10/Aphl7T.md.png" alt="Aphl7T.md.png"></a></p>
 
       
     </div>
@@ -650,7 +613,7 @@ public static void main(String[] args) {
       
         <div class="post-tags">
           
-            <a href="/tags/集合框架/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>集合框架</a>
+            <a href="/tags/设计模式☞代理模式/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>设计模式☞代理模式</a>
           
         </div>
       
@@ -663,8 +626,8 @@ public static void main(String[] args) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/如何学习Spring、Struts、Hibernate三大框架-概论/" rel="next" title="如何学习Spring、Struts、Hibernate三大框架 --- 概论">
-                <i class="fa fa-chevron-left"></i> 如何学习Spring、Struts、Hibernate三大框架 --- 概论
+              <a href="/捡芝麻-SimpleDateFormat/" rel="next" title="🎯捡芝麻-SimpleDateFormat">
+                <i class="fa fa-chevron-left"></i> 🎯捡芝麻-SimpleDateFormat
               </a>
             
           </div>
@@ -672,10 +635,6 @@ public static void main(String[] args) {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Spring关键字之依赖注入（Dependency-Injection）/" rel="prev" title="Spring关键字之依赖注入（Dependency Injection)">
-                Spring关键字之依赖注入（Dependency Injection) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -886,7 +845,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#集合接口"><span class="nav-number">1.</span> <span class="nav-text">集合接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Set和List的区别"><span class="nav-number">2.</span> <span class="nav-text">Set和List的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历ArrayList"><span class="nav-number">3.</span> <span class="nav-text">遍历ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遍历Map"><span class="nav-number">4.</span> <span class="nav-text">遍历Map</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#代理模式"><span class="nav-number">1.</span> <span class="nav-text">代理模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#实例-在不适用jdk和cglib实现代理"><span class="nav-number">1.1.</span> <span class="nav-text">实例 在不适用jdk和cglib实现代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用JDK实现动态代理"><span class="nav-number">1.2.</span> <span class="nav-text">利用JDK实现动态代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CGLIB实现动态代理"><span class="nav-number">1.3.</span> <span class="nav-text">CGLIB实现动态代理</span></a></li></ol></li></ol></div>
             
 
           </div>
