@@ -545,11 +545,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[window常用命令]]></title>
+    <title><![CDATA[🌍Window骚操作📌]]></title>
     <url>%2Fwindow%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[常用命令 keyword function D/E: 进入D/E盘 ipconfig 查看本机IP cls 清除屏幕 appwiz.cpl 打开删除程序面板 msinfo32 系统信息 win + shift + s 截屏 12345//删除占用指定端口的进程netstat -ano|findstr &quot;8080&quot; //查询8080端口taskkill/pid 3017 /F 关闭pid为3017的进程 /F标识强制结束 cmd控制台输入命令 keyword description IPCONFIG 进入DOS命令一打直接显示当前的所有网络配置 NETSTAT 显示当前网络链接状态 PING 192.168.0.1 判断DNS解析是否正常 arp 查看主机存储的IP和MAC的映射 systeminfo 查看系统信息（带图像界面的输入msinfo32 tasklist 当前进程列表 各种应用程序直接通过win+r中运行 keyword descrption service.msc 打开服务 devmgmt.msc 打开设备管理 control 打开控制面板 regedit 打开注册表 appwiz.cpl 打开删除程序的面板 msinfo32 系统信息 windows中各种快捷键 keyword function win + E 打开文件管理器 win + D 显示桌面 win + L 锁定计算机 alt + F4 关闭当前程序]]></content>
+    <content type="text"><![CDATA[常用命令 keyword function D/E: 进入D/E盘 ipconfig 查看本机IP cls 清除屏幕 appwiz.cpl 打开删除程序面板 msinfo32 系统信息 win + shift + s 截屏 12345//删除占用指定端口的进程netstat -ano|findstr &quot;8080&quot; //查询8080端口taskkill/pid 3017 /F 关闭pid为3017的进程 /F标识强制结束 cmd控制台输入命令 keyword description IPCONFIG 进入DOS命令一打直接显示当前的所有网络配置 NETSTAT 显示当前网络链接状态 PING 192.168.0.1 判断DNS解析是否正常 arp 查看主机存储的IP和MAC的映射 systeminfo 查看系统信息（带图像界面的输入msinfo32 tasklist 当前进程列表 win + A 打开操作中心 win + I Windows设置 win + S Windows打开搜索🔍 各种应用程序直接通过win+r中运行 keyword descrption service.msc 打开服务 devmgmt.msc 打开设备管理 control 打开控制面板 regedit 打开注册表 appwiz.cpl 打开删除程序的面板 msinfo32 系统信息 windows中各种快捷键 keyword function win + E 打开文件管理器 win + D 显示桌面 win + L 锁定计算机 alt + F4 关闭当前程序]]></content>
       <categories>
-        <category>windows</category>
+        <category>🎯我的电脑（🗽）</category>
       </categories>
       <tags>
         <tag>windows window常用cmd命令 windows小知识</tag>

@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.openmind.ink/MyBooks/index.html</loc>
+    
+    <lastmod>2019-03-13T06:10:22.710Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.openmind.ink/about/index.html</loc>
+    
+    <lastmod>2019-03-13T06:10:22.080Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.openmind.ink/window%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
+    
+    <lastmod>2019-03-13T05:50:40.018Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.openmind.ink/Oracle-%E7%AE%80%E4%BB%8B/</loc>
     
     <lastmod>2019-03-13T01:44:54.792Z</lastmod>
@@ -61,20 +82,6 @@
     <loc>https://www.openmind.ink/JavaSE-CLASSPATH/</loc>
     
     <lastmod>2019-03-09T08:30:10.813Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.openmind.ink/MyBooks/index.html</loc>
-    
-    <lastmod>2019-03-06T11:27:14.309Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.openmind.ink/about/index.html</loc>
-    
-    <lastmod>2019-03-06T10:20:04.275Z</lastmod>
     
   </url>
   
@@ -159,13 +166,6 @@
     <loc>https://www.openmind.ink/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6%E4%B9%8BMap%E5%92%8CList%E9%81%8D%E5%8E%86/</loc>
     
     <lastmod>2019-03-02T03:52:33.862Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.openmind.ink/window%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
-    
-    <lastmod>2019-02-25T06:13:34.436Z</lastmod>
     
   </url>
   
