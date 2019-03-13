@@ -96,7 +96,7 @@
 <meta name="description" content="Oracle公司 Oracle公司是世界上最大的软件提供商之一，而Oracle的中文含义是甲骨文，在古希腊神话之中被翻译为“神谕”、“上帝的宠儿”。实际上Oracle公司的起源于最早的IBM一个分析人员的论文————论关系型数据库的发展。  Oracle数据库主要经历的几个版本 Oracle8/Oracle8i(1CD): “i”表示的是Internet，表示Oracle进军网络； Oracle9">
 <meta name="keywords" content="Oracle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="🔰Oracle_简介（初探）">
+<meta property="og:title" content="🛢Oracle_简介（初探）">
 <meta property="og:url" content="https://www.openmind.ink/Oracle-简介/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="Oracle公司 Oracle公司是世界上最大的软件提供商之一，而Oracle的中文含义是甲骨文，在古希腊神话之中被翻译为“神谕”、“上帝的宠儿”。实际上Oracle公司的起源于最早的IBM一个分析人员的论文————论关系型数据库的发展。  Oracle数据库主要经历的几个版本 Oracle8/Oracle8i(1CD): “i”表示的是Internet，表示Oracle进军网络； Oracle9">
@@ -108,9 +108,9 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/11/ACuxfI.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/11/ACKSpt.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/11/ACKlBF.png">
-<meta property="og:updated_time" content="2019-03-13T01:44:54.792Z">
+<meta property="og:updated_time" content="2019-03-13T08:03:13.573Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="🔰Oracle_简介（初探）">
+<meta name="twitter:title" content="🛢Oracle_简介（初探）">
 <meta name="twitter:description" content="Oracle公司 Oracle公司是世界上最大的软件提供商之一，而Oracle的中文含义是甲骨文，在古希腊神话之中被翻译为“神谕”、“上帝的宠儿”。实际上Oracle公司的起源于最早的IBM一个分析人员的论文————论关系型数据库的发展。  Oracle数据库主要经历的几个版本 Oracle8/Oracle8i(1CD): “i”表示的是Internet，表示Oracle进军网络； Oracle9">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/03/11/ACmXuD.png">
 
@@ -148,7 +148,7 @@
 
 
 
-  <title>🔰Oracle_简介（初探） | Sunshineisbright</title>
+  <title>🛢Oracle_简介（初探） | Sunshineisbright</title>
   
 
 
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">🔰Oracle_简介（初探）</h1>
+          <h1 class="post-title" itemprop="name headline">🛢Oracle_简介（初探）</h1>
         
 
         <div class="post-meta">
@@ -372,7 +372,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-13T09:44:54+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-13T16:03:13+08:00">
                 2019-03-13
               </time>
             
@@ -391,8 +391,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Oracle/" itemprop="url" rel="index">
-                    <span itemprop="name">Oracle</span>
+                  <a href="/categories/Oracle-Learning/" itemprop="url" rel="index">
+                    <span itemprop="name">Oracle_Learning</span>
                   </a>
                 </span>
 
@@ -437,7 +437,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  841
+                  897
                 </span>
               
 
@@ -496,15 +496,20 @@
 <blockquote>
 <p>在安装完Oracle之后，Oracle的相关服务都会设置为自动启动，但是这样一来，对于电脑的启动速度有限制，所以一般所有的服务都设置为手动启动。</p>
 </blockquote>
-<h3 id="每次启动的时候只需要启动两个服务即可："><a href="#每次启动的时候只需要启动两个服务即可：" class="headerlink" title="每次启动的时候只需要启动两个服务即可："></a>每次启动的时候只需要启动两个服务即可：</h3><pre><code>* OracleOraDb11g_home1TNSListener:是监听服务，如果通过程序或者是不同客户端连接Oracle连接的时候，此服务必须启动，否则无法连接；
-* OracleServiceMLDN：数据库的实例服务，它的命名标准：OracleServiceSID每当系统增加一个数据库的时候都会自动的出现要给类似的服务名称。
-</code></pre><p>|- 在默认的情况下，SID的名称和数据库的名称是完全一致的，在网络上使用的是SID的名字。</p>
+<h3 id="–-gt-每次启动的时候只需要启动两个服务即可："><a href="#–-gt-每次启动的时候只需要启动两个服务即可：" class="headerlink" title="–&gt; 每次启动的时候只需要启动两个服务即可："></a>–&gt; 每次启动的时候只需要启动两个服务即可：</h3><ul>
+<li>OracleOraDb11g_home1TNSListener:是<strong>监听服务</strong>，如果通过程序或者是不同客户端连接Oracle连接的时候，此服务必须启动，否则无法连接；</li>
+<li>OracleServiceMLDN：<strong>数据库的实例服务</strong>，它的命名标准：OracleServiceSID每当系统增加一个数据库的时候都会自动的出现要给类似的服务名称。</li>
+</ul>
+<p>|- 在默认的情况下，SID的名称和数据库的名称是完全一致的，在网络上使用的是SID的名字。</p>
 <h1 id="Oracle的安装问题："><a href="#Oracle的安装问题：" class="headerlink" title="Oracle的安装问题："></a>Oracle的安装问题：</h1><h4 id="使用Oracle提供的卸载程序"><a href="#使用Oracle提供的卸载程序" class="headerlink" title="使用Oracle提供的卸载程序"></a>使用Oracle提供的卸载程序</h4><pre><code>|- 使用Oracle提供的卸载程序（unistall.exe）
 |- 重新启动电脑，进入到安全模式（启动时按住F8）
 |- 找到系统上的对应的磁盘路径，并且删除；
 |- 运行注册表命令**regedit.exe**，搜索所有与Oracle有关的内容，并且删除；
 |- 重新启动电脑后就可以重新安装。
-</code></pre><h1 id="SQLPlus命令"><a href="#SQLPlus命令" class="headerlink" title="SQLPlus命令"></a>SQLPlus命令</h1><blockquote>
+</code></pre><h1 id="SQLPlus"><a href="#SQLPlus" class="headerlink" title="SQLPlus"></a>SQLPlus</h1><blockquote>
+<p>SQLPlus是Oracle数据库提供的一个专门用于<strong>数据库管理的交互式工具</strong>,SQLPlus通过命令的方法对数据库进行管理，也可以通过SQLPlus执行SQL语句的操作。</p>
+</blockquote>
+<h2 id="SQLPlus命令"><a href="#SQLPlus命令" class="headerlink" title="SQLPlus命令"></a>SQLPlus命令</h2><blockquote>
 <p>Oracle提供一个软件平台，如果要想让此平台可以使用，则必须要输入命令（DBMS、命令行）</p>
 </blockquote>
 <h4 id="常用的几种登录方式"><a href="#常用的几种登录方式" class="headerlink" title="常用的几种登录方式"></a>常用的几种登录方式</h4><ul>
@@ -744,7 +749,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -847,7 +852,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle公司"><span class="nav-number">1.</span> <span class="nav-text">Oracle公司</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle数据库主要经历的几个版本"><span class="nav-number">2.</span> <span class="nav-text">Oracle数据库主要经历的几个版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装"><span class="nav-number">3.</span> <span class="nav-text">Oracle的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要操作的几个用户（设置经典口令）"><span class="nav-number">4.</span> <span class="nav-text">主要操作的几个用户（设置经典口令）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装在win中注册的服务"><span class="nav-number">5.</span> <span class="nav-text">Oracle的安装在win中注册的服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#每次启动的时候只需要启动两个服务即可："><span class="nav-number">5.0.1.</span> <span class="nav-text">每次启动的时候只需要启动两个服务即可：</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装问题："><span class="nav-number">6.</span> <span class="nav-text">Oracle的安装问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Oracle提供的卸载程序"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">使用Oracle提供的卸载程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQLPlus命令"><span class="nav-number">7.</span> <span class="nav-text">SQLPlus命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的几种登录方式"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">常用的几种登录方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令"><span class="nav-number">7.0.0.2.</span> <span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用记事本编写指定的sql语句"><span class="nav-number">7.0.0.3.</span> <span class="nav-text">如何使用记事本编写指定的sql语句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换用户"><span class="nav-number">7.0.1.</span> <span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过HOST调用本机系统的命令"><span class="nav-number">7.0.2.</span> <span class="nav-text">通过HOST调用本机系统的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">7.0.3.</span> <span class="nav-text">小结</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle公司"><span class="nav-number">1.</span> <span class="nav-text">Oracle公司</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle数据库主要经历的几个版本"><span class="nav-number">2.</span> <span class="nav-text">Oracle数据库主要经历的几个版本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装"><span class="nav-number">3.</span> <span class="nav-text">Oracle的安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要操作的几个用户（设置经典口令）"><span class="nav-number">4.</span> <span class="nav-text">主要操作的几个用户（设置经典口令）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装在win中注册的服务"><span class="nav-number">5.</span> <span class="nav-text">Oracle的安装在win中注册的服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#–-gt-每次启动的时候只需要启动两个服务即可："><span class="nav-number">5.0.1.</span> <span class="nav-text">–&gt; 每次启动的时候只需要启动两个服务即可：</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Oracle的安装问题："><span class="nav-number">6.</span> <span class="nav-text">Oracle的安装问题：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#使用Oracle提供的卸载程序"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">使用Oracle提供的卸载程序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQLPlus"><span class="nav-number">7.</span> <span class="nav-text">SQLPlus</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#SQLPlus命令"><span class="nav-number">7.1.</span> <span class="nav-text">SQLPlus命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的几种登录方式"><span class="nav-number">7.1.0.1.</span> <span class="nav-text">常用的几种登录方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令"><span class="nav-number">7.1.0.2.</span> <span class="nav-text">常用的命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用记事本编写指定的sql语句"><span class="nav-number">7.1.0.3.</span> <span class="nav-text">如何使用记事本编写指定的sql语句</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换用户"><span class="nav-number">7.1.1.</span> <span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#通过HOST调用本机系统的命令"><span class="nav-number">7.1.2.</span> <span class="nav-text">通过HOST调用本机系统的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">7.1.3.</span> <span class="nav-text">小结</span></a></li></ol></li></div>
             
 
           </div>
@@ -892,7 +897,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共49.5k字</span>
+  <span class="post-count">博客全站共50.8k字</span>
 </div>
 
         
