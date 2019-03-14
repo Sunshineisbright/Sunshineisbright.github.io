@@ -106,7 +106,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/12/AiXcKx.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/12/AiXTxI.md.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/12/AiXyx1.png">
-<meta property="og:updated_time" content="2019-03-12T15:54:52.207Z">
+<meta property="og:updated_time" content="2019-03-14T12:25:01.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="💐Spring学习-面向切面的Spring之AOP（理论）">
 <meta name="twitter:description" content="😕理解面向切面（Aspect Oriented Programming）🗡AOP简介 通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。 AOP是一种编程范式，而不是一种编程语言解决一些特定的问题作为OOP的一种补充利用AOP可以对业务逻辑中各个部分进行分离，从而使得业务逻辑各部分之间的耦合度降低，提供程序的可重用性，同时提高了开发的效率。    ⚔AOP产生的初衷 解决代码重复">
@@ -370,8 +370,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T23:54:52+08:00">
-                2019-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-14T20:25:01+08:00">
+                2019-03-14
               </time>
             
           </span>
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  3
                 </span>
               
             </div>
@@ -554,27 +554,22 @@
 <h4 id="切面的好处"><a href="#切面的好处" class="headerlink" title="切面的好处"></a>切面的好处</h4><pre><code>1. 首先，现在每个关注点（重复的代码）都集中在一个地方，而不是分散到多处代码中；
 2. 其次，服务模块更简洁因为他们只包含**主要关注点（即核心功能业务逻辑代码），而次要关注点的代码被转移到切面中了。
 </code></pre><h2 id="⛓AOP通知类型"><a href="#⛓AOP通知类型" class="headerlink" title="⛓AOP通知类型"></a>⛓AOP通知类型</h2><ul>
-<li><p><strong>前置通知（Before）</strong></p>
+<li><p><strong>前置通知（MethodBeforeAdvice）</strong></p>
 <blockquote>
 <p>在目标方法被调用之前调用通知功能；</p>
 </blockquote>
 </li>
-<li><p><strong>后置通知（After）</strong></p>
+<li><p><strong>后置通知（AfterReturningAdvice）</strong></p>
 <blockquote>
 <p>在目标方法完成之后调用通知，此时不关心方法的输出是什么；</p>
 </blockquote>
 </li>
-<li><p><strong>返回通知（After-returning）</strong></p>
-<blockquote>
-<p>在目标方法成功执行之后调用通知；</p>
-</blockquote>
-</li>
-<li><p><strong>异常通知（After-throwing）</strong></p>
+<li><p><strong>异常通知（ThrowsAdvice）</strong></p>
 <blockquote>
 <p>在目标方法抛出异常后调用通知；</p>
 </blockquote>
 </li>
-<li><p><strong>环绕通知（Around）</strong></p>
+<li><p><strong>环绕通知（MethodInterceptor）</strong></p>
 <blockquote>
 <p>通知包裹了被通知的方法，在被通知的方法被调用之前和调用之后执行自定义的行为。</p>
 </blockquote>
@@ -764,7 +759,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">61</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -775,7 +770,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -786,7 +781,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-count">47</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -912,7 +907,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共50.8k字</span>
+  <span class="post-count">博客全站共52.2k字</span>
 </div>
 
         
