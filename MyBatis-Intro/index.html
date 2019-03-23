@@ -93,19 +93,22 @@
 
 
 
-<meta name="description" content="什么是MyBatis？ 定义：是一个支持自定义SQL、存储过程和高级映射的持久层框架。  custom SQL stored procedures advanced mappings   干什么：可以消除大多数的JDBC代码和参数设置以及检索结果  如果做：MyBatis使用简单的XML或者注解去配置和映射原生信息，将接口和Java POJOs 类映射成数据库中的记录（use simple XM">
+<meta name="description" content="ORM简介 在系统开发过程中，开发人员需要使用OOP的思维实现业务逻辑，但在设计数据表或操作DB记录时则需要通过关系型的思维方式考虑问题。   纯JDBC操作 ORM框架应运而生 ORM框架的主要功能： 根据映射配置文件，完成数据在对象模型 和 关系模型 之间的映射，同时也屏蔽了在使用JDBC过程中重复性代码。只暴露简单的API给开发人员使用   常见的持久化框架（Hibernat、JPA、Sp">
 <meta name="keywords" content="MyBais_Learn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="🕵️‍♂️MyBatis_intro">
 <meta property="og:url" content="https://www.openmind.ink/MyBatis-Intro/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="什么是MyBatis？ 定义：是一个支持自定义SQL、存储过程和高级映射的持久层框架。  custom SQL stored procedures advanced mappings   干什么：可以消除大多数的JDBC代码和参数设置以及检索结果  如果做：MyBatis使用简单的XML或者注解去配置和映射原生信息，将接口和Java POJOs 类映射成数据库中的记录（use simple XM">
+<meta property="og:description" content="ORM简介 在系统开发过程中，开发人员需要使用OOP的思维实现业务逻辑，但在设计数据表或操作DB记录时则需要通过关系型的思维方式考虑问题。   纯JDBC操作 ORM框架应运而生 ORM框架的主要功能： 根据映射配置文件，完成数据在对象模型 和 关系模型 之间的映射，同时也屏蔽了在使用JDBC过程中重复性代码。只暴露简单的API给开发人员使用   常见的持久化框架（Hibernat、JPA、Sp">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/03/12/APhfTP.png">
-<meta property="og:updated_time" content="2019-03-12T09:25:35.870Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/22/A88TgO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/22/A887vD.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/03/22/A88o8K.png">
+<meta property="og:updated_time" content="2019-03-22T09:59:14.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="🕵️‍♂️MyBatis_intro">
-<meta name="twitter:description" content="什么是MyBatis？ 定义：是一个支持自定义SQL、存储过程和高级映射的持久层框架。  custom SQL stored procedures advanced mappings   干什么：可以消除大多数的JDBC代码和参数设置以及检索结果  如果做：MyBatis使用简单的XML或者注解去配置和映射原生信息，将接口和Java POJOs 类映射成数据库中的记录（use simple XM">
+<meta name="twitter:description" content="ORM简介 在系统开发过程中，开发人员需要使用OOP的思维实现业务逻辑，但在设计数据表或操作DB记录时则需要通过关系型的思维方式考虑问题。   纯JDBC操作 ORM框架应运而生 ORM框架的主要功能： 根据映射配置文件，完成数据在对象模型 和 关系模型 之间的映射，同时也屏蔽了在使用JDBC过程中重复性代码。只暴露简单的API给开发人员使用   常见的持久化框架（Hibernat、JPA、Sp">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/03/12/APhfTP.png">
 
 
@@ -366,8 +369,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-12T17:25:35+08:00">
-                2019-03-12
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-22T17:59:14+08:00">
+                2019-03-22
               </time>
             
           </span>
@@ -431,7 +434,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  184
+                  1.4k
                 </span>
               
 
@@ -447,7 +450,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  4
                 </span>
               
             </div>
@@ -469,6 +472,37 @@
 
       
         <p><img src="https://s2.ax1x.com/2019/03/12/APhfTP.png" alt="APhfTP.png"></p>
+<h1 id="ORM简介"><a href="#ORM简介" class="headerlink" title="ORM简介"></a>ORM简介</h1><blockquote>
+<p>在系统开发过程中，开发人员需要使用<strong>OOP</strong>的思维实现业务逻辑，但在设计数据表或操作DB记录时则需要通过<strong>关系型的思维方式</strong>考虑问题。</p>
+</blockquote>
+<p><img src="https://s2.ax1x.com/2019/03/22/A88TgO.png" alt="A88TgO.png" border="0"></p>
+<h1 id="纯JDBC操作"><a href="#纯JDBC操作" class="headerlink" title="纯JDBC操作"></a>纯JDBC操作</h1><p><img src="https://s2.ax1x.com/2019/03/22/A887vD.png" alt="A887vD.png" border="0"></p>
+<h1 id="ORM框架应运而生"><a href="#ORM框架应运而生" class="headerlink" title="ORM框架应运而生"></a>ORM框架应运而生</h1><blockquote>
+<p>ORM框架的主要功能： 根据映射配置文件，完成数据在<strong>对象模型</strong> 和 <strong>关系模型</strong> 之间的映射，同时也屏蔽了在使用JDBC过程中重复性代码。只暴露简单的API给开发人员使用</p>
+</blockquote>
+<p><img src="https://s2.ax1x.com/2019/03/22/A88o8K.png" alt="A88o8K.png" border="0"></p>
+<h1 id="常见的持久化框架（Hibernat、JPA、Spring-JDBC、MyBatis）"><a href="#常见的持久化框架（Hibernat、JPA、Spring-JDBC、MyBatis）" class="headerlink" title="常见的持久化框架（Hibernat、JPA、Spring JDBC、MyBatis）"></a>常见的持久化框架（Hibernat、JPA、Spring JDBC、MyBatis）</h1><h2 id="Hibernate"><a href="#Hibernate" class="headerlink" title="Hibernate"></a>Hibernate</h2><blockquote>
+<p>Hibernate是一款Java世界中最著名的ORM框架之一。Hibernate通过hbm.xml映射文件维护Java类与数据库表的映射关系。通过Hibernate的映射，Java开发人员可以直观的感受到<strong>以面向对象的思维方式操作数据库</strong>，在Java对象之间存在一对一、一对多、多对多等复杂的层次关系，Hibernate的hbm.xml映射文件也可以维护这种层次关系，并将这种关系与数据库中的外键、关联表等进行映射 ===》关联映射。</p>
+</blockquote>
+<h3 id="Hibernate工作方式"><a href="#Hibernate工作方式" class="headerlink" title="Hibernate工作方式"></a>Hibernate工作方式</h3><p>概述：</p>
+<blockquote>
+<p>Hibernate除了能够实现<strong>对象模型</strong>与<strong>关系模型</strong>的映射，还可以帮助开发人员屏蔽不同数据库产品中SQL语句的细微差异。现在不同的关系型数据库产品对SQL标准的支持不尽相同。Hibernate封装了数据库层面的全部操作，开发人员<strong>不需要直接编写SQL语句</strong>，只需要使用Hibernate提供的简单易懂的API即可完成相应的操作。eg：Hibernate提供的Criteria是一个完全面向对象、可扩展的条件查询API，使用它查询数据库时完全不需要考虑数据库底层如何实现、SQL语句如何编写</p>
+</blockquote>
+<h3 id="Hibernate的好处"><a href="#Hibernate的好处" class="headerlink" title="Hibernate的好处"></a>Hibernate的好处</h3><blockquote>
+<p>Hibernate的API<strong>没有侵入性</strong>，业务逻辑不需要继承Hibernate的任何接口。Hibernate默认提供了一级缓存和二级缓存，有利于提供系统的性能，降低数据库压力🍐。Hibernate还有支持透明的持久化、延迟加载、由对象模型自动生成数据库表等。</p>
+</blockquote>
+<h3 id="Hibernate的弊端"><a href="#Hibernate的弊端" class="headerlink" title="Hibernate的弊端"></a>Hibernate的弊端</h3><blockquote>
+<p>Hibernate并<strong>不是一颗万能药</strong>。数据库本身有自己的组织方式，并不是数据库中所有的概念都能在面向对象的世界中找到合适的映射，eg：<strong>索引、存储过程、函数</strong>等，尤其是索引，它对数据库查询的性能帮助很大。适当优化SQL语句，选择使用合适的索引会提供整个查询的速度。但我们很难修改<strong>Hibernate生成的SQL语句</strong>，由于数据量比较大、数据库结构比较复杂时，Hibernat生成SQL语句复杂，而且要让生成的SQL语句使用正确的索引比较困难。会导致出现<strong>大量的慢查询的情况。</strong>在有些大数据量、高并发、低延迟的场景下，Hibernate并不是特别合适。最后Hibernate对批处理的支持并不是非常友好，也会影响部分性能。<em>后来出现的iBatis(MyBatis的前身)这种半自动化的映射方式来解决其性能的问题。</em></p>
+</blockquote>
+<h2 id="JPA（Java-Persistence-API）"><a href="#JPA（Java-Persistence-API）" class="headerlink" title="JPA（Java Persistence API）"></a>JPA（Java Persistence API）</h2><blockquote>
+<p>JPA是EJB3.0中持久化部分的规范，但它可以脱离EJB的体系单独作为一个持久化规范进行使用。Gavin King最为Hibernate的创始人，同时也参与了JPA规范的编写。所以在JPA规范中可以看到很多Hibernate类似的概念和设计。<strong>JPA仅仅是一个持久化的规范，它并没有提供具体的实现。</strong>其他持久化厂商会提供JPA规范的具体实现。eg：Hibernate、EclipseLink等都提供了JPA规范的具体实现。</p>
+</blockquote>
+<h2 id="Spring-JDBC"><a href="#Spring-JDBC" class="headerlink" title="Spring JDBC"></a>Spring JDBC</h2><blockquote>
+<p>严格来说，<em>Spring JDBC并不能算是一个ORM框架</em>，它仅仅是使用<strong>模板方式来对原生JDBC进行了一层非常薄的封装。</strong>使用Spring JDBC可以帮助开发人员屏蔽创建数据库连接对、Statement对象、异常处理以及事务管理的重复性代码，提高开发效率。<br><br></p>
+</blockquote>
+<blockquote>
+<p>在Spring JDBC中没有映射文件、对象查询语言、缓存等概念，而是直接执行原生SQL语句。Spring JDBC中提供多种Template类，可以将对象中的属性映射成SQL语句中绑定的参数，Spring JDBC提供了很多的ORM化的Callback，这些Callback可以将ResultSet转化成相应的对象列表。在有些场景中，我们需要直接使用JDBC原生对象，eg：操作JDBC原生的ResultSet，则可以直接返回SqlRowSet对象，该对象是原生ResultSet对象的简单封装。</p>
+</blockquote>
 <h3 id="什么是MyBatis？"><a href="#什么是MyBatis？" class="headerlink" title="什么是MyBatis？"></a>什么是MyBatis？</h3><ul>
 <li><p>定义：<strong>是一个支持自定义SQL、存储过程和高级映射的持久层框架。</strong></p>
 <ul>
@@ -668,7 +702,7 @@ var jiathis_config={
               <img class="site-author-image" itemprop="image" src="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg" alt="Wangzhuang">
             
               <p class="site-author-name" itemprop="name">Wangzhuang</p>
-              <p class="site-description motion-element" itemprop="description">思想是绝对的,才能用之于出神入化;</p>
+              <p class="site-description motion-element" itemprop="description">“知识之上是思想，思想之上是精神”</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -781,7 +815,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是MyBatis？"><span class="nav-number">1.</span> <span class="nav-text">什么是MyBatis？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyBatis可以简化JDBC操作，实现数据的持久化。"><span class="nav-number">2.</span> <span class="nav-text">MyBatis可以简化JDBC操作，实现数据的持久化。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ORM简介"><span class="nav-number">1.</span> <span class="nav-text">ORM简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#纯JDBC操作"><span class="nav-number">2.</span> <span class="nav-text">纯JDBC操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ORM框架应运而生"><span class="nav-number">3.</span> <span class="nav-text">ORM框架应运而生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的持久化框架（Hibernat、JPA、Spring-JDBC、MyBatis）"><span class="nav-number">4.</span> <span class="nav-text">常见的持久化框架（Hibernat、JPA、Spring JDBC、MyBatis）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hibernate"><span class="nav-number">4.1.</span> <span class="nav-text">Hibernate</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hibernate工作方式"><span class="nav-number">4.1.1.</span> <span class="nav-text">Hibernate工作方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hibernate的好处"><span class="nav-number">4.1.2.</span> <span class="nav-text">Hibernate的好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hibernate的弊端"><span class="nav-number">4.1.3.</span> <span class="nav-text">Hibernate的弊端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JPA（Java-Persistence-API）"><span class="nav-number">4.2.</span> <span class="nav-text">JPA（Java Persistence API）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-JDBC"><span class="nav-number">4.3.</span> <span class="nav-text">Spring JDBC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是MyBatis？"><span class="nav-number">4.3.1.</span> <span class="nav-text">什么是MyBatis？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MyBatis可以简化JDBC操作，实现数据的持久化。"><span class="nav-number">4.3.2.</span> <span class="nav-text">MyBatis可以简化JDBC操作，实现数据的持久化。</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -826,7 +860,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共55.3k字</span>
+  <span class="post-count">博客全站共56.5k字</span>
 </div>
 
         
