@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[🕹IDEA之将项目打成war包]]></title>
+    <url>%2FIDEA%E4%B9%8B%E5%B0%86%E9%A1%B9%E7%9B%AE%E6%89%93%E6%88%90war%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[1 2 3 4 5 6]]></content>
+      <categories>
+        <category>IDEA集成开发工具、</category>
+      </categories>
+      <tags>
+        <tag>IDEA集成开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[🖼图解HTTP——了解Web以及网络基础]]></title>
     <url>%2F%E5%9B%BE%E8%A7%A3HTTP%E2%80%94%E2%80%94%E4%BA%86%E8%A7%A3Web%E4%BB%A5%E5%8F%8A%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%2F</url>
     <content type="text"><![CDATA[概述Web是建立在何种技术之上，以及HTTP协议是如何诞生并发展的。 主要内容 1.1 使用HTTP协议访问Web 1.2 HTTP的诞生 1.3 网络基础TCP/IP 1.4 与HTTP关系密切的协议：IP、TCP和DNS 1.5 负责域名解析的DNS服务 1.6 各种协议与HTTP协议的关系 1.7 URL和URI 使用HTTP协议访问Web 根据Web浏览器地地址栏中指定的URL，Web浏览器从Web服务器端获取文件资源（resources）等信息，从而显示出Web页面。类似这种通过发送请求获取服务器资源的Web浏览器等，都可称之为客户端（Client） Web使用一种名为HTTP（HyperText Transfer Protocol，即超文本传输协议）的协议作为规范，完成从客户端到服务器端等一系列动作流程。而协议时指规则的约定。可以说Web是建立在HTTP协议上通信的 HTTP通常被译为超文本传输协议，但这种译法并不严谨。严谨的译名应该为“超文本转移协议”。 HTTP的诞生 在1989年3月，互联网还只属于少数人，。在这一互联网的黎明期，HTTP诞生了。 WWW的这一提议致力于全世界的研究者进行知识共享 CERN 的蒂姆·伯纳斯·李（Tim BernersLee）博士提出了一种让远离两地的研究者们共享知识的设想。 最初的设计理念：借助多文档之间相互关联形成的超文本（HyperText),连成可以互相参阅的WWW（World Wide Web，万维网）。 现在提出了3项WWW构建技术： 把SGML（Standard Generalized Markup Language，标准通用标记语言）作为页面的文本标记语言的HTML（HyperText Markup Language） 作为文档传递协议的HTTP 指定文档所在地址的URL（Uniform Resource Locator，统一资源定位符）。 WWW来源于当年Web浏览器浏览超文本的客户端应用程序时的名称。表示这一系列的集合——————Web Web成长时代 1990年11月 CERN成功研发了世界上第一台Web服务器和Web浏览器。在1990年时针对HTML1.0草案进行了讨论，因为HTML1.0中存在多处模糊不清的部分，其草案最终被废弃。 1993年1月 现代浏览器的祖先——————Mosaic 1994年12月 网景通信公司发布的Netscape Navigator1.0 1995年 微软公司 2004年 Mozilla基金会发布了FireFox浏览器 网络基础TCP/IP 通常使用的网络（包括互联网）是在TCP/IP协议组的基础上运作的。而HTTP属于一个子集。 TCP/IP协议族 计算机与网络设备要相互通信，双方就必须基于相同的方法。eg: 如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而这种规则就可以称之为协议(protocol)。 常见的协议：IEEE 802.3、FDDI、ICMP、TCP、FTP、IP、DNS、SNMP、PPPoE、UDP TCP/IP是互联网相关的各类协议组的总称。 协议中存在各式各样的内容。从电缆的规格到IP地址的选定方法、寻找异地用户的方法、双方建立通信的顺序以及Web显示需要处理的步骤等。 把与互联网相关联的协议集合起来总称为TCP/IP。 TCP/IP的分层管理 TCP/IP协议族里重要的一点就是分层。TCP/IP协议族按层次分别为：应用层、传输层、网络层和数据链路层。 TCP/IP协议族各层的作用：1 . 应用层决定了向用户提供应用服务时通信的活动。 TCP/IP协议组内预存了各类通用的应用服务。eg：FTP（File Transfer Protocol)和DNS（Domain Name System）域名系统而且HTTP协议也处于该层。 2 . 传输层对上层应用层提供处于网络连接中的两台计算机之间的数据传输。 在传输层有两个性质不同的协议：TCP（Transmission Control Protocol，传输控制协议）和UDP（User Data Protocol，用户数据包协议） 3 . 网络层（又名网络互联层）用来处理在网络上流动的数据包。 数据包是网络传输的最小数据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计算机，并把数据包传送给对方。 4 . 链路层（数据链路层，网络接口层），用来处理连接网络的硬件部分。 包括控制操作系统、硬件的设备驱动、NIC（Network Interface Card，网络适配器即网卡），以及光纤等物理可见部分。硬件上的范畴均在链路层的作用范围之内。 TCP/IP通信传输流 利用TCP/IP协议族进行网络通信时，会通过分层顺序与对方进行通信。发送端从应用层往下走，接受端从应用层往上走。 在网络层（IP协议）增加作为通信目的地的MAC地址后转发给链路层 接收端的服务器在链路层接受到数据，按序网上层发送，一直到应用层。当传输到应用层，才能算是真正接受到由客户端发送过来的HTTP请求。 * 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层把对应的首部消去。 这种把数据信息包装起来的做法称之为封装(encapsulate)]]></content>
