@@ -106,7 +106,7 @@
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/02/A6IiRA.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/02/A6IFxI.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/02/A6IAMt.png">
-<meta property="og:updated_time" content="2019-04-02T10:36:59.646Z">
+<meta property="og:updated_time" content="2019-04-02T13:36:15.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="🌋Linux学习之基础理论和常用工具使用">
 <meta name="twitter:description" content="什么是Operation System？ Linux作为一种OS的起源、特点 重要的知识点     Linux的读音【’li:neks’】 音为“李呢克斯”  什么是Operation System？ 定义： 管理计算机硬件与软件资源的计算机程序   操作系统就是处于用户与计算机系统硬件之间用于传递信息的系统程序软件    常见的操作系统：Windows、Linux、DOS（DiskOperat">
@@ -370,7 +370,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-02T18:36:59+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-02T21:36:15+08:00">
                 2019-04-02
               </time>
             
@@ -435,7 +435,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1k
+                  1.7k
                 </span>
               
 
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  6
                 </span>
               
             </div>
@@ -557,6 +557,188 @@
 </ul>
 </li>
 </ul>
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><table>
+<thead>
+<tr>
+<th style="text-align:right">命令</th>
+<th style="text-align:right">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right">pwd</td>
+<td style="text-align:right">打印工作目录，当前所有文件夹路径</td>
+</tr>
+<tr>
+<td style="text-align:right">cd</td>
+<td style="text-align:right">进入到文件夹</td>
+</tr>
+<tr>
+<td style="text-align:right">cd ..</td>
+<td style="text-align:right">向上跳一级文件夹</td>
+</tr>
+<tr>
+<td style="text-align:right">cd 路径</td>
+<td style="text-align:right">进入指定文件夹</td>
+</tr>
+<tr>
+<td style="text-align:right">mkdir</td>
+<td style="text-align:right">新建空文件夹</td>
+</tr>
+<tr>
+<td style="text-align:right">ls</td>
+<td style="text-align:right">平铺</td>
+</tr>
+<tr>
+<td style="text-align:right">ll</td>
+<td style="text-align:right">详细列表</td>
+</tr>
+<tr>
+<td style="text-align:right">touch</td>
+<td style="text-align:right">创建空文件</td>
+</tr>
+<tr>
+<td style="text-align:right">cat</td>
+<td style="text-align:right">查看文件全部内容</td>
+</tr>
+<tr>
+<td style="text-align:right">tail[n] 文件名</td>
+<td style="text-align:right">查看文件后n行，默认后10行</td>
+</tr>
+<tr>
+<td style="text-align:right">tailf</td>
+<td style="text-align:right">动态显示文件后n行内容，eg：在现实tomcat日志文件</td>
+</tr>
+<tr>
+<td style="text-align:right">echo ‘内容’ &gt;&gt; 文件名</td>
+<td style="text-align:right">向文件中添加一些内容</td>
+</tr>
+<tr>
+<td style="text-align:right">ifconfig</td>
+<td style="text-align:right">打印网卡信息</td>
+</tr>
+<tr>
+<td style="text-align:right">tar zxvf 文件名</td>
+<td style="text-align:right">解压文件</td>
+</tr>
+<tr>
+<td style="text-align:right">cp [-r] 原文件 新文件路径 :复制文件</td>
+</tr>
+<tr>
+<td style="text-align:right">ctrl + c</td>
+<td style="text-align:right">中断</td>
+</tr>
+<tr>
+<td style="text-align:right">rm [-rf] 文件名</td>
+<td style="text-align:right">删除</td>
+</tr>
+<tr>
+<td style="text-align:right">-r</td>
+<td style="text-align:right">删除目录</td>
+</tr>
+<tr>
+<td style="text-align:right">-f</td>
+<td style="text-align:right">强制删除，不需要确认</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vim-和-vi-都是编辑文件的程序"><a href="#vim-和-vi-都是编辑文件的程序" class="headerlink" title="vim 和 vi 都是编辑文件的程序"></a>vim 和 vi 都是编辑文件的程序</h4><ul>
+<li>如果文件不存在，则带有创建文件的功能</li>
+<li>vi 普通编辑 vim 高级编辑（带有highlight）</li>
+<li><p>进入到编辑器后非可编辑状态 -&gt; 点击“i”或“insert”启用编辑状态。</p>
+</li>
+<li><p>编辑后点击esc退出编辑状态</p>
+<ul>
+<li>:wq 保存并退出</li>
+<li>:q 不保存退出（适用于没有编辑时）</li>
+<li>:q! 强制退出</li>
+</ul>
+</li>
+</ul>
+<h4 id="Linux所有需要写路径的地方支持两种写法"><a href="#Linux所有需要写路径的地方支持两种写法" class="headerlink" title="Linux所有需要写路径的地方支持两种写法"></a>Linux所有需要写路径的地方支持两种写法</h4><ul>
+<li>全路径，标志: 以/开头</li>
+<li>相对路径：从当前资源一步步寻找其他资源过程</li>
+</ul>
+<h2 id="XShell工具"><a href="#XShell工具" class="headerlink" title="XShell工具"></a>XShell工具</h2><ul>
+<li>Linux客户端工具</li>
+<li>CentOS中默认只开启22端口，其他端口都被防火墙拦截</li>
+</ul>
+<h2 id="Filezilla-工具使用"><a href="#Filezilla-工具使用" class="headerlink" title="Filezilla 工具使用"></a>Filezilla 工具使用</h2><ol>
+<li><p>FTP协议</p>
+<ul>
+<li>英文名称（File Transfer Protocol）</li>
+<li>作用：互联网中，计算机之间传输文件需要遵守的协议</li>
+</ul>
+</li>
+<li><p>filezilla</p>
+<ul>
+<li>基于FTP协议的客户端工具</li>
+<li>使用filezilla可以快速完成文件传输功能</li>
+</ul>
+</li>
+</ol>
+<h2 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h2><ol>
+<li>把压缩包上传到/usr/local/tmp</li>
+<li>解压压缩包</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># tar zxvf 文件名</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>把解压后文件复制到/usr/local/jdk7</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># cp -r 文件名 /usr/local/jdk7</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>配置环境变量，执行命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># vim /etc/profile</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p>修改文件中内容</p>
+<ul>
+<li>分割使用冒号 “:”</li>
+<li>$变量名表示引用</li>
+<li>export添加或修改变量</li>
+</ul>
+</li>
+</ol>
+<p><code></code></p>
+<pre><code>#exportPATHUSERLOGNAMEMAILHOSTNAMEHISTSIZEHISTCONTROL
+exportJAVA_HOME=/usr/local/jdk7
+exportPATH=$JAVA_HOME/bin:$PATH
+exportCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+</code></pre><p></p>
+<ol start="6">
+<li><strong>解析文件（或重启系统）</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># source /etc/profile</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>验证配置是否成功</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># java -version</span><br></pre></td></tr></table></figure>
+<h2 id="Tomcat-配置"><a href="#Tomcat-配置" class="headerlink" title="Tomcat 配置"></a>Tomcat 配置</h2><ol>
+<li>把 tomcat 压缩包上传到服务器</li>
+<li>解压 tomcat</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#tarzxvf 压缩包名</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>解压后的文件夹复制到/usr/local/tomcat</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#cp-rapache-tomcat-7.0.68/usr/local/tomcat</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>配置环境变量</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4.1#vim/etc/profile</span><br></pre></td></tr></table></figure>
+<p>4.2 添加内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">exportTOMCAT_HOME=/usr/local/tomcat</span><br><span class="line">exportCATALINA_HOME=/usr/local/tomcat</span><br></pre></td></tr></table></figure></p>
+<ol start="5">
+<li>放行 8080 端口</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5.1#vim /etc/sysconfig/iptables</span><br></pre></td></tr></table></figure>
+<p>5.2 把包含 22 行复制一行,修改 22 为 8080<br>5.2.18080:9000 从 8080 到 9000 全放行</p>
+<p>5.3 重启服务:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#serviceiptablesrestart</span><br></pre></td></tr></table></figure></p>
+<p>5.3.1restart 重启<br>5.3.2start 启动<br>5.3.3stop 停止</p>
+<ol start="6">
+<li>启动 tomcat,进入到 tomcat/bin 文件夹<br>6.1 直接启动<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#./startup.sh</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>6.2 启动并动态打印启动信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#./startup.sh&amp;tailf/usr/local/tomcat/logs/catalina.out</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -840,7 +1022,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Operation-System？"><span class="nav-number">1.</span> <span class="nav-text">什么是Operation System？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux作为一种OS的起源、特点"><span class="nav-number">2.</span> <span class="nav-text">Linux作为一种OS的起源、特点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux的发展历史"><span class="nav-number">2.0.1.</span> <span class="nav-text">Linux的发展历史</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点（相对于Windows的优点）"><span class="nav-number">2.0.2.</span> <span class="nav-text">特点（相对于Windows的优点）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的发行版本："><span class="nav-number">2.0.3.</span> <span class="nav-text">常见的发行版本：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定位："><span class="nav-number">2.0.4.</span> <span class="nav-text">定位：</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware虚拟机常见的网络类型：Bridged、NAT、Host-only"><span class="nav-number">3.</span> <span class="nav-text">VMware虚拟机常见的网络类型：Bridged、NAT、Host-only</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bridged（桥接模式）：适合有路由器上网的情况，即局域网的情况"><span class="nav-number">3.0.1.</span> <span class="nav-text">Bridged（桥接模式）：适合有路由器上网的情况，即局域网的情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NAT（地址转换）：适合无路由器上网的情况，例如家庭宽带上网，局域网的情况也可以"><span class="nav-number">3.0.2.</span> <span class="nav-text">NAT（地址转换）：适合无路由器上网的情况，例如家庭宽带上网，局域网的情况也可以</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Host-only（仅主机-适合本机不上网之和宿主机进行通信"><span class="nav-number">3.0.3.</span> <span class="nav-text">Host-only（仅主机):适合本机不上网之和宿主机进行通信</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#参考文档"><span class="nav-number">3.0.3.0.1.</span> <span class="nav-text">参考文档</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux系统目录介绍"><span class="nav-number">4.</span> <span class="nav-text">Linux系统目录介绍</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Operation-System？"><span class="nav-number">1.</span> <span class="nav-text">什么是Operation System？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux作为一种OS的起源、特点"><span class="nav-number">2.</span> <span class="nav-text">Linux作为一种OS的起源、特点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux的发展历史"><span class="nav-number">2.0.1.</span> <span class="nav-text">Linux的发展历史</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特点（相对于Windows的优点）"><span class="nav-number">2.0.2.</span> <span class="nav-text">特点（相对于Windows的优点）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#常见的发行版本："><span class="nav-number">2.0.3.</span> <span class="nav-text">常见的发行版本：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#定位："><span class="nav-number">2.0.4.</span> <span class="nav-text">定位：</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#VMware虚拟机常见的网络类型：Bridged、NAT、Host-only"><span class="nav-number">3.</span> <span class="nav-text">VMware虚拟机常见的网络类型：Bridged、NAT、Host-only</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bridged（桥接模式）：适合有路由器上网的情况，即局域网的情况"><span class="nav-number">3.0.1.</span> <span class="nav-text">Bridged（桥接模式）：适合有路由器上网的情况，即局域网的情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NAT（地址转换）：适合无路由器上网的情况，例如家庭宽带上网，局域网的情况也可以"><span class="nav-number">3.0.2.</span> <span class="nav-text">NAT（地址转换）：适合无路由器上网的情况，例如家庭宽带上网，局域网的情况也可以</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Host-only（仅主机-适合本机不上网之和宿主机进行通信"><span class="nav-number">3.0.3.</span> <span class="nav-text">Host-only（仅主机):适合本机不上网之和宿主机进行通信</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#参考文档"><span class="nav-number">3.0.3.0.1.</span> <span class="nav-text">参考文档</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux系统目录介绍"><span class="nav-number">4.</span> <span class="nav-text">Linux系统目录介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用命令"><span class="nav-number">4.0.1.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vim-和-vi-都是编辑文件的程序"><span class="nav-number">4.0.2.</span> <span class="nav-text">vim 和 vi 都是编辑文件的程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux所有需要写路径的地方支持两种写法"><span class="nav-number">4.0.3.</span> <span class="nav-text">Linux所有需要写路径的地方支持两种写法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XShell工具"><span class="nav-number">5.</span> <span class="nav-text">XShell工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Filezilla-工具使用"><span class="nav-number">6.</span> <span class="nav-text">Filezilla 工具使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装JDK"><span class="nav-number">7.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat-配置"><span class="nav-number">8.</span> <span class="nav-text">Tomcat 配置</span></a></li></div>
             
 
           </div>
@@ -885,7 +1067,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共59.7k字</span>
+  <span class="post-count">博客全站共60.4k字</span>
 </div>
 
         
