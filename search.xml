@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[🕹IDEA--常用操作]]></title>
+    <url>%2FIDEA-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[无处不再的跳转 项目之间的跳转 12Ctrl + Alt + [ or ] 代码Bookmarks 12F11 编辑区和文件区之间的跳转 12Alt + 1 搜索最近的文件、类、动作 12Ctrl + E 迅速差错 12F2 postfix 的使用 username.field 12this.username = username; username.sout 12System.out.println(username); username.soutv 12System.out.println(&quot;username = &quot; + username); getUsername.try(); 1234567891011121314public void m2() &#123; getUsername().try======================== try &#123; m(); &#125; catch(CheckedException e) &#123; e.printStackTrace(); &#125;&#125;public void m() throws CheckedException &#123; &#125; 重构 方法参数 12Ctrl + F2 更改已经定义变量的名称 12Shfit + F6]]></content>
+      <categories>
+        <category>IDEA集成开发工具</category>
+      </categories>
+      <tags>
+        <tag>IDEA集成开发工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[🌋Linux学习之基础理论和常用工具使用]]></title>
     <url>%2FLinux%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%9F%BA%E7%A1%80%E7%90%86%E8%AE%BA%E5%92%8C%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%2F</url>
     <content type="text"><![CDATA[什么是Operation System？ Linux作为一种OS的起源、特点 重要的知识点 Linux的读音【’li:neks’】 音为“李呢克斯” 什么是Operation System？ 定义： 管理计算机硬件与软件资源的计算机程序 操作系统就是处于用户与计算机系统硬件之间用于传递信息的系统程序软件 常见的操作系统：Windows、Linux、DOS（DiskOperationSystem）、Unix、MacOS Linux作为一种OS的起源、特点Linux的发展历史1、1984年，Andrew S.Tanenbaum开发了用于教学的Unix系统，命名为MINIX。 2、1989年，Andrew S.Tanenbaum将MINIX系统运行与x86的PC计算机平台。 3、1990年，芬兰赫尔辛基大学学生Linus Torvalds首次接触MINIX系统。 4、1991年，Linus Torvalds开始在MINIX上编写各种驱动程序等操作系统内核组件。 5、1991年底，Linus Torvalds公开了Linux内核源代码00.2版（http://www.kernel.org）。 6、1993年，Linux1.0版发行，Linux转向GPL版权协议。 7、1994年，Linux的第一个商业发行版Slackware问世。 8、1996年，美国国家标准技术局的计算机系统实验室确认Linux版本1.2.13（由Open Linux公司打包）符合POSIX标准。 9、1999年，Linux的简体中文发行版问世。 10、2000年后，Linux系统日趋成熟，涌现大量基于Linux服务器平台的应用，并广泛应用于基于ARM技术的嵌入式系统中。 特点（相对于Windows的优点） 稳定 安全性较高 免费 1.开发源代码的程序，可自由修改。2.Unix系统兼容，具备Unix几乎所有优秀特性。3.可自由传播，无任何商业化版权制约4.适合Intel等x86 CPU系列架构的计算机 常见的发行版本：* Red Hat 目前全球最大的Linux发行厂商（收费） * Ubuntu 免费界面友好 * 麒麟 * CentOS 免费作为Red Hat的分支 定位： 嵌入式Linux系统应用领域 个人桌面Linux系统应用领域 IT服务器Linux系统应用领域（重要） VMware虚拟机常见的网络类型：Bridged、NAT、Host-onlyBridged（桥接模式）：适合有路由器上网的情况，即局域网的情况桥接模式可以简单理解为通过物理主机架设了一座桥，从而连入到了实际网络中，因此虚拟机可以分配与物理主机相同网段的独立IP，所有网络功能和网络中的真实机器几乎完全一样 Just Like 统一WiFi下的PC和Phone。连的是同一网络 NAT（地址转换）：适合无路由器上网的情况，例如家庭宽带上网，局域网的情况也可以NAT(Network Address Translation),网络地址转换，NAT模是比较简单的实现虚拟机上网的模式。**通过宿主机（物理电脑）上网和交换数据 NAT网络特别适合于家庭里电脑直接连接网线的情况，办公室的局域网也适合的，优势就是不会和其他物理主机IP冲突，且在没有路由器的环境下也可以使用。推荐使用NAT模式。 Host-only（仅主机):适合本机不上网之和宿主机进行通信在Host-only模式下，虚拟机的网卡会连接到宿主的VMnet1上，但宿主系统并不为虚拟机提供任何路由服务，因此虚拟机只能和宿主机进行通信，不能连接到实际网络上，即无法上网。 参考文档 Linux基础介绍 Linux系统目录介绍 系统路径 / 表示根目录 ~ 表示/root etc 存放系统配置目录 home 除了root以外所有用户默认在home下新建一个以用户名为文件夹名称的文件夹 用户xxx对/home/xxx具有完全操作权限 root用户root单独文件夹 usr 所有用户按转的软件都放入这个文件夹中 在usr/local下新建一个tmp，所有的压缩包都存入进入 常用命令 命令 描述 pwd 打印工作目录，当前所有文件夹路径 cd 进入到文件夹 cd .. 向上跳一级文件夹 cd 路径 进入指定文件夹 mkdir 新建空文件夹 ls 平铺 ll 详细列表 touch 创建空文件 cat 查看文件全部内容 tail[n] 文件名 查看文件后n行，默认后10行 tailf 动态显示文件后n行内容，eg：在现实tomcat日志文件 echo ‘内容’ &gt;&gt; 文件名 向文件中添加一些内容 ifconfig 打印网卡信息 tar zxvf 文件名 解压文件 cp [-r] 原文件 新文件路径 :复制文件 ctrl + c 中断 rm [-rf] 文件名 删除 -r 删除目录 -f 强制删除，不需要确认 vim 和 vi 都是编辑文件的程序 如果文件不存在，则带有创建文件的功能 vi 普通编辑 vim 高级编辑（带有highlight） 进入到编辑器后非可编辑状态 -&gt; 点击“i”或“insert”启用编辑状态。 编辑后点击esc退出编辑状态 :wq 保存并退出 :q 不保存退出（适用于没有编辑时） :q! 强制退出 Linux所有需要写路径的地方支持两种写法 全路径，标志: 以/开头 相对路径：从当前资源一步步寻找其他资源过程 XShell工具 Linux客户端工具 CentOS中默认只开启22端口，其他端口都被防火墙拦截 Filezilla 工具使用 FTP协议 英文名称（File Transfer Protocol） 作用：互联网中，计算机之间传输文件需要遵守的协议 filezilla 基于FTP协议的客户端工具 使用filezilla可以快速完成文件传输功能 安装JDK 把压缩包上传到/usr/local/tmp 解压压缩包 1# tar zxvf 文件名 把解压后文件复制到/usr/local/jdk7 1# cp -r 文件名 /usr/local/jdk7 配置环境变量，执行命令 1# vim /etc/profile 修改文件中内容 分割使用冒号 “:” $变量名表示引用 export添加或修改变量 #exportPATHUSERLOGNAMEMAILHOSTNAMEHISTSIZEHISTCONTROL exportJAVA_HOME=/usr/local/jdk7 exportPATH=$JAVA_HOME/bin:$PATH exportCLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 解析文件（或重启系统） 1# source /etc/profile 验证配置是否成功 1# java -version Tomcat 配置 把 tomcat 压缩包上传到服务器 解压 tomcat 1#tarzxvf 压缩包名 解压后的文件夹复制到/usr/local/tomcat 1#cp-rapache-tomcat-7.0.68/usr/local/tomcat 配置环境变量 14.1#vim/etc/profile 4.2 添加内容12exportTOMCAT_HOME=/usr/local/tomcatexportCATALINA_HOME=/usr/local/tomcat 放行 8080 端口 15.1#vim /etc/sysconfig/iptables 5.2 把包含 22 行复制一行,修改 22 为 80805.2.18080:9000 从 8080 到 9000 全放行 5.3 重启服务:1#serviceiptablesrestart 5.3.1restart 重启5.3.2start 启动5.3.3stop 停止 启动 tomcat,进入到 tomcat/bin 文件夹6.1 直接启动1#./startup.sh 6.2 启动并动态打印启动信息1#./startup.sh&amp;tailf/usr/local/tomcat/logs/catalina.out]]></content>
@@ -16,7 +27,7 @@
     <url>%2FIDEA%E4%B9%8B%E5%B0%86%E9%A1%B9%E7%9B%AE%E6%89%93%E6%88%90war%E5%8C%85%2F</url>
     <content type="text"><![CDATA[1 2 3 4 5 6]]></content>
       <categories>
-        <category>IDEA集成开发工具、</category>
+        <category>IDEA集成开发工具</category>
       </categories>
       <tags>
         <tag>IDEA集成开发工具</tag>
