@@ -93,21 +93,21 @@
 
 
 
-<meta name="description" content="核心（） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延迟加载）。   一对一">
+<meta name="description" content="核心（Association） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延">
 <meta name="keywords" content="MyBais_Learn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="🕵️‍♂️MyBatis之关联映射">
 <meta property="og:url" content="https://www.openmind.ink/MyBatis之关联映射/index.html">
 <meta property="og:site_name" content="Sunshineisbright">
-<meta property="og:description" content="核心（） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延迟加载）。   一对一">
+<meta property="og:description" content="核心（Association） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/05/AWFezQ.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/05/AWFnMj.png">
 <meta property="og:image" content="https://s2.ax1x.com/2019/04/06/Afm0sO.png">
-<meta property="og:updated_time" content="2019-04-06T14:32:27.844Z">
+<meta property="og:updated_time" content="2019-04-06T14:37:40.145Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="🕵️‍♂️MyBatis之关联映射">
-<meta name="twitter:description" content="核心（） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延迟加载）。   一对一">
+<meta name="twitter:description" content="核心（Association） property: 指定映射到实体类对象属性，与表字段一一对应。 column：指定表中对应的字段。 javaType：映射到实体对象属性的类型。 select：引入嵌套查询的子SQL语句，该属性用于关联映射中的嵌套查询 fetchType：指定在关联查询时是否启用延迟加载，fetch Type属性有lazy和eager两个属性值，默认值为lazy（即默认关联映射延">
 <meta name="twitter:image" content="https://s2.ax1x.com/2019/04/05/AWFezQ.png">
 
 
@@ -368,7 +368,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T22:32:27+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-04-06T22:37:40+08:00">
                 2019-04-06
               </time>
             
@@ -433,7 +433,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  396
+                  397
                 </span>
               
 
@@ -470,7 +470,7 @@
       
 
       
-        <h2 id="核心（）"><a href="#核心（）" class="headerlink" title="核心（）"></a>核心（<association>）</association></h2><ul>
+        <h2 id="核心（Association）"><a href="#核心（Association）" class="headerlink" title="核心（Association）"></a>核心（Association）</h2><ul>
 <li>property: 指定映射到实体类对象属性，与表字段一一对应。</li>
 <li>column：指定表中对应的字段。</li>
 <li>javaType：映射到实体对象属性的类型。</li>
@@ -790,7 +790,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心（）"><span class="nav-number">1.</span> <span class="nav-text">核心（）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一对一（1-1）"><span class="nav-number">2.</span> <span class="nav-text">一对一（1:1）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过数据库中的表可以描述数据之间的关系，而Java通过对象的描述如下"><span class="nav-number">2.0.1.</span> <span class="nav-text">通过数据库中的表可以描述数据之间的关系，而Java通过对象的描述如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#核心代码（-mapper-xml"><span class="nav-number">2.0.2.</span> <span class="nav-text">核心代码（*mapper.xml)</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#一对多（1-n）"><span class="nav-number">3.</span> <span class="nav-text">一对多（1:n）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码描述"><span class="nav-number">3.0.1.</span> <span class="nav-text">Java代码描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多对多（m-n）"><span class="nav-number">4.</span> <span class="nav-text">多对多（m:n）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码描述-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">Java代码描述</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#核心（Association）"><span class="nav-number">1.</span> <span class="nav-text">核心（Association）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一对一（1-1）"><span class="nav-number">2.</span> <span class="nav-text">一对一（1:1）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过数据库中的表可以描述数据之间的关系，而Java通过对象的描述如下"><span class="nav-number">2.0.1.</span> <span class="nav-text">通过数据库中的表可以描述数据之间的关系，而Java通过对象的描述如下</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#核心代码（-mapper-xml"><span class="nav-number">2.0.2.</span> <span class="nav-text">核心代码（*mapper.xml)</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#一对多（1-n）"><span class="nav-number">3.</span> <span class="nav-text">一对多（1:n）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码描述"><span class="nav-number">3.0.1.</span> <span class="nav-text">Java代码描述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多对多（m-n）"><span class="nav-number">4.</span> <span class="nav-text">多对多（m:n）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Java代码描述-1"><span class="nav-number">4.0.1.</span> <span class="nav-text">Java代码描述</span></a></li></ol></li></div>
             
 
           </div>
