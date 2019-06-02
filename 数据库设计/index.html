@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="oZQ-DMIoYoBfyPts1kBNMyug0rxzvWjbr0xmJlR2WKw">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://s1.ax1x.com/2018/12/15/FaJ7qS.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://s1.ax1x.com/2018/12/15/FaJ7qS.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="🗺数据库设计,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sunshineisbright" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="对于任何一个软件项目开发而言，都一定会经历以下的几个阶段：   获取需求阶段 需求分析与业务设计  数据库设计 程序开发与业务实现 程序的测试 程序的运维  数据库设计范式 所有给出的设计范式只能够作为一种参考出现，在初期结构之中可以遵循设计范式进行设计但最终会发现所有的范式都几乎会被打破，只有一个原则： 根据业务的需求尽可能的减少多表查询和复杂查询  第一设计范式(单表) 数据库表中的每个字段">
+<meta name="keywords" content="🗺数据库设计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🗺数据库设计">
+<meta property="og:url" content="https://www.openmind.ink/数据库设计/index.html">
+<meta property="og:site_name" content="Sunshineisbright">
+<meta property="og:description" content="对于任何一个软件项目开发而言，都一定会经历以下的几个阶段：   获取需求阶段 需求分析与业务设计  数据库设计 程序开发与业务实现 程序的测试 程序的运维  数据库设计范式 所有给出的设计范式只能够作为一种参考出现，在初期结构之中可以遵循设计范式进行设计但最终会发现所有的范式都几乎会被打破，只有一个原则： 根据业务的需求尽可能的减少多表查询和复杂查询  第一设计范式(单表) 数据库表中的每个字段">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/V8xdsO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/V8x4eg.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/V8xOyT.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/VGSSu8.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/VGSmuT.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/VGS3CR.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/VGSqqU.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/02/VGptWn.png">
+<meta property="og:updated_time" content="2019-06-02T08:35:37.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="🗺数据库设计">
+<meta name="twitter:description" content="对于任何一个软件项目开发而言，都一定会经历以下的几个阶段：   获取需求阶段 需求分析与业务设计  数据库设计 程序开发与业务实现 程序的测试 程序的运维  数据库设计范式 所有给出的设计范式只能够作为一种参考出现，在初期结构之中可以遵循设计范式进行设计但最终会发现所有的范式都几乎会被打破，只有一个原则： 根据业务的需求尽可能的减少多表查询和复杂查询  第一设计范式(单表) 数据库表中的每个字段">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/02/V8xdsO.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.openmind.ink/数据库设计/">
+
+
+
+
+
+  <title>🗺数据库设计 | Sunshineisbright</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/Sunshineisbright" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sunshineisbright</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Hello World</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mybooks">
+          <a href="/MyBooks" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            MyBooks
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/数据库设计/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wangzhuang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshineisbright">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">🗺数据库设计</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-02T16:14:12+08:00">
+                2019-06-02
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-02T16:35:37+08:00">
+                2019-06-02
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/🗺数据库设计/" itemprop="url" rel="index">
+                    <span itemprop="name">🗺数据库设计</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/数据库设计/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/数据库设计/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.4k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  8
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>对于任何一个软件项目开发而言，都一定会经历以下的几个阶段：</p>
+</blockquote>
+<ul>
+<li><strong>获取需求阶段</strong></li>
+<li><strong><font color="red">需求分析与业务设计</font></strong></li>
+<li><strong><font color="red"> 数据库设计</font></strong></li>
+<li><strong>程序开发与业务实现</strong></li>
+<li><strong>程序的测试</strong></li>
+<li><strong>程序的运维</strong></li>
+</ul>
+<h1 id="数据库设计范式"><a href="#数据库设计范式" class="headerlink" title="数据库设计范式"></a>数据库设计范式</h1><blockquote>
+<p>所有给出的设计范式只能够作为一种参考出现，在初期结构之中可以遵循设计范式进行设计但最终会发现所有的范式都几乎会被打破，只有一个原则： 根据业务的需求尽可能的减少多表查询和复杂查询</p>
+</blockquote>
+<h2 id="第一设计范式-单表"><a href="#第一设计范式-单表" class="headerlink" title="第一设计范式(单表)"></a>第一设计范式(单表)</h2> <font size="4px" color="blue">数据库表中的每个字段都不可再分</font>
+
+
+<h3 id="Eg"><a href="#Eg" class="headerlink" title="Eg:"></a>Eg:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CREATE TABLE student(		</span><br><span class="line">	sid		NUMBER,</span><br><span class="line">	sname	VARCHAR(20),</span><br><span class="line">	scontact 	VARCHAR(20),</span><br><span class="line">	CONSTRAINT	pk_sid PRIMARY KEY(mid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>学生的联系方式可以由地址、邮政编码、电话、email、手机、QQ、微信….. 所以这样的设计就不符合第一设计方式的原则。</p>
+</blockquote>
+<h3 id="Eg-modified"><a href="#Eg-modified" class="headerlink" title="Eg(modified):"></a>Eg(modified):</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CREATE TABLE student(</span><br><span class="line">	sid		 NUMBER，</span><br><span class="line">	sname    VARCHAR(50),</span><br><span class="line">	semail   VARCHAR(200),</span><br><span class="line">	stel	 VARCHAR(50),</span><br><span class="line">	mobile   VARCHAR(50),</span><br><span class="line">	CONSTRAINT pk_mid PRIMARY KEY(mid)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上表中的字段就不可以再分了，符合第一设计范式</p>
+</blockquote>
+<h2 id="第二设计范式（多对多关系映射）"><a href="#第二设计范式（多对多关系映射）" class="headerlink" title="第二设计范式（多对多关系映射）"></a>第二设计范式（多对多关系映射）</h2><font size="4px" color="blue">数据表之中不存在非关键字段对任意一候选关键字段的部分函数依赖</font>
+
+
+<ul>
+<li>关键点： 函数、函数依赖</li>
+</ul>
+<p><strong>函数关系</strong>： <strong>数据库表之中的两个列之间不要存在有数学关系。</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CREATE TABLE orders(</span><br><span class="line">	unitprice	NUMBER,</span><br><span class="line">	quantity	NUMBER,</span><br><span class="line">	allprice	NUMBER</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>此表存在以下关系： allprice = unitprice * allprice</p>
+</blockquote>
+<p><strong>依赖</strong>： <strong>指通过某几个字段可以成功的推演出唯一的一个字段</strong></p>
+<h3 id="Eg-第一种设计方式"><a href="#Eg-第一种设计方式" class="headerlink" title="Eg(第一种设计方式)"></a>Eg(第一种设计方式)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CREATE TABLE 学生选课 (</span><br><span class="line">学生编号	NUMBER  PRIMARY KEY </span><br><span class="line">学生姓名	VARCHAR2(50),</span><br><span class="line">学生年龄	NUMBER ,</span><br><span class="line">课程名称	VARCHAR2(50) ,</span><br><span class="line">课程学分	NUMBER ,</span><br><span class="line">考试成绩	NUMBER</span><br><span class="line">) ;</span><br><span class="line"></span><br><span class="line">INSERT INTO 学生选课  VALUES (1,&apos;张三&apos;,18,&apos;oracle&apos;,2,89) ;</span><br><span class="line">INSERT INTO 学生选课  VALUES (2,&apos;李四&apos;,17,&apos;java&apos;,3,69) ;</span><br><span class="line">INSERT INTO 学生选课  VALUES (1,&apos;张三&apos;,18,&apos;java&apos;,3,79) ;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上表设计所存在的问题是没有将学生的选课看成一个独立存在的实体而是直接作为学生实体的属性因此没有考虑【学生实体】【学生所选的课程实体】之间的关系<br>存在的问题如下：</p>
+<blockquote>
+<ul>
+<li><strong>无法设计一个合适的字段作为主键</strong></li>
+<li><strong>课程信息重复，那么如果更新一个课程信息则需要更新N行记录</strong></li>
+<li>如何说现在有一门课程一直没人报名参加，则这个课程信息就彻底消失了</li>
+</ul>
+</blockquote>
+</blockquote>
+<p>如果现在按照可以使用的思路，认为应该设计为三张表，因为一个学生可以参加多门课程，一个课程可以有多个学生参加。</p>
+<h3 id="Eg-modified-1"><a href="#Eg-modified-1" class="headerlink" title="Eg(modified)"></a>Eg(modified)</h3><pre>
+
+CREATE TABLE 学生(
+    学生ID    NUMBER PRIMARY KEY ,
+    学生姓名    VARCHAR2(20) ,
+    学生年龄    NUMBER 
+) ;
+CREATE TABLE 课程(
+    课程ID        NUMBER    PRIMARY KEY ,
+    课程名称    VARCHAR2(50) ,
+    课程学分    NUMBER 
+) ;
+
+CREATE TABLE 学生选课(
+    学生ID        NUMBER REFERENCES 学生(学生ID) ,
+    课程ID        NUMBER REFERENCES 课程(课程ID) ,
+    成绩        NUMBER
+) ;
+INSERT INTO 学生 VALUES (1,'张三',18) ;
+INSERT INTO 学生 VALUES (2,'李四',17) ;
+INSERT INTO 课程 VALUES (10,'马克思主义哲学',3) ;
+INSERT INTO 课程 VALUES (11,'oracle',1) ;
+INSERT INTO 课程 VALUES (12,'java',0.1) ;
+INSERT INTO 学生选课 VALUES (1,10,99) ;
+INSERT INTO 学生选课 VALUES (2,10,99) ;
+INSERT INTO 学生选课 VALUES (1,11,80) ;
+INSERT INTO 学生选课 VALUES (2,12,90) ;
+
+
+</pre>
+
+
+<blockquote>
+<p><strong>所有的数据都可以进行各自的实体表的维护。</strong></p>
+</blockquote>
+<h2 id="第三设计范式（一对多映射）"><a href="#第三设计范式（一对多映射）" class="headerlink" title="第三设计范式（一对多映射）"></a>第三设计范式（一对多映射）</h2><font size="4px" color="blue">数据库表之中不存在非关键字段对任意一候选关键字段的传递函数依赖</font>
+
+
+<h3 id="示例讲解"><a href="#示例讲解" class="headerlink" title="示例讲解"></a>示例讲解</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">雇员编号</th>
+<th style="text-align:center">姓名</th>
+<th style="text-align:center">职位</th>
+<th style="text-align:center">部门名称</th>
+<th style="text-align:center">位置</th>
+<th style="text-align:center">工资</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">张三</td>
+<td style="text-align:center">软工</td>
+<td style="text-align:center">开发02</td>
+<td style="text-align:center">天津</td>
+<td style="text-align:center">8000</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>存在有一个传递的函数依赖，通过张三可以知道他的部门名称，但是通过部门名称又可以找到部门位置</p>
+</blockquote>
+<ul>
+<li>(姓名、职位) —&gt; (部门名称) —&gt; (部门位置)， 这属于一个传递关系</li>
+</ul>
+<h3 id="范例：-设计数据表，可以描述一个学校有多个学生"><a href="#范例：-设计数据表，可以描述一个学校有多个学生" class="headerlink" title="范例： 设计数据表，可以描述一个学校有多个学生"></a>范例： 设计数据表，可以描述一个学校有多个学生</h3><pre><code>* 第一范式如果要使用的话，一定会出现传递依赖关系；
+* 第二范式可以描述，但是也会存在有：一个学生在多个学校；
+* 使用第三范式设计
+</code></pre><h3 id="Eg（错误设计）"><a href="#Eg（错误设计）" class="headerlink" title="Eg（错误设计）"></a>Eg（错误设计）</h3><pre>
+    CREATE TABLE 学校-学生 (
+        学校ID    NUMBER PRIMARY KEY ,
+        学校名称    VARCHAR2(50) ,
+        学校地址    VARCHAR2(50) ,
+        学生姓名    VARCHAR2(50) ,
+        学生年龄    NUMBER
+    ) ;
+</pre>
+
+
+<h3 id="Eg-modified-2"><a href="#Eg-modified-2" class="headerlink" title="Eg(modified)"></a>Eg(modified)</h3><pre>
+
+CREATE TABLE 学校 (
+    学校ID    NUMBER PRIMARY KEY ,
+    学校名称    VARCHAR2(50) ,
+    学校地址    VARCHAR2(50)
+) ;
+CREATE TABLE 学生 (
+    学生ID    NUMBER PRIMARY KEY ,
+    学生姓名    VARCHAR2(50) ,
+    学生年龄    NUMBER ,
+    学校ID    NUMBER REFERENCES 学校(学校ID)
+) ;
+
+</pre>
+
+
+<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><ul>
+<li><p><strong>要想熟练掌握数据库分析与设计能力，是需要积累大量的项目开发经验，必须知道程序能做那些？数据库又可以做哪些事情。</strong></p>
+</li>
+<li><p><strong>在实际开发之中，第三设计范式是最优先考虑的。</strong></p>
+</li>
+</ul>
+<hr>
+
+<p><strong>单  表</strong>  👉 <strong>第一范式</strong></p>
+<p><strong>多对多</strong>  👉 <strong>第二范式</strong></p>
+<p><strong>一对多</strong>  👉 <strong>第三范式</strong></p>
+<hr>
+
+
+<h1 id="数据库设计综合实战"><a href="#数据库设计综合实战" class="headerlink" title="数据库设计综合实战"></a>数据库设计综合实战</h1><blockquote>
+<p>巩固数据库的设计范式。</p>
+</blockquote>
+<h2 id="设计要求"><a href="#设计要求" class="headerlink" title="设计要求"></a>设计要求</h2><p>设计一个购物网站程序，基本要求：</p>
+<p>1 . <strong>所有的<font color="red">商品</font>由后台<font color="red">管理员</font>进行管理，所发布的商品必须经过其他管理员审核后才可以由顾客购买</strong>；</p>
+<font color="green"><br> 商品信息应该是一张实体表，实体表一定需要主键，由于此数据的主键不需要特殊的处理，所以可以直接使用序列生成。<br><img src="https://s2.ax1x.com/2019/06/02/V8xdsO.png" alt="V8xdsO.png" border="0"><br> <br>商品如果要有品牌的话那么一个品牌就需要对应多个商品，使用第三范式<br><img src="https://s2.ax1x.com/2019/06/02/V8x4eg.png" alt="V8x4eg.png" border="0"><br> <br>所有商品一定由管理员负责维护，所以需要一张管理员信息表。<br><br>  所有发布的商品不能够直接让前台用户浏览，需要先审核，那么需要一个明确的字段来描述当前商品的状态eg：有一个flag字段，这个字段可以用来描述商品的状态<br><br><br><em> flag = 0: 此商品等待审核；
+</em> flag = 1: 此商品审核通过可以正常浏览;<br><em> flag = 2: 此商品审核不通过需要重新提交审核;
+</em> flag = 3: 此商品已经被逻辑删除了，不应该被搜索到;<br><br><br> 如果真的需要审核的话，则审核管理员和发布管理员不能为同一个人，但是这一个判断是由程序的逻辑业务来进行处理的，所以本次只是提供数据的存储。<br><br><img src="https://s2.ax1x.com/2019/06/02/V8xOyT.png" alt="V8xOyT.png" border="0"><br><br></font>
+
+<p>2 . <strong>每一个管理员都有一个自己的<font color="red">角色</font>，每一个角色包含有多个<font color="red">权限组</font>，每个权限组可可以属于不同的角色，每个权限组有多个<font color="red">权限</font></strong>；</p>
+<font color="purple"><br> 每一个角色可以有多个管理员具备，但是一个管理员只能够有一个角色，属于一对多关系，使用第三范式。<br> 每一个角色包含有多个权限组，每个权限组可以属于多个角色，典型的多对多关系使用第二范式。<br><br> 每一个权限组可以有多个权限，属于一对多关系，使用第三范式<br><img src="https://s2.ax1x.com/2019/06/02/VGSSu8.png" alt="VGSSu8.png" border="0"><br><br></font>
+
+
+<p>3 . <strong>所有的商品需要按照类型进行分类，分类分为一级类型与二级类型</strong>;</p>
+<font color="orange"><br>  商品分为两类：类型与子类型，一个类型下有多个子类型，属于第三范式<br>  商品也有所属类型，一个类型有多个商品，一个子类型下也有多个商品，属于第三范式<br><br></font><br><img src="https://s2.ax1x.com/2019/06/02/VGSmuT.png" alt="VGSmuT.png" border="0"><br><br>4 . <strong>每一件商品都可以有多张展示图片</strong>；<br><br><font color="#76EE00"><br>    一个商品可以有多张图片，属于一对多关系，图片先暂时使用BLOB类型描述<br><br><img src="https://s2.ax1x.com/2019/06/02/VGS3CR.png" alt="VGS3CR.png" border="0"><br><br></font><br>5 . <strong><font color="red">商品</font>可以由<font color="red">用户</font>进行<font color="red">评论</font>，在评论时可以写出购买体会与打分</strong>；<br><br><font color="#00F5FF"><br>    每一个用户可以评价多个商品，每一个商品可以有多个用户评价，属于多对多关系，并且每一个用户针对每一个商品可以写出自己的心得体会以及打分<br></font><br><img src="https://s2.ax1x.com/2019/06/02/VGSqqU.png" alt="VGSqqU.png" border="0"><br><br>6 . <strong>每一个<font color="red">用户</font>在每次<font color="red">订单</font>中可以购买多件<font color="red">商品</font>，并且要保留有详细的购买记录</strong>；<br><br><font color="#8B0000"><br>    一个用户可以有多个订单，每一个订单可以有多个购买的商品。每个订单购买的详细内容，可以设计一个订单详情表描述，即用户与订单属于第三范式，订单与订单详情属于第三范式<br></font><br>7 . <strong>在进行购买商品配送时要求用户提供有详细收件地址、联系人、电话等信息；一个用户可以保存多个地址且可以设置一个常用<font color="red">地址</font></strong>；<br><br><font color="#7B68EE"><br>    如果要保存地址，需要知道用户所在的省份与城市，一个身份包含有多个城市信息，一对多关系，<br>    一个省份可能有多个用户地址，或者说一个城市可能有多个用户地址<br>    对于常用地址标记（flag=1, 为常用；flag=2为普通）<br><br></font>
+
+
+<ul>
+<li>Physical Data Model</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/06/02/VGptWn.png" alt="VGptWn.png" border="0"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><ol>
+<li>数据库设计的前期一定要按照数据库的设计范式来完成；</li>
+<li>数据库分析能力是一种长期积累的过程，量变–&gt;质变，之后自然就知道那些地方可以进行调正优化了；</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>鼓励一下😜</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="https://s1.ax1x.com/2018/12/15/FaJbVg.png" alt="Wangzhuang Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/🗺数据库设计/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>🗺数据库设计</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/开发工具-PowerDesigner/" rel="next" title="🚀开发工具---PowerDesigner">
+                <i class="fa fa-chevron-left"></i> 🚀开发工具---PowerDesigner
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg" alt="Wangzhuang">
+            
+              <p class="site-author-name" itemprop="name">Wangzhuang</p>
+              <p class="site-description motion-element" itemprop="description">知识之上是思想,思想之上是精神</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">78</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">57</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Sunshineisbright" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Wang.zhuang@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.meijutt.com/" title="美剧" target="_blank">美剧</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://mvnrepository.com/" title="mvnrepository" target="_blank">mvnrepository</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.ximalaya.com/" title="喜马拉雅" target="_blank">喜马拉雅</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.ibm.com/" title="IBM Developer" target="_blank">IBM Developer</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://visualgo.net/en" title="visualgo" target="_blank">visualgo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sqlzoo.net/wiki/SQL_Tutorial" title="SQL_Tutorial" target="_blank">SQL_Tutorial</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="leetcode-cn.com/sunshineisbright" title="leetcode-cn" target="_blank">leetcode-cn</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://imgchr.com/sunshineisbright" title="图床" target="_blank">图床</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iconfont.cn/" title="iconfont" target="_blank">iconfont</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.1001freedownloads.com/" title="freedownload" target="_blank">freedownload</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+          
+
+        </div>
+			
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库设计范式"><span class="nav-number">1.</span> <span class="nav-text">数据库设计范式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一设计范式-单表"><span class="nav-number">1.1.</span> <span class="nav-text">第一设计范式(单表)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg"><span class="nav-number">1.1.1.</span> <span class="nav-text">Eg:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg-modified"><span class="nav-number">1.1.2.</span> <span class="nav-text">Eg(modified):</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二设计范式（多对多关系映射）"><span class="nav-number">1.2.</span> <span class="nav-text">第二设计范式（多对多关系映射）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg-第一种设计方式"><span class="nav-number">1.2.1.</span> <span class="nav-text">Eg(第一种设计方式)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg-modified-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">Eg(modified)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三设计范式（一对多映射）"><span class="nav-number">1.3.</span> <span class="nav-text">第三设计范式（一对多映射）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#示例讲解"><span class="nav-number">1.3.1.</span> <span class="nav-text">示例讲解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#范例：-设计数据表，可以描述一个学校有多个学生"><span class="nav-number">1.3.2.</span> <span class="nav-text">范例： 设计数据表，可以描述一个学校有多个学生</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg（错误设计）"><span class="nav-number">1.3.3.</span> <span class="nav-text">Eg（错误设计）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Eg-modified-2"><span class="nav-number">1.3.4.</span> <span class="nav-text">Eg(modified)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结："><span class="nav-number">2.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库设计综合实战"><span class="nav-number">3.</span> <span class="nav-text">数据库设计综合实战</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设计要求"><span class="nav-number">3.1.</span> <span class="nav-text">设计要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">3.2.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; © 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wangzhuang</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共67k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访问数<i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量<i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'dSwraPPUXQh5tFaHQsHGFpXO-gzGzoHsz',
+        appKey: 'i0ey4siWcQzgsjkJnytf4rvE',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
