@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<meta name="google-site-verification" content="oZQ-DMIoYoBfyPts1kBNMyug0rxzvWjbr0xmJlR2WKw">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="https://s1.ax1x.com/2018/12/15/FaJ7qS.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="https://s1.ax1x.com/2018/12/15/FaJ7qS.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml">
+
+
+
+  <meta name="keywords" content="💦JSON,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Sunshineisbright" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="JSON是什么? JSON: JavaScript Object Notation(JavaScript对象表示法)； JSON是轻量级的文本数据交换格式； JSON独立于语言和平台 JSON自我描述性，更易理解 JSON是存储和交换文本信息的语法。类似XML； JSON比XML更小、更快、更易解析；   JSON –&amp;gt; 转换为JS JSON文本格式在语法上与创建JS对象的代码相同。且无需任">
+<meta name="keywords" content="💦JSON">
+<meta property="og:type" content="article">
+<meta property="og:title" content="💦JavaScript对象表示法---JSON">
+<meta property="og:url" content="https://www.openmind.ink/JavaScript对象表示法-JSON/index.html">
+<meta property="og:site_name" content="Sunshineisbright">
+<meta property="og:description" content="JSON是什么? JSON: JavaScript Object Notation(JavaScript对象表示法)； JSON是轻量级的文本数据交换格式； JSON独立于语言和平台 JSON自我描述性，更易理解 JSON是存储和交换文本信息的语法。类似XML； JSON比XML更小、更快、更易解析；   JSON –&amp;gt; 转换为JS JSON文本格式在语法上与创建JS对象的代码相同。且无需任">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/11/Vcz80K.png">
+<meta property="og:updated_time" content="2019-06-11T08:19:59.466Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="💦JavaScript对象表示法---JSON">
+<meta name="twitter:description" content="JSON是什么? JSON: JavaScript Object Notation(JavaScript对象表示法)； JSON是轻量级的文本数据交换格式； JSON独立于语言和平台 JSON自我描述性，更易理解 JSON是存储和交换文本信息的语法。类似XML； JSON比XML更小、更快、更易解析；   JSON –&amp;gt; 转换为JS JSON文本格式在语法上与创建JS对象的代码相同。且无需任">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/11/Vcz80K.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.openmind.ink/JavaScript对象表示法-JSON/">
+
+
+
+
+
+  <title>💦JavaScript对象表示法---JSON | Sunshineisbright</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/Sunshineisbright" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sunshineisbright</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Hello World</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-mybooks">
+          <a href="/MyBooks" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            MyBooks
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.openmind.ink/JavaScript对象表示法-JSON/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Wangzhuang">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sunshineisbright">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">💦JavaScript对象表示法---JSON</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-11T14:36:34+08:00">
+                2019-06-11
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-11T16:19:59+08:00">
+                2019-06-11
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/💦JSON/" itemprop="url" rel="index">
+                    <span itemprop="name">💦JSON</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/JavaScript对象表示法-JSON/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/JavaScript对象表示法-JSON/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数<i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1.5k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  6
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="JSON是什么"><a href="#JSON是什么" class="headerlink" title="JSON是什么?"></a>JSON是什么?</h3><ul>
+<li>JSON: JavaScript Object Notation(JavaScript对象表示法)；</li>
+<li>JSON是轻量级的文本数据交换格式；</li>
+<li>JSON独立于语言和平台</li>
+<li>JSON自我描述性，更易理解</li>
+<li>JSON是<strong>存储和交换文本信息</strong>的语法。类似XML；</li>
+<li>JSON比XML更小、更快、更易解析；</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/06/11/Vcz80K.png" alt="Vcz80K.png" border="0"></p>
+<h5 id="JSON-–-gt-转换为JS"><a href="#JSON-–-gt-转换为JS" class="headerlink" title="JSON –&gt; 转换为JS"></a>JSON –&gt; 转换为JS</h5><blockquote>
+<p>JSON文本格式在语法上与创建JS对象的代码相同。且无需任何解析器直接使用JavaScript的内建函数eval()，用JSON数据来生成原来的JavaScript对象；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;p&gt;</span><br><span class="line">网站名称: &lt;span id=&quot;jname&quot;&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站地址: &lt;span id=&quot;jurl&quot;&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">网站 slogan: &lt;span id=&quot;jslogan&quot;&gt;&lt;/span&gt;&lt;br /&gt; </span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">var JSONObject= &#123;</span><br><span class="line">	&quot;name&quot;:&quot;菜鸟教程&quot;,</span><br><span class="line">	&quot;url&quot;:&quot;www.runoob.com&quot;, </span><br><span class="line">	&quot;slogan&quot;:&quot;学的不仅是技术，更是梦想！&quot;</span><br><span class="line">&#125;;</span><br><span class="line">document.getElementById(&quot;jname&quot;).innerHTML=JSONObject.name </span><br><span class="line">document.getElementById(&quot;jurl&quot;).innerHTML=JSONObject.url </span><br><span class="line">document.getElementById(&quot;jslogan&quot;).innerHTML=JSONObject.slogan </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="与XML相同之处"><a href="#与XML相同之处" class="headerlink" title="与XML相同之处"></a>与XML相同之处</h3><ul>
+<li>JSON是纯文本</li>
+<li>JSON具有“自我描述性”</li>
+<li>JSON可以通过JS进行解析</li>
+<li>JSON数据可以使用Ajax进行传输</li>
+</ul>
+<h3 id="与XML不同之处"><a href="#与XML不同之处" class="headerlink" title="与XML不同之处"></a>与XML不同之处</h3><ul>
+<li>没有任何结束标签</li>
+<li>更短、更快</li>
+<li>使用JS的内建函数eval()方法进行解析</li>
+<li>使用数组</li>
+</ul>
+<h3 id="JSON-is-better"><a href="#JSON-is-better" class="headerlink" title="JSON is better ?"></a>JSON is better ?</h3><ul>
+<li><strong>使用 XML</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>读取 XML 文档</li>
+<li>使用 XML DOM 来循环遍历文档</li>
+<li>读取值并存储在变量中</li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>使用 JSON</strong></li>
+</ul>
+<blockquote>
+<ul>
+<li>读取 JSON 字符串</li>
+<li>用 eval() 处理 JSON 字符串</li>
+</ul>
+</blockquote>
+<h3 id="JSON语法"><a href="#JSON语法" class="headerlink" title="JSON语法"></a>JSON语法</h3><blockquote>
+<p>JSON语法是JavaScript语法的子集</p>
+</blockquote>
+<h5 id="JSON-语法规则"><a href="#JSON-语法规则" class="headerlink" title="JSON 语法规则"></a>JSON 语法规则</h5><ul>
+<li>数据在名称/值对中</li>
+<li>数据由”,”分隔</li>
+<li>大括号保存对象</li>
+<li>中括号保存数组</li>
+</ul>
+<h5 id="JSON数据的书写格式：名称-值对"><a href="#JSON数据的书写格式：名称-值对" class="headerlink" title="JSON数据的书写格式：名称/值对"></a>JSON数据的书写格式：<strong>名称/值对</strong></h5><blockquote>
+<p>Eg: <code>&quot;name&quot;:&quot;菜鸟教程&quot;</code></p>
+</blockquote>
+<h5 id="JSON值"><a href="#JSON值" class="headerlink" title="JSON值"></a>JSON值</h5><ul>
+<li>数字（整或浮）</li>
+<li>字符串（在双引号中)</li>
+<li>逻辑值(true or false)</li>
+<li>数组（在中括号中)</li>
+<li>对象(在大括号中)</li>
+<li>null</li>
+</ul>
+<h5 id="JSON对象-：-在大括号-【-】中书写"><a href="#JSON对象-：-在大括号-【-】中书写" class="headerlink" title="JSON对象 ： 在大括号 【{}】中书写"></a>JSON对象 ： 在大括号 【{}】中书写</h5><blockquote>
+<p><code>{&quot;name&quot;:&quot;菜鸟教程&quot;,&quot;url&quot;:&quot;www.runoob.com&quot;}</code></p>
+</blockquote>
+<p>在JS语句等价: </p>
+<blockquote>
+<p>name = “菜鸟教程” url = “<a href="http://www.runoob.com&quot;" target="_blank" rel="noopener">www.runoob.com&quot;</a></p>
+</blockquote>
+<h5 id="JSON数组"><a href="#JSON数组" class="headerlink" title="JSON数组"></a>JSON数组</h5><blockquote>
+<p>JSON数组在中括号中书写，当然数组可以包含多个对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;sites&quot;:[</span><br><span class="line">&#123;&quot;name&quot;:&quot;菜鸟教程&quot;,&quot;url&quot;:&quot;www.runoob.com&quot;&#125;,</span><br><span class="line">&#123;&quot;name&quot;:&quot;google&quot;,&quot;url&quot;:&quot;www.google.com&quot;&#125;,</span><br><span class="line">&#123;&quot;name&quot;:&quot;weibo&quot;,&quot;url&quot;:&quot;www.weibo.com&quot;&#125;</span><br><span class="line">]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="JSON文件"><a href="#JSON文件" class="headerlink" title="JSON文件"></a>JSON文件</h5><blockquote>
+<p>文件类型: 【.json】 MIME类型:【”application/json”】</p>
+</blockquote>
+<h4 id="JSON对象"><a href="#JSON对象" class="headerlink" title="JSON对象"></a>JSON对象</h4><pre><code>{ &quot;name&quot;:&quot;runoob&quot;, &quot;alexa&quot;:10000, &quot;site&quot;:null }
+</code></pre><blockquote>
+<p>JSON对象使用在大括号({})中书写✍<br><br>对象可以包含多key/value(键/值)对。<br><br>key必须是字符串，value可以是合法的JSON数据类型（字符串、数字、对象、数组、布尔值或null)<br><br>key和value中使用冒号(:)分割<br><br>每个key/value对使用逗号(,)分割&lt;br/</p>
+</blockquote>
+<h5 id="访问对象值"><a href="#访问对象值" class="headerlink" title="访问对象值"></a>访问对象值</h5><ul>
+<li><p><strong>A.b</strong></p>
+</li>
+<li><p><strong>A[b]</strong> (在循环时只能使用此种方式)</p>
+</li>
+</ul>
+<h5 id="删除对象属性"><a href="#删除对象属性" class="headerlink" title="删除对象属性"></a>删除对象属性</h5><ul>
+<li><strong>delte A.b.b0</strong></li>
+<li><strong>delete A.b[“b0”]</strong></li>
+</ul>
+<h3 id="JSON数组-1"><a href="#JSON数组-1" class="headerlink" title="JSON数组"></a>JSON数组</h3><pre><code>[ &quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot; ]
+</code></pre><blockquote>
+<p>JSON数组在中括号中书写<br><br>JSON数组值必须是合法的JSON数据类型（字符串、数组、对象、布尔值或null）</p>
+</blockquote>
+<h5 id="访问数组通过索引-其中删除数值的元素中数组大小不变。"><a href="#访问数组通过索引-其中删除数值的元素中数组大小不变。" class="headerlink" title="访问数组通过索引[] 其中删除数值的元素中数组大小不变。"></a>访问数组通过索引[] 其中删除数值的元素中数组大小不变。</h5><h3 id="JSON-parse"><a href="#JSON-parse" class="headerlink" title="JSON.parse()"></a>JSON.parse()</h3><blockquote>
+<p>JSON通常用于与<strong>服务器交换数据</strong>，在接收服务器数组时一般是字符串。可以使用JSON.parse()方法将数据转换为JavaScript对象。</p>
+</blockquote>
+<pre><code>语法: JSON.parse(text[, reviver])
+</code></pre><blockquote>
+<p><strong>text</strong>: 必须是一个有效的JSON字符串；<br><strong>reviver</strong>: 可选，一个转换结果的函数，将为对象的每个成员调用此函数</p>
+</blockquote>
+<ul>
+<li>解析实例</li>
+</ul>
+<blockquote>
+<p>接收的数据:<code>{ &quot;name&quot;:&quot;runoob&quot;, &quot;alexa&quot;:10000, &quot;site&quot;:&quot;www.runoob.com&quot; }</code><br>解析数据: <code>var obj = JSON.parse(&#39;{ &quot;name&quot;:&quot;runoob&quot;, &quot;alexa&quot;:10000, &quot;site&quot;:&quot;www.runoob.com&quot; }&#39;);</code></p>
+</blockquote>
+<h3 id="从服务端接收JSON数据"><a href="#从服务端接收JSON数据" class="headerlink" title="从服务端接收JSON数据"></a>从服务端接收JSON数据</h3><blockquote>
+<p>使用Ajax从服务器请求JSON数据，并解析为JavaScript对象</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var xmlhttp = new XMLHttpRequest();</span><br><span class="line">xmlhttp.onreadystatechange = function() &#123;</span><br><span class="line">    if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">        myObj = JSON.parse(this.responseText);</span><br><span class="line">        document.getElementById(&quot;demo&quot;).innerHTML = myObj.name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">xmlhttp.open(&quot;GET&quot;, &quot;/try/ajax/json_demo.txt&quot;, true);</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+<h3 id="从服务端接收数组的JSON数据"><a href="#从服务端接收数组的JSON数据" class="headerlink" title="从服务端接收数组的JSON数据"></a>从服务端接收数组的JSON数据</h3><blockquote>
+<p>如果从服务器接收的是数组的JSON数据，则JSON.parse会将其转换为JavaScript数组；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var xmlhttp = new XMLHttpRequest();</span><br><span class="line">xmlhttp.onreadystatechange = function() &#123;</span><br><span class="line">   	if (this.readyState == 4 &amp;&amp; this.status == 200) &#123;</span><br><span class="line">       	myArr = JSON.parse(this.responseText);</span><br><span class="line">       	document.getElementById(&quot;demo&quot;).innerHTML = myArr[1];</span><br><span class="line">   	&#125;</span><br><span class="line">&#125;;</span><br><span class="line">xmlhttp.open(&quot;GET&quot;, &quot;/try/ajax/json_demo_array.txt&quot;, true);</span><br><span class="line">xmlhttp.send();</span><br></pre></td></tr></table></figure>
+<h3 id="解析数据为Data类型的数据"><a href="#解析数据为Data类型的数据" class="headerlink" title="解析数据为Data类型的数据"></a>解析数据为Data类型的数据</h3><blockquote>
+<p>JSON 不能存储 Date 对象。如果你需要存储 Date 对象，需要将其转换为字符串。之后再将字符串转换为 Date 对象。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	var text = &apos;&#123; &quot;name&quot;:&quot;Runoob&quot;, &quot;initDate&quot;:&quot;2013-12-14&quot;, &quot;site&quot;:&quot;www.runoob.com&quot;&#125;&apos;;</span><br><span class="line">var obj = JSON.parse(text);</span><br><span class="line">obj.initDate = new Date(obj.initDate);</span><br><span class="line"></span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = obj.name + &quot;创建日期: &quot; + obj.initDate;</span><br></pre></td></tr></table></figure>
+<h3 id="eval-string-函数可计算某个字符串，并执行其中的JavaScript代码"><a href="#eval-string-函数可计算某个字符串，并执行其中的JavaScript代码" class="headerlink" title="eval(string): 函数可计算某个字符串，并执行其中的JavaScript代码"></a>eval(string): 函数可计算某个字符串，并执行其中的JavaScript代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">eval(&quot;var a=1&quot;); //声明一个变量a并赋值1</span><br><span class="line">eval(&quot;2 + 3&quot;); //执行加运算，并返回运算值</span><br><span class="line">eval(&quot;mytest()&quot;): //执行mytest()函数</span><br><span class="line">eval(&quot;&#123;b:2&#125;&quot;); //声明一个对象</span><br></pre></td></tr></table></figure>
+<h3 id="JSON-stringify"><a href="#JSON-stringify" class="headerlink" title="JSON.stringify()"></a>JSON.stringify()</h3><blockquote>
+<p>JSON 通常用于与服务端交换数据。在向服务器发送数据时一般是字符串。我们可以使用 JSON.stringify() 方法将 JavaScript 对象转换为字符串。</p>
+</blockquote>
+<pre><code>JSON.stringify(value[, replacer[, space]])
+</code></pre><ul>
+<li>value: 必需，要转换的JS值（对象或数组)</li>
+<li>replacer: 可选，用于转换结果的函数或数组</li>
+<li>space: 可选，文本添加缩进</li>
+</ul>
+<h5 id="JavaScript对象转换"><a href="#JavaScript对象转换" class="headerlink" title="JavaScript对象转换"></a>JavaScript对象转换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var obj = &#123; &quot;name&quot;:&quot;runoob&quot;, &quot;alexa&quot;:10000, &quot;site&quot;:&quot;www.runoob.com&quot;&#125;;</span><br><span class="line">var myJSON = JSON.stringify(obj);</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = myJSON;</span><br></pre></td></tr></table></figure>
+<h5 id="JavaScript数组转换"><a href="#JavaScript数组转换" class="headerlink" title="JavaScript数组转换"></a>JavaScript数组转换</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">var arr = [ &quot;Google&quot;, &quot;Runoob&quot;, &quot;Taobao&quot;, &quot;Facebook&quot; ];</span><br><span class="line">var myJSON = JSON.stringify(arr);</span><br><span class="line">document.getElementById(&quot;demo&quot;).innerHTML = myJSON;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>鼓励一下😜</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="https://s1.ax1x.com/2018/12/15/FaJbVg.png" alt="Wangzhuang Bitcoin">
+        <p>Bitcoin</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/💦JSON/" rel="tag"><i class="fa fa-tag" aria-hidden="true"></i>💦JSON</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/可扩展标记语言-XML/" rel="next" title="💦可扩展标记语言---XML">
+                <i class="fa fa-chevron-left"></i> 💦可扩展标记语言---XML
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/个人学习笔记/" rel="prev" title="🌈个人学习笔记">
+                🌈个人学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://s1.ax1x.com/2018/12/15/FaJgVe.jpg" alt="Wangzhuang">
+            
+              <p class="site-author-name" itemprop="name">Wangzhuang</p>
+              <p class="site-description motion-element" itemprop="description">知识之上是思想,思想之上是精神</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Sunshineisbright" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:Wang.zhuang@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.meijutt.com/" title="美剧" target="_blank">美剧</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://mvnrepository.com/" title="mvnrepository" target="_blank">mvnrepository</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.ximalaya.com/" title="喜马拉雅" target="_blank">喜马拉雅</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://developer.ibm.com/" title="IBM Developer" target="_blank">IBM Developer</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://visualgo.net/en" title="visualgo" target="_blank">visualgo</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://sqlzoo.net/wiki/SQL_Tutorial" title="SQL_Tutorial" target="_blank">SQL_Tutorial</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="leetcode-cn.com/sunshineisbright" title="leetcode-cn" target="_blank">leetcode-cn</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://github.com" title="GitHub" target="_blank">GitHub</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://imgchr.com/sunshineisbright" title="图床" target="_blank">图床</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.iconfont.cn/" title="iconfont" target="_blank">iconfont</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.1001freedownloads.com/" title="freedownload" target="_blank">freedownload</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+          
+
+        </div>
+			
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON是什么"><span class="nav-number">1.</span> <span class="nav-text">JSON是什么?</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON-–-gt-转换为JS"><span class="nav-number">1.0.1.</span> <span class="nav-text">JSON –&gt; 转换为JS</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#与XML相同之处"><span class="nav-number">2.</span> <span class="nav-text">与XML相同之处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与XML不同之处"><span class="nav-number">3.</span> <span class="nav-text">与XML不同之处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-is-better"><span class="nav-number">4.</span> <span class="nav-text">JSON is better ?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON语法"><span class="nav-number">5.</span> <span class="nav-text">JSON语法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON-语法规则"><span class="nav-number">5.0.1.</span> <span class="nav-text">JSON 语法规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON数据的书写格式：名称-值对"><span class="nav-number">5.0.2.</span> <span class="nav-text">JSON数据的书写格式：名称/值对</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON值"><span class="nav-number">5.0.3.</span> <span class="nav-text">JSON值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON对象-：-在大括号-【-】中书写"><span class="nav-number">5.0.4.</span> <span class="nav-text">JSON对象 ： 在大括号 【{}】中书写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON数组"><span class="nav-number">5.0.5.</span> <span class="nav-text">JSON数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JSON文件"><span class="nav-number">5.0.6.</span> <span class="nav-text">JSON文件</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JSON对象"><span class="nav-number">5.1.</span> <span class="nav-text">JSON对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#访问对象值"><span class="nav-number">5.1.1.</span> <span class="nav-text">访问对象值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除对象属性"><span class="nav-number">5.1.2.</span> <span class="nav-text">删除对象属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON数组-1"><span class="nav-number">6.</span> <span class="nav-text">JSON数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#访问数组通过索引-其中删除数值的元素中数组大小不变。"><span class="nav-number">6.0.1.</span> <span class="nav-text">访问数组通过索引[] 其中删除数值的元素中数组大小不变。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-parse"><span class="nav-number">7.</span> <span class="nav-text">JSON.parse()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从服务端接收JSON数据"><span class="nav-number">8.</span> <span class="nav-text">从服务端接收JSON数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从服务端接收数组的JSON数据"><span class="nav-number">9.</span> <span class="nav-text">从服务端接收数组的JSON数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析数据为Data类型的数据"><span class="nav-number">10.</span> <span class="nav-text">解析数据为Data类型的数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval-string-函数可计算某个字符串，并执行其中的JavaScript代码"><span class="nav-number">11.</span> <span class="nav-text">eval(string): 函数可计算某个字符串，并执行其中的JavaScript代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JSON-stringify"><span class="nav-number">12.</span> <span class="nav-text">JSON.stringify()</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript对象转换"><span class="nav-number">12.0.1.</span> <span class="nav-text">JavaScript对象转换</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#JavaScript数组转换"><span class="nav-number">12.0.2.</span> <span class="nav-text">JavaScript数组转换</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; © 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Wangzhuang</span>
+
+  
+</div>
+
+<!--
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共71.4k字</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访问数<i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量<i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'dSwraPPUXQh5tFaHQsHGFpXO-gzGzoHsz',
+        appKey: 'i0ey4siWcQzgsjkJnytf4rvE',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
