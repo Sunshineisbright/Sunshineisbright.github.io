@@ -101,10 +101,13 @@
 <meta property="og:site_name" content="Sunshineisbright">
 <meta property="og:description" content="Java技术的发展历程  1995年发布  1997年国内萌芽 -&amp;gt; 在国内最早的一批进行Java技术开发的人员基本上开发的都是Applet程序 2000年 JSP + Servlet（MVC设计模式） 第二批次 2003年 传统的MVC实现部分公司开始使用Struts1.x框架 2004年 Struts1.x开发技术应用非常广泛了。之后出现了Hibernate、Spring；（WebSer">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-29T14:33:37.883Z">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/30/Z1if3T.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/06/30/Z1i4vF.png">
+<meta property="og:updated_time" content="2019-06-30T05:13:14.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="🌈个人学习笔记">
 <meta name="twitter:description" content="Java技术的发展历程  1995年发布  1997年国内萌芽 -&amp;gt; 在国内最早的一批进行Java技术开发的人员基本上开发的都是Applet程序 2000年 JSP + Servlet（MVC设计模式） 第二批次 2003年 传统的MVC实现部分公司开始使用Struts1.x框架 2004年 Struts1.x开发技术应用非常广泛了。之后出现了Hibernate、Spring；（WebSer">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/06/30/Z1if3T.png">
 
 
 
@@ -364,8 +367,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-06-29T22:33:37+08:00">
-                2019-06-29
+              <time title="更新于" itemprop="dateModified" datetime="2019-06-30T13:13:14+08:00">
+                2019-06-30
               </time>
             
           </span>
@@ -502,6 +505,9 @@
 <p>开发人员编写代码，随后由开发人员进行代码的打包、测试，随后将代码交给运维人员进行人肉部署。<br>存在的弊端在于无法准确把控整个项目最终整合在一起失败？还是成功呢？</p>
 </blockquote>
 </blockquote>
+<blockquote>
+<p><img src="https://s2.ax1x.com/2019/06/30/Z1if3T.png" alt="Z1if3T.png" border="0"></p>
+</blockquote>
 <p>对于自动化构建里面最常见的两类组件：Jenkins、Devops，（D &gt; J)</p>
 <h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><p><strong> 数据库连接池本质：保证数据库的连接不关闭的一种做法</strong></p>
 <blockquote>
@@ -509,6 +515,9 @@
 <blockquote>
 <p>实际上连接池之中的操作除了保存有若干个连接之外，还有一个最为核心的概念就是需要追加以一个延迟队列，连接池已经用满的情况下，其他的用户可以等待进行资源的获取。对于连接池的实现有在WEB容器中使用也可以在程序中使用。eg：C3P0、Druid都属于常见的pool<br>所有连接池的操作都是基于<strong>DataSource</strong>处理的，只要获取了DataSource就可以获取Connection。</p>
 </blockquote>
+</blockquote>
+<blockquote>
+<p><img src="https://s2.ax1x.com/2019/06/30/Z1i4vF.png" alt="Z1i4vF.png" border="0"></p>
 </blockquote>
 <blockquote>
 <p>对于服务器并发量的设置，最简单的操作模式就是观察电脑支持的并发线程数量，所以这个时候最佳的性能每秒同时处理6个用户，但是如果只是这样简单的计算话，如果要是有大规模的并发访问，电脑足以耗尽地球的资源。这个时候就需要使用一些多线程、多进程、多协程技术进行性能的复用。而真正能够承受住的并发量就需要一些测试软件进行压力测试，包括数据库、WEB程序都可以进行测试。</p>
@@ -589,6 +598,24 @@
 <blockquote>
 <p><strong>基础!基础！基础！</strong></p>
 </blockquote>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><blockquote>
+<p><strong>hexo n</strong> // 新建文章</p>
+</blockquote>
+<blockquote>
+<p><strong>hexo c</strong> //清除缓存</p>
+</blockquote>
+<blockquote>
+<p><strong>hexo d -g</strong> // 生成静态页面 + 部署</p>
+</blockquote>
+<blockquote>
+<p><strong>hexo g</strong> // 生成静态网页</p>
+</blockquote>
+<blockquote>
+<p><strong>hexo d</strong> // 部署</p>
+</blockquote>
+<blockquote>
+<p><strong>hexo s</strong> //启动服务器预览</p>
+</blockquote>
 
       
     </div>
@@ -662,6 +689,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/设计模式之MVC模式/" rel="prev" title="🍧设计模式之MVC模式">
+                🍧设计模式之MVC模式 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -769,7 +800,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">81</span>
+                  <span class="site-state-item-count">82</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -780,7 +811,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">47</span>
+                  <span class="site-state-item-count">48</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -791,7 +822,7 @@ var jiathis_config={
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -900,7 +931,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java技术的发展历程"><span class="nav-number">1.</span> <span class="nav-text">Java技术的发展历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化运维"><span class="nav-number">2.</span> <span class="nav-text">自动化运维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库连接池"><span class="nav-number">3.</span> <span class="nav-text">数据库连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#out和err区别"><span class="nav-number">4.</span> <span class="nav-text">out和err区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Restful"><span class="nav-number">5.</span> <span class="nav-text">Restful</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于return关键字问题"><span class="nav-number">6.</span> <span class="nav-text">关于return关键字问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目打包"><span class="nav-number">7.</span> <span class="nav-text">项目打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微架构"><span class="nav-number">8.</span> <span class="nav-text">微架构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java技术的发展历程"><span class="nav-number">1.</span> <span class="nav-text">Java技术的发展历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动化运维"><span class="nav-number">2.</span> <span class="nav-text">自动化运维</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库连接池"><span class="nav-number">3.</span> <span class="nav-text">数据库连接池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#out和err区别"><span class="nav-number">4.</span> <span class="nav-text">out和err区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Restful"><span class="nav-number">5.</span> <span class="nav-text">Restful</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于return关键字问题"><span class="nav-number">6.</span> <span class="nav-text">关于return关键字问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目打包"><span class="nav-number">7.</span> <span class="nav-text">项目打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#微架构"><span class="nav-number">8.</span> <span class="nav-text">微架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo常用命令"><span class="nav-number">9.</span> <span class="nav-text">Hexo常用命令</span></a></li></ol></div>
             
 
           </div>
@@ -945,7 +976,7 @@ var jiathis_config={
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共71.4k字</span>
+  <span class="post-count">博客全站共72.2k字</span>
 </div>
 
         
